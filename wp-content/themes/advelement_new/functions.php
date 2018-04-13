@@ -1,6 +1,7 @@
 <?php
 
 require_once "post-types/logotypes.php";
+require_once "post-types/competition-files.php";
 
 
 load_theme_textdomain( 'woodrun', get_template_directory().'/languages' );
