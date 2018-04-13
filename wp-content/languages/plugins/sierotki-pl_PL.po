@@ -1,0 +1,272 @@
+# Translation of Plugins - Orphans - Stable (latest release) in Polish
+# This file is distributed under the same license as the Plugins - Orphans - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-06-29 10:37:55+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: pl\n"
+"Project-Id-Version: Plugins - Orphans - Stable (latest release)\n"
+
+#: etc/options.php:175
+msgid "Use a comma to separate custom fields name."
+msgstr "Użyj przecinka między nazwami własnych pól."
+
+#: etc/options.php:173
+msgid "Entries custom fields"
+msgstr "Własne pola we wpisach"
+
+#: vendor/iworks/options/options.php:1548
+msgid "ON"
+msgstr "WŁĄCZ"
+
+#: vendor/iworks/options/options.php:1547
+msgid "OFF"
+msgstr "WYŁĄCZ"
+
+#: vendor/iworks/options/options.php:695
+msgid "Delete image"
+msgstr "Skasuj obrazek"
+
+#: vendor/iworks/options/options.php:689
+msgid "Upload image"
+msgstr "Prześlij obrazek"
+
+#: vendor/iworks/options/options.php:196
+msgid "An error occurred while getting the configuration."
+msgstr "Wystąpił błąd pobierania konfiguracji."
+
+#: etc/options.php:235
+msgctxt "link to support forum on WordPress.org"
+msgid "https://wordpress.org/support/plugin/sierotki/"
+msgstr "https://wordpress.org/support/plugin/sierotki/"
+
+#: etc/options.php:205
+msgctxt "plugin home page on WordPress.org"
+msgid "https://wordpress.org/plugins/sierotki/"
+msgstr "https://pl.wordpress.org/plugins/sierotki/"
+
+#: etc/options.php:149
+msgid "Allow to use plugin with another languages then Polish."
+msgstr "Pozwala na włączenie wtyczki dla innych języków niż język polski."
+
+#: etc/options.php:147
+msgid "Ignore language"
+msgstr "Ignoruj język"
+
+#: etc/options.php:140
+msgid "Enabled the substitution of orphans in the author description."
+msgstr "Włącz obsługę sierotek w opisie autora."
+
+#: etc/options.php:139
+msgid "Author description"
+msgstr "Opis autora"
+
+#: etc/options.php:131
+msgid "Miscellaneous"
+msgstr "Różne"
+
+#: etc/options.php:124
+msgid "Enabled the substitution of orphans in the taxonomy description."
+msgstr "Włącz obsługę sierotek w opisach taksonomii."
+
+#: etc/options.php:122
+msgid "Description"
+msgstr "Opis"
+
+#: etc/options.php:115
+msgid "Enabled the substitution of orphans in the taxonomy title."
+msgstr "Włącz obsługę sierotek w tytułach taksonomii."
+
+#: etc/options.php:34 etc/options.php:113
+msgid "Title"
+msgstr "Tytuł"
+
+#: etc/options.php:101 etc/options.php:106
+msgid "Taxonomies"
+msgstr "Taksonomie"
+
+#: etc/options.php:89
+msgid "Widget text"
+msgstr "Widget tekstowy"
+
+#: etc/options.php:77
+msgid "Widget title"
+msgstr "Tytuł widgetu"
+
+#: etc/options.php:70
+msgid "Widgets"
+msgstr "Widgety"
+
+#: etc/options.php:62
+msgid "Comments"
+msgstr "Komentarze"
+
+#: etc/options.php:52
+msgid "Content"
+msgstr "Treść"
+
+#: etc/options.php:43
+msgid "Excerpt"
+msgstr "Zajawka"
+
+#: etc/options.php:27
+msgid "Post types"
+msgstr "Własne typy treści"
+
+#: etc/options.php:19
+msgid "Entries"
+msgstr "Wpisy"
+
+#: etc/options.php:11
+msgid "Orphans configuration"
+msgstr "Konfiguracja sierotek"
+
+#: vendor/iworks/rate/rate.php:388
+msgid "No thanks"
+msgstr "Nie dziękuję"
+
+#: vendor/iworks/rate/rate.php:387
+msgid "Saving"
+msgstr "Zapisywanie"
+
+#: vendor/iworks/rate/rate.php:383
+msgid "Rate %s"
+msgstr "Oceń %s"
+
+#: vendor/iworks/rate/rate.php:380
+msgid "Thanks :)"
+msgstr "Dzięki :)"
+
+#: vendor/iworks/rate/rate.php:365
+msgid "We've spent countless hours developing this free plugin for you, and we would really appreciate it if you dropped us a quick rating!"
+msgstr "Spędziliśmy mnóstwo czasu tworząc tę darmową wtyczkę i bylibyśmy wdzięczni za pozytywne jej ocenienie!"
+
+#: vendor/iworks/rate/rate.php:365
+msgid "Hey %s, you've been using %s for a while now, and we hope you're happy with it."
+msgstr "Hej %s, od jakiegoś czasu używasz wtyczki %s, i mamy nadzieję, że wszystko jest w jak najlepszym porządku."
+
+#: etc/options.php:91
+msgid "Enabled the substitution of orphans in the widget text."
+msgstr "Włącz obsługę sierotek w treści widżetu tekstowego."
+
+#: etc/options.php:79
+msgid "Enabled the substitution of orphans in the widget title."
+msgstr "Włącz obsługę sierotek w tytule widżetu."
+
+#: etc/options.php:158
+msgid "Allow to keep together phone number or strings with space between numbers."
+msgstr "Pozwala na nierozdzielanie numeru telefonu oraz liczb między którymi jest spacja."
+
+#. Author URI of the plugin/theme
+msgid "http://iworks.pl/"
+msgstr "http://iworks.pl/"
+
+#. Author of the plugin/theme
+msgid "Marcin Pietrzak"
+msgstr "Marcin Pietrzak"
+
+#. Description of the plugin/theme
+msgid "Implement Polish grammar rules with orphans."
+msgstr "Pilnuje zasady nie zostawiania sierotek na końcu linii."
+
+#. Plugin URI of the plugin/theme
+msgid "http://iworks.pl/2011/02/16/sierotki/"
+msgstr "http://iworks.pl/2011/02/16/sierotki/"
+
+#: vendor/iworks/orphan.php:431
+msgid "Donate"
+msgstr "Darowizna"
+
+#: vendor/iworks/orphan.php:411
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: vendor/iworks/orphan.php:322
+msgid "<a href=\"http://iworks.pl/en/\" target=\"_blank\">break the web</a>"
+msgstr "<a href=\"http://iworks.pl/\" target=\"_blank\">przełam sieć</a>"
+
+#: vendor/iworks/orphan.php:321
+msgid "<a href=\"http://wordpress.org/support/plugin/sierotki/\" target=\"_blank\">Support Forums</a>"
+msgstr "<a href=\"http://wordpress.org/support/plugin/sierotki/\" target=\"_blank\">Forum pomocy (en)</a>"
+
+#: vendor/iworks/orphan.php:320
+msgid "<a href=\"http://wordpress.org/extend/plugins/sierotki/\" target=\"_blank\">Plugin Homepage</a>"
+msgstr "<a href=\"http://wordpress.org/extend/plugins/sierotki/\" target=\"_blank\">Strona wtyczki (en)</a>"
+
+#: vendor/iworks/orphan.php:319
+msgid "For more information:"
+msgstr "Więcej informacji:"
+
+#: vendor/iworks/orphan.php:313
+msgid "Plugin fix some Polish gramary rules with orphans."
+msgstr "Wtyczka poprawia w treściach spacje związane z sierotkami, tak żeby nie rozdzielać np. spójników od innych wyrazów."
+
+#: etc/options.php:235
+msgid "WordPress Help Forum"
+msgstr "Forum Wtyczki (en)"
+
+#: etc/options.php:233
+msgid "Problems? The links bellow can be very helpful to you"
+msgstr "Problemy? Poszukaj pomocy poniżej"
+
+#: etc/options.php:189
+msgid "Need Assistance?"
+msgstr "Potrzebujesz pomocy?"
+
+#: etc/options.php:205
+msgid "Link to it so others can easily find it"
+msgstr "Odnośnik do wtyczki - żeby łatwo było znaleźć"
+
+#: etc/options.php:204
+msgid "Give it a five stars on WordPress.org"
+msgstr "Daj wtyczce 5 gwiazdek na wordpress.org"
+
+#: etc/options.php:202
+msgid "Below are some links to help spread this plugin to other users"
+msgstr "Poniżej znajdują się odnośniki, które mogą pomóc innym użytkownikom"
+
+#: etc/options.php:183
+msgid "Loved this Plugin?"
+msgstr "Czy lubisz tę wtyczkę?"
+
+#: vendor/iworks/options/options.php:763
+msgid "Save Changes"
+msgstr "Zapisz zmiany"
+
+#. #-#-#-#-#  sierotki-code.pot (Orphans 2.7.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: etc/options.php:12 sierotki.php:110 vendor/iworks/orphan.php:312
+msgid "Orphans"
+msgstr "Sierotki"
+
+#: etc/options.php:166
+msgid "Use a comma to separate orphans."
+msgstr "Użyj przecinka do oddzielenia sierot."
+
+#: etc/options.php:164
+msgid "User definied orphans"
+msgstr "Własna definicja sierotek"
+
+#: etc/options.php:156
+msgid "Keep numbers together"
+msgstr "Trzymaj liczby razem"
+
+#: etc/options.php:54
+msgid "Enabled the substitution of orphans in the content."
+msgstr "Włącz obsługę sierotek w treści."
+
+#: etc/options.php:45
+msgid "Enabled the substitution of orphans in the excerpt."
+msgstr "Włącz obsługę sierotek w zajawce."
+
+#: etc/options.php:36
+msgid "Enabled the substitution of orphans in the post_title."
+msgstr "Włącz obsługę sierotek dla tytułów."
+
+#: etc/options.php:63
+msgid "Enabled the substitution of orphans in the comments."
+msgstr "Włącz obsługę sierotek w komentarzach."

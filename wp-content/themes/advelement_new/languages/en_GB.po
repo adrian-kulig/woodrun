@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Adventure Element\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 22:05+0000\n"
+"PO-Revision-Date: 2018-02-14 22:12+0000\n"
+"Last-Translator: admin <info@adventureelement.pl>\n"
+"Language-Team: English (UK)\n"
+"Language: en-GB\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: single-offer-pl.php:73 single-trener-pl.php:63
+msgid "Formularz zamówienia"
+msgstr ""
+
+#: single-offer-pl.php:77 single-trener-pl.php:67
+msgid "Osoba prywatna"
+msgstr ""
+
+#: single-offer-pl.php:89 single-offer-pl.php:272 single-trener-pl.php:79
+#: single-trener-pl.php:223
+msgid "Imię i Nazwisko:"
+msgstr ""
+
+#: single-offer-pl.php:93 single-trener-pl.php:83
+msgid "Adres E-mail:"
+msgstr ""
+
+#: single-offer-pl.php:97 single-offer-pl.php:279 single-trener-pl.php:87
+#: single-trener-pl.php:230
+msgid "Telefon:"
+msgstr ""
+
+#: single-offer-pl.php:101 single-trener-pl.php:91
+msgid "Ulica i numer domu:"
+msgstr ""
+
+#: single-offer-pl.php:105 single-trener-pl.php:95
+msgid "Kod pocztowy i miejscowość:"
+msgstr ""
+
+#: single-offer-pl.php:114 single-offer-pl.php:293 single-trener-pl.php:104
+#: single-trener-pl.php:244
+msgid "NIP:"
+msgstr ""
+
+#: single-offer-pl.php:118 single-offer-pl.php:296 single-trener-pl.php:108
+#: single-trener-pl.php:247
+msgid "REGON:"
+msgstr ""
+
+#: single-offer-pl.php:125
+msgid "Wybierz termin:"
+msgstr ""
+
+#: single-offer-pl.php:127
+msgid "-- Wybierz datę --"
+msgstr ""
+
+#: single-offer-pl.php:136
+msgid "Wybierz zakwaterowanie"
+msgstr ""
+
+#: single-offer-pl.php:138 single-offer-pl.php:149 single-offer-pl.php:157
+msgid "-- Wybierz opcję --"
+msgstr ""
+
+#: single-offer-pl.php:147
+msgid ""
+"Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona "
+"inna osoba"
+msgstr ""
+
+#: single-offer-pl.php:150 single-offer-pl.php:158
+msgid "Tak"
+msgstr ""
+
+#: single-offer-pl.php:151 single-offer-pl.php:159
+msgid "Nie"
+msgstr ""
+
+#: single-offer-pl.php:155
+msgid ""
+"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej (noclegi, "
+"wyżywienie, bez zajęć sportowych i bez badania EKG wysiłkowego)"
+msgstr ""
+
+#: single-offer-pl.php:173 single-trener-pl.php:123
+msgid "Akceptuję"
+msgstr ""
+
+#: single-offer-pl.php:175 single-trener-pl.php:125
+msgid "Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)"
+msgstr ""
+
+#: single-offer-pl.php:176 single-trener-pl.php:126
+msgid "oraz"
+msgstr ""
+
+#: single-offer-pl.php:178 single-trener-pl.php:128
+msgid "regulamin aktualnie obowiązujących promocji Woodrun"
+msgstr ""
+
+#: single-offer-pl.php:189 single-trener-pl.php:139
+msgid ""
+"Wyrażam zgodę na 1) przetwarzanie danych osobowych w celu: wykorzystania "
+"przez Woodrun oraz\n"
+"                                    Trenerów W Panelu W do realizacji usług "
+"zawartych w Voucherze W lub Pobycie W oraz prezentacji\n"
+"                                    danych osobowych Użytkownika na jego "
+"profilu w Panelu W  (widocznych jedynie dla Administratora,\n"
+"                                    Trenerów W oraz samego Klienta); 2) "
+"udostępnianie przez Woodrun wybranych danych Trenerom W i\n"
+"                                    innym kontrahentom Administratora w "
+"celach opisanych powyżej (związanych z realizacją przez nich\n"
+"                                    usług wobec Klientów w szczególności z "
+"wykorzystaniem Panelu W); 3) dochodzenie przez Woodrun\n"
+"                                    roszczeń z tytułu prowadzonej "
+"działalności; 4) prowadzenie przez Woodrun marketingu bezpośredniego\n"
+"                                    własnych produktów lub usług "
+"administratora danych. 5) i oświadczam o świadomości na temat prawa dostępu\n"
+"                                    do podanych swoich danych osobowych i "
+"ich poprawiania oraz o dobrowolności podania w/w danych, oraz\n"
+"                                    podanie prawnych podstaw przetwarzania "
+"danych: niezbędności podania w/w danych z uwagi na umożliwienie\n"
+"                                    Woodrun - poprzez wykorzystanie Panelu W "
+"– realizacji umowy, zaś w przypadku celów: dochodzenie\n"
+"                                    roszczeń i marketing bezpośredni z uwagi "
+"na Art.23 pkt.4 Ustawy o ochronie danych\n"
+"                                    osobowych z 29 sierpnia 1997 r."
+msgstr ""
+
+#: single-offer-pl.php:211 single-trener-pl.php:161
+msgid ""
+"Wyrażam zgodę na korzystanie przez Klienta z Usług świadczonych przez "
+"Woodrun odbywać\n"
+"                                    się będzie na wyłączną odpowiedzialność "
+"Klienta, w szczególności dotyczy to uwarunkowań\n"
+"                                    związanych ze stanem zdrowia Klienta"
+msgstr ""
+
+#: single-offer-pl.php:223 single-trener-pl.php:173
+msgid ""
+"Oświadczam, że jestem świadomy/-a, że na mocy Ustawy o prawach konsumenta z "
+"30 maja\n"
+"                                    2014 r.: 1) na podstawie Art. 27 w/w "
+"ustawy, mam prawo w terminie 14 dni odstąpić\n"
+"                                    (postępując szczegółowo w sposób opisany "
+"w Art. 30 w/w ustawy) od zawartej umowy bez\n"
+"                                    podawania przyczyny i ponoszenia kosztów "
+"(z wyjątkiem kosztów określonych w art. 33,\n"
+"                                    art. 34 ust.2 i art. 35); 2) zgodnie z "
+"Art. 21 pkt. 2 w/w ustawy, rozpoczęcie realizacji\n"
+"                                    przez Woodrun realizacji zamówionej "
+"przez klienta usługi przed upływem 14-dniowego\n"
+"                                    terminu na odstąpienie przez Klienta od "
+"umowy jest możliwe tylko w przypadku wyrażenia\n"
+"                                    przez Klienta wyraźnego żądania. ; 3)  "
+"zgodnie z Art. 35 w/w ustawy, w przypadku odstąpienia\n"
+"                                    przez Klienta od umowy po zgłoszeniu "
+"żądania opisanego powyżej w pkt. 1.f.ii, Woodrun będzie\n"
+"                                    zobowiązana do zwrotu Klientowi jedynie "
+"części opłaty – będącej w takiej samej relacji do\n"
+"                                    całości poniesionej przez Klienta opłaty "
+"jak relacja wartości niewykorzystanej części usługi\n"
+"                                    do wartości pełnej usługi.  4) zgodnie z "
+"Art. 38 w/w ustawy, w chwili, gdy Woodrun wykona w\n"
+"                                    pełni zamówioną przez Klienta usługę, "
+"Klient utraci prawo do odstąpienia od umowy."
+msgstr ""
+
+#: single-offer-pl.php:245 single-trener-pl.php:195
+msgid ""
+"Wyrażam zgodę w przypadku zakupu przeze mnie Voucherów W (na pakiety opieki "
+"online) na\n"
+"                                    rozpoczęcie realizacji przez Woodrun "
+"realizacji zamówionej przez klienta usługi przed\n"
+"                                    upływem 14-dniowego terminu na "
+"odstąpienie przez Klienta od umowy. Zgoda ta jest wymagana\n"
+"                                    z uwagi na specyfikę usług Woodrun oraz "
+"formy płatności za nie (poprzez vouchery posiadające\n"
+"                                    określony okres ważności). Niniejszy "
+"punkt nie odnosi się do Pobytów W."
+msgstr ""
+
+#: single-offer-pl.php:257 single-trener-pl.php:208
+msgid "Zamawiam"
+msgstr ""
+
+#: single-offer-pl.php:262 single-trener-pl.php:213
+msgid "Podsumowanie zamówienia"
+msgstr ""
+
+#: single-offer-pl.php:265 single-trener-pl.php:216
+msgid "Dane:"
+msgstr ""
+
+#: single-offer-pl.php:276 single-trener-pl.php:227
+msgid "E-mail:"
+msgstr ""
+
+#: single-offer-pl.php:282 single-trener-pl.php:233
+msgid "Adres:"
+msgstr ""
+
+#: single-offer-pl.php:285 single-trener-pl.php:236
+msgid "Kod pocztowy:"
+msgstr ""
+
+#: single-offer-pl.php:289 single-trener-pl.php:240
+msgid "Miejscowość:"
+msgstr ""
+
+#: single-offer-pl.php:319 single-trener-pl.php:254
+msgid "Voucher :"
+msgstr ""
+
+#: single-offer-pl.php:325
+msgid "Informacje :"
+msgstr ""
+
+#: single-offer-pl.php:326
+msgid "Termin pobytu:"
+msgstr ""
+
+#: single-offer-pl.php:328
+msgid "Zakwaterowanie: "
+msgstr ""
+
+#: single-offer-pl.php:331
+msgid ""
+"Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona "
+"inna osoba:"
+msgstr ""
+
+#: single-offer-pl.php:334
+msgid ""
+"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej z zakresem "
+"świadczeń: noclegi i wyżywienie:"
+msgstr ""
+
+#: single-offer-pl.php:341 single-trener-pl.php:259
+msgid "Cena i termin płatności : "
+msgstr ""
+
+#: single-offer-pl.php:345 single-trener-pl.php:263
+msgid "Czas trwania umowy* :"
+msgstr ""
+
+#: single-offer-pl.php:347 single-trener-pl.php:265
+msgid ""
+"*Jest to wynikający z umowy czas trwania zobowiązań zarówno\n"
+"                                Woodrun, jak i Klienta."
+msgstr ""
+
+#: single-offer-pl.php:352 single-trener-pl.php:270
+msgid ""
+"Po złożeniu zamówienia otrzymasz na wskazany adres e-mail wiadomość o "
+"kolejnych\n"
+"                                etapach\n"
+"                                realizacji zamówienia. Ponadto będziemy się "
+"kontaktować z Tobą telefonicznie."
+msgstr ""
+
+#: single-offer-pl.php:358 single-trener-pl.php:276
+msgid "Zamawiam z obowiązkiem zapłaty"
+msgstr ""
+
+#: single-offer-pl.php:365 single-trener-pl.php:283
+msgid "Dziękujemy za złożenie zamówienia."
+msgstr ""
+
+#: single-offer-pl.php:368 single-trener-pl.php:286
+msgid "Przepraszamy, coś poszło nie tak."
+msgstr ""
+
+#: single-offer-pl.php:380
+msgid "Rezerwuj online"
+msgstr ""
+
+#: single-offer-pl.php:383 single-trener-pl.php:306
+msgid "Powrót do listy ofert"
+msgstr ""
+
+#: offer-pl.php:59
+msgid "Dyscyplina"
+msgstr "Dyscypline"
+
+#: offer-pl.php:61
+msgid "Miesiąc"
+msgstr ""
+
+#. Name of the theme
+msgid "Adventure Element"
+msgstr ""
+
+#. Description of the theme
+msgid "Adventure Element Theme"
+msgstr ""
+
+#. Author of the theme
+msgid "Pawel Wolak"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.pawelwolak.info/"
+msgstr ""
+
+#: single-offer-pl.php:78 single-trener-pl.php:68
+msgid "Firma"
+msgstr "Company"
+
+#: single-offer-pl.php:84 single-offer-pl.php:268 single-trener-pl.php:74
+#: single-trener-pl.php:219
+msgid "Nazwa firmy:"
+msgstr "Company name"
