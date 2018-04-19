@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="da1da4e0-e134-48c3-8b41-c5cdcde055ad" name="Woodrun - FTP" url="http://s24.linuxpl.com">
+        <fileTransfer host="s24.linuxpl.com" port="21" rootFolder="/domains/woodrun.pl/public_html">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -622,6 +622,18 @@ function order_offer(){
         $message .= 'REGON : ' . $userData['company-regon'] . '<br>';
     }
 
+//    $mayArray = array(
+//        'user_name' =>$userData['person-name'],
+//        'user_email' =>$userData['person-email'],
+//        'user_phone' =>$userData['person-phone'],
+//        'offer_id' => $voucher['post']->ID,
+//        'offer_name' => $voucher['name'],
+//        'offer_price' => $voucher['price'],
+//        'offer_start_date' => date('Y-m-d H:i:s'),
+//        'offer_end_date' => date('Y-m-d H:i:s'),
+//        'user_notes' => 'Czas trwania : ' .$voucher["duration"],
+//    );
+
 
 //    Nazwa produktu i opis zawartości
     $message .= '<br><br><b>Nazwa produktu i opis zawartości: </b> ' . $voucher["name"] . '  <br>';
@@ -665,6 +677,17 @@ function order_offer(){
 
     $status = 400;
     try{
+//         createOrderUser(array(
+//            'user_name' =>$userData['person-name'],
+//            'user_email' =>$userData['person-email'],
+//            'user_phone' =>$userData['person-phone'],
+//            'offer_id' => $voucher['post']->ID,
+//            'offer_name' => $voucher['name'],
+//            'offer_price' => $voucher['price'],
+//            'offer_start_date' => date('Y-m-d H:i:s'),
+//            'offer_end_date' => date('Y-m-d H:i:s'),
+//            'user_notes' => 'Czas trwania : ' .$voucher["duration"],
+//        ));
         wp_mail( $userEmail, $subject, $body, $headers);
         wp_mail( $adminEmail, $subject, $body, $headers);
         if($sendMailAnkieta){
@@ -719,6 +742,131 @@ function sendMailQuestionnaire($userEmail)
 
 }
 
+
+
+
+// wyświetlanie tekstu do max X znaków
+function short_text_after_word($string, $wordsreturned)
+{
+    $retval = $string;
+    $string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $string);
+    $string = str_replace("\n", " ", $string);
+    $array = explode(" ", $string);
+    if (count($array)<=$wordsreturned)
+    {
+        $retval = $string;
+    }
+    else
+    {
+        array_splice($array, $wordsreturned);
+        $retval = implode(" ", $array)." ...";
+    }
+    return $retval;
+}
+
+function short_text_after_characters($string, $wordsreturned)
+{
+    if (strlen($string) > $wordsreturned) {
+        $string = substr($string, 0, $wordsreturned) . '...';
+    }
+    return $string;
+}
+
+
+
+
+
+//ladowanie filmu konkursowego
+
+    add_action('wp_ajax_render_competition_movie', 'render_competition_movie');
+    add_action('wp_ajax_nopriv_render_competition_movie', 'render_competition_movie');
+    function render_competition_movie()
+    {
+        $movieID = $_POST['data'];
+        $post = get_post($movieID);
+
+        $movie = get_field('movie', $post);
+        $name = get_field('name', $post);
+        $description = get_field('krotki_opis', $post);
+
+        $html = '';
+        $html .= '
+        <div class="user-data">
+            <h3 class="name">'.$name.'</h3>
+        </div>
+        <div class="user-movie">
+            <iframe src="'.$movie.'" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="user-description">
+            <span class="description">'.$description.'</span>
+        </div>';
+
+
+        wp_send_json_success(array('status'=> 200,'html' => $html));
+
+    }
+
+
+
+//sprawdzanie danych logowania
+function checkLoginData(){
+    $userData = $_POST['userData'];
+
+}
+
+function createOrderUser($userData){
+    global $wpdb;
+
+    $results = $wpdb->get_results('SELECT * FROM wp_orders WHERE `user_email` = "'.$userData["user_email"].'" ');
+
+    $response = array('status' => 400,'message'=> "Użytkownik już istnieje");
+
+    if(!$results){
+        $userPassword = randomPassword(8);
+        $userData = array(
+            'user_name' => $userData['user_name'],
+            'user_phone' => $userData['user_phone'],
+            'user_email' => $userData['user_email'],
+            'user_password' => md5($userPassword),
+            'offer_id' => $userData['offer_id'],
+            'offer_name' => $userData['offer_name'],
+            'offer_end_date' => $userData['offer_end_date'],
+            'offer_price' => $userData['offer_price'],
+            'user_notes' => $userData['user_notes'],
+        );
+
+        $createUser = $wpdb->insert('wp_orders', $userData);
+        if ($createUser === false){
+            $response = array('status' => '400');
+        }else{
+            $id = $wpdb->insert_id;
+            $response = array(
+                'status' => '200',
+                'userid' => $id
+            );
+        }
+    }
+    return $response;
+}
+
+
+
+
+
+
+
+function randomPassword($length,
+    $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
+    $str = '';
+    $max = mb_strlen($keyspace, '8bit') - 1;
+    if ($max < 1) {
+        throw new Exception('$keyspace must be at least two characters long');
+    }
+    for ($i = 0; $i < $length; ++$i) {
+        $str .= $keyspace[random_int(0, $max)];
+    }
+    return $str;
+}
 
 
 ?>

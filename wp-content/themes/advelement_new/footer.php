@@ -68,7 +68,6 @@
             <?php else:?>
                 <?= do_shortcode('[contact-form-7 id="5514" title="Formularz - Konkrus"]'); ?>
             <?php endif; ?>
-
         </div>
     </div>
 </div>

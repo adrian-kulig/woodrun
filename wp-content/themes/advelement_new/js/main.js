@@ -187,9 +187,7 @@
 
         $('#confirm-button-end').click(function (e) {
             e.preventDefault();
-            if($(this).hasClass('austriacamp')){
-                fbq('track', 'Purchase');
-            }
+
             var voucher = {};
             voucher.post = $('#offer_form').attr('data-postid');
             voucher.price = $('#voucher_price').html();
@@ -219,6 +217,11 @@
                             $('html, body').animate({
                                 scrollTop: $(".confirmation-order-success").offset().top - 50
                             }, 1000);
+
+                            if($('#confirm-button-end').hasClass('austriacamp')){
+                                console.log('purchaste');
+                                fbq('track', 'Purchase');
+                            }
                         }else{
                             $('.offer_form').fadeOut(500);
                             $('.confirmation-order-error').fadeIn(1000);
@@ -257,18 +260,20 @@
             $("#konkrus-modal").show();
         }
 
+        $(".target-competition-modal").click(function () {
+            $("#konkrus-modal").show();
+        })
+
 
         $(".modal .close").click(function () {
             $(this).closest('.modal').hide();
-        })
-
+        });
 
         document.addEventListener( 'wpcf7mailsent', function( event ) {
             if($('#ankieta-modal').length > 0){
                 $('.ankieta-body').fadeOut(500);
             }
         }, false );
-
 
         function printUserData(userDetails){
             //print user data
@@ -287,6 +292,39 @@
             return reg.test(c);
         }
 
+
+        $('.movie-box .show-more, .movie-box .poster').click(function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: '/wp-admin/admin-ajax.php',
+                data: ({
+                    action: "render_competition_movie",
+                    data : $(this).attr('data-id'),
+                }),
+                beforeSend: function(){
+                    $('#template-movie-modal .competition-body').html('');
+                },
+                success: function (data) {
+                    if (data) {
+                        if (data.data.status == 200) {
+                            $('#template-movie-modal .competition-body').html(data.data.html);
+                            $('#template-movie-modal').show();
+
+                        }else{
+                            alert('Wystąpił błąd. Prosimy spróbować później.')
+                        }
+                    }
+                }
+            })
+        })
+
+        $('#template-movie-modal .close').click(function (e) {
+            e.preventDefault();
+            $('#template-movie-modal').hide();
+            $('#template-movie-modal .competition-body').empty();
+        })
 
     })
 
