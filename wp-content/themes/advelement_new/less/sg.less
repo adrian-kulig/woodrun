@@ -70,6 +70,11 @@ body {
   margin: auto;
   position: relative;
 }
+
+#content .competition-content {
+  width:auto;
+  max-width:100%;
+}
 #content > div > div {
   margin-top: 20px;
 }
@@ -1910,10 +1915,10 @@ html{
 
 
 .movie-box{
-  width:30%;
+  //width:30%;
   float: left;
   margin:0 auto;
-  padding:15px;
+  //padding:15px;
   color:#fff;
   .box{
   background:#000;
@@ -1967,6 +1972,11 @@ html{
   }
 }
 
+.wetransfer-link{
+  font-weight:bold;
+  color: red;
+  font-size:20px
+}
 .competition-content{
   padding:50px 0;
   .target-competition-modal{
@@ -1976,10 +1986,13 @@ html{
     color: #007C89;
     cursor: pointer;
   }
-
 }
 
+#konkrus-modal{
+  overflow:auto;
+}
 #template-movie-modal{
+    overflow : auto !important;
   .modal-body{
     overflow-y: auto;
     height: 500px;
@@ -2015,4 +2028,9 @@ html{
       width:100%;
     }
   }
+}
+
+
+.page-template-template-competition{
+  min-width:auto;
 }

@@ -79,6 +79,10 @@ body {
   margin: auto;
   position: relative;
 }
+#content .competition-content {
+  width: auto;
+  max-width: 100%;
+}
 #content > div > div {
   margin-top: 20px;
 }
@@ -1827,10 +1831,8 @@ html {
 /*#slider-main .carousel-container .slider-carousel {*/
 /*}*/
 .movie-box {
-  width: 30%;
   float: left;
   margin: 0 auto;
-  padding: 15px;
   color: #fff;
 }
 .movie-box .box {
@@ -1883,6 +1885,11 @@ html {
 .movie-box .box .more-info .show-more:hover {
   border: 2px solid #007C89;
 }
+.wetransfer-link {
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+}
 .competition-content {
   padding: 50px 0;
 }
@@ -1892,6 +1899,12 @@ html {
   line-height: normal;
   color: #007C89;
   cursor: pointer;
+}
+#konkrus-modal {
+  overflow: auto;
+}
+#template-movie-modal {
+  overflow: auto !important;
 }
 #template-movie-modal .modal-body {
   overflow-y: auto;
@@ -1925,4 +1938,7 @@ html {
 #template-movie-modal .competition-body iframe {
   height: 440px;
   width: 100%;
+}
+.page-template-template-competition {
+  min-width: auto;
 }

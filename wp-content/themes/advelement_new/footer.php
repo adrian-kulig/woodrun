@@ -56,21 +56,25 @@
 
 
 <div id="konkrus-modal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2><?php _e('Zgłoszenie do konkursu', 'woodrun'); ?></h2>
-        </div>
-        <div class="modal-body">
-            <?php
-            if(pll_current_language() =='en'):?>
-                <?= do_shortcode('[contact-form-7 id="5515" title="Formularz - konkurs EN"]'); ?>
-            <?php else:?>
-                <?= do_shortcode('[contact-form-7 id="5514" title="Formularz - Konkrus"]'); ?>
-            <?php endif; ?>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><?php _e('Zgłoszenie do konkursu', 'woodrun'); ?></h2>
+
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <?php
+                if(pll_current_language() =='en'):?>
+                    <?= do_shortcode('[contact-form-7 id="5515" title="Formularz - konkurs EN"]'); ?>
+                <?php else:?>
+                    <?= do_shortcode('[contact-form-7 id="5514" title="Formularz - Konkrus"]'); ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </div>
+
 
 <script type="text/javascript">Cufon.now()</script>
 <?php wp_footer(); ?>

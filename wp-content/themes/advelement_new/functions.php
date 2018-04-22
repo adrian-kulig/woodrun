@@ -1,4 +1,8 @@
 <?php
+ini_set( 'upload_max_size' , '96M' );
+ini_set( 'post_max_size', '96M');
+ini_set( 'max_execution_time', '500' );
+
 
 require_once "post-types/logotypes.php";
 require_once "post-types/competition-files.php";
@@ -693,6 +697,64 @@ function order_offer(){
         if($sendMailAnkieta){
             sendMailQuestionnaire($userEmail);
         }
+        $status = 200;
+    }catch (Exception $e){
+        $status = $e->getMessage();
+    }
+
+     wp_send_json_success(array('status' => $status));
+}
+
+add_action('wp_ajax_competition_admin_mail', 'competition_admin_mail');
+add_action('wp_ajax_nopriv_competition_admin_mail', 'competition_admin_mail');
+function competition_admin_mail(){
+
+    $postData = $_POST['data'];
+    $message = '';
+    $userEmail = 'kulig.adrian1@gmail.com';
+
+    $message .='<b>Dziękujemy za nadesłanie zgłoszenia do konkursu Bieganie - moja pasja - filmy</b> <br>';
+
+    $message .='<b> Dane osobowe: </b><br>';
+
+    foreach ($postData as $data){
+        $name = $data['name'];
+        $value = $data['value'];
+        if($data['name'] =='Imie'){
+            $name = 'Imię';
+        }
+        if($data['name'] =='Email'){
+            $userEmail = $data['value'];
+        }
+        if($data['name'] == 'Zgoda-regulamin'){
+            $value  = 'Wyrażam zgodę na postanowienia <a target="_blank" href="/wp-content/themes/advelement_new/assets/KonkursWoodrunFILM-Bieganie-moja-pasja.pdf">Regulaminu Konkursu “BIEGANIE - MOJA PASJA - filmy”</a> ';
+        }
+        if($data['name'] == 'Zgoda-dane'){
+            $value = 'Wyrażam zgodę na przetwarzanie moich danych osobowych i na wykorzystanie przesłanych filmów oraz ich opisów do celów promocyjnych przez Organizatora';
+        }
+
+        $message .= $name. ' : ' . $value. '<br>';
+    }
+
+    $message .='<br><br>Informujemy, że odbiór ewentualnej nagrody będzie możliwy tylko po wcześniejszym polajkowaniu naszej strony na Facebooku <br>';
+    $message .='Komisja Konkursowa będzie przy wyborze zwycięzcy brała pod uwagę wyłącznie te filmy, które uzyskają co najmniej 1 polubienie od innych (filmy będę wystawione jako galeria na Fb)<br><br>';
+
+    $message .= '<br><br>Dziękujemy za okazane nam zaufanie.<br><br>';
+
+
+    $message .= 'Woodrun';
+
+
+    $adminEmail = 'biuro@woodrun.pl';
+
+    $subject = 'Potwierdzenie zgłoszenia do konkursu';
+    $body = $message;
+    $headers = array('Content-Type: text/html; charset=UTF-8', 'Cc: biuro@woodrun.pl');
+
+    $status = 400;
+    try{
+        wp_mail( $userEmail, $subject, $body, $headers);
+//        wp_mail( $adminEmail, $subject, $body, $headers);
         $status = 200;
     }catch (Exception $e){
         $status = $e->getMessage();

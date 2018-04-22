@@ -1,0 +1,337 @@
+.vform-element {
+    display: block;
+    float: left;
+    white-space: nowrap;
+    font: 14px/30px Arial;
+    clear: left;
+    color: #cccccc;
+    margin: 0 0 10px;
+}
+
+.vform-element input,
+.vform-element textarea {
+    border: 0;
+    outline: 0;
+    resize: none;
+    padding: 0;
+    margin: 0;
+    color: #cccccc;
+    font: 14px/30px Arial;
+}
+
+/* INPUT TEXT */
+.vform-inputText {
+}
+
+.vform-inputText * {
+    height: 30px;
+    float: left;
+}
+
+.vform-inputText-left {
+    display: block;
+    width: 10px;
+    background: url(images/form-left.png) no-repeat left top;
+}
+
+.vform-inputText input {
+    background: #151515;
+    width: 180px;
+}
+
+.vform-inputText-right {
+    display: block;
+    width: 10px;
+    background: url(images/form-right.png) no-repeat left top;
+}
+
+/* INPUT FILE */
+.vform-inputFile {
+    background: url(images/input-left.gif) no-repeat left top;
+    padding: 0 0 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vform-inputFile.focus,
+.vform-inputFile.focus * {
+    background-position: left -26px !important;
+}
+
+.vform-inputFile.correct,
+.vform-inputFile.correct * {
+    background-position: left -52px;
+}
+
+.vform-inputFile.incorrect,
+.vform-inputFile.incorrect * {
+    background-position: left bottom;
+}
+
+.vform-inputFile input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 26px;
+    font-size: 100px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.vform-inputFile-button {
+    display: block;
+    float: left;
+    background: url(images/file.gif) no-repeat left top !important;
+    width: 72px;
+    height: 26px;
+}
+
+.vform-inputFile.focus .vform-inputFile-button {
+    background-position: left top !important;
+}
+
+.vform-inputFile-text {
+    height: 26px;
+    display: block;
+    float: left;
+    width: 155px;
+    padding: 0 10px 0 0;
+    background: url(images/input.gif) repeat-x left top;
+}
+
+/* INPUT RADIO */
+.vform-inputRadio {
+    height: 20px;
+    width: 20px;
+    margin: 5px 0px;
+    background: url(images/form-radio.png) no-repeat left top;
+    overflow: hidden;
+}
+
+.checked.vform-inputRadio {
+    background-position: left bottom;
+}
+
+.vform-inputRadio input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -1px;
+    top: -1px;
+}
+
+.vform-inputRadio-image {
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+}
+
+/* INPUT CHECKBOX */
+.vform-inputCheckbox {
+    height: 15px;
+    width: 15px;
+    background: url(images/checkbox.gif) no-repeat left top;
+    overflow: hidden;
+}
+
+.vform-inputCheckbox.focus {
+    background-position: left -15px !important;
+}
+
+.vform-inputCheckbox.correct {
+    background-position: left -30px;
+}
+
+.vform-inputCheckbox.incorrect {
+    background-position: left bottom;
+}
+
+.vform-inputCheckbox input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -1px;
+    top: -1px;
+}
+
+.vform-inputCheckbox-image {
+    display: block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url(images/checkbox-check.gif) no-repeat left top;
+}
+
+.checked .vform-inputCheckbox-image {
+    background-position: left bottom;
+}
+
+/* TEXTAREA */
+.vform-textarea {
+}
+
+.vform-textarea.focus .vertical {
+    background-position: left -10px !important;
+}
+
+.vform-textarea.focus .horizontal {
+    background-position: -10px top !important;
+}
+
+.vform-textarea.correct .vertical {
+    background-position: left -20px;
+}
+
+.vform-textarea.correct .horizontal {
+    background-position: -20px top;
+}
+
+.vform-textarea.incorrect .vertical {
+    background-position: left bottom;
+}
+
+.vform-textarea.incorrect .horizontal {
+    background-position: right top;
+}
+
+.vform-textarea td {
+    padding: 0;
+}
+
+.vform-textarea-tl {
+    width: 10px;
+    height: 10px;
+    background: url(images/textarea-tl.gif) no-repeat left top;
+}
+
+.vform-textarea-t {
+    height: 10px;
+    background: url(images/textarea-t.gif) repeat-x left top;
+}
+
+.vform-textarea-tr {
+    width: 10px;
+    height: 10px;
+    background: url(images/textarea-tr.gif) no-repeat left top;
+}
+
+.vform-textarea-l {
+    width: 10px;
+    background: url(images/textarea-l.gif) repeat-y left top;
+}
+
+.vform-textarea-r {
+    width: 10px;
+    background: url(images/textarea-r.gif) repeat-y left top;
+}
+
+.vform-textarea-bl {
+    width: 10px;
+    height: 10px;
+    background: url(images/textarea-bl.gif) no-repeat left top;
+}
+
+.vform-textarea-b {
+    height: 10px;
+    background: url(images/textarea-b.gif) repeat-x left top;
+}
+
+.vform-textarea-br {
+    width: 10px;
+    height: 10px;
+    background: url(images/textarea-br.gif) no-repeat left top;
+}
+
+.vform-textarea textarea {
+    line-height: 15px;
+}
+
+/* SELECT */
+.vform-select {
+    height: 30px;
+    background: url(images/form-left.png) no-repeat left top;
+    padding: 0 0 0 10px;
+    position: relative;
+    z-index: 9998;
+}
+
+.vform-select.focus {
+    z-index: 9999;
+}
+
+.vform-select:hover .vform-select-arrow {
+    background-position: left bottom;
+}
+
+.vform-select-text {
+    height: 30px;
+    float: left;
+    background: #151515;
+    margin: 0;
+    cursor: default;
+    width: 180px;
+}
+
+.vform-select-arrow {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 30px;
+    background: url(images/form-arrow.png) no-repeat left top;
+}
+
+.vform-select select {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+}
+
+.vform-select-options {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 9999;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    line-height: 24px;
+    display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 192px;
+}
+
+.vform-select-options li:first-child span {
+    border-radius: 3px 3px 0 0;
+}
+
+.vform-select-options li {
+    display: block;
+    margin: 0;
+    border-top: 0;
+}
+
+.vform-select-options .selected span,
+.vform-select-options li:hover span {
+    background: #007C89;
+    color: #fff !important;
+}
+
+.vform-select-options span {
+    background: #151515;
+    display: block;
+    cursor: pointer;
+    padding: 0 10px;
+    width: 100%;
+}

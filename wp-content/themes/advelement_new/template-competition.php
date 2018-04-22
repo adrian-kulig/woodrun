@@ -16,8 +16,8 @@ $args = array(
 
 $posts = get_posts($args);
 ?>
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"-->
-<!--          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
     <div class="container" style="padding:0;">
         <div id="content">
@@ -29,6 +29,8 @@ $posts = get_posts($args);
                             <h5 class="target-competition-modal">Prześlij nam swój film i weź udział w konkursie</h5>
                         </hgroup>
                     </div>
+
+
 
 
 
@@ -79,6 +81,7 @@ $posts = get_posts($args);
         </div>
     </div>
 </div>
+
 
 
 <?php get_footer();?>

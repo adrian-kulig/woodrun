@@ -296,6 +296,10 @@
         $('.movie-box .show-more, .movie-box .poster').click(function (e) {
             e.preventDefault();
 
+            var video = $(this).parents('.movie-box').find('video');
+            console.log(video);
+            video[0].pause();
+
             $.ajax({
                 type: "POST",
                 url: '/wp-admin/admin-ajax.php',
@@ -325,6 +329,36 @@
             $('#template-movie-modal').hide();
             $('#template-movie-modal .competition-body').empty();
         })
+
+
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            console.log(event.detail.inputs);
+            if ( '5514' == event.detail.contactFormId ) {
+
+                $.ajax({
+                    type: "POST",
+                    url: '/wp-admin/admin-ajax.php',
+                    data: ({
+                        action: "competition_admin_mail",
+                        data : event.detail.inputs,
+                        // status : event.detail.status,
+                    }),
+                    beforeSend: function(){
+                        // $('#template-movie-modal .competition-body').html('');
+                    },
+                    success: function (data) {
+                        if (data) {
+                            if (data.data.status == 200) {
+
+                            }else{
+                            }
+                        }
+                    }
+                })
+
+
+            }
+        }, true );
 
     })
 
