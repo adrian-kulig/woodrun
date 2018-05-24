@@ -79,7 +79,7 @@
                 <h2><?php bloginfo( 'description' ); ?></h2>
             </hgroup>
         </a>
-<!--        <div class="site-language">--><?php //pll_the_languages(array('show_flags' => 1, 'hide_current' => 0, 'display_names_as' => 'slug')); ?><!--</div>-->
+        <div class="site-language"><?php pll_the_languages(array('show_flags' => 1, 'hide_current' => 0, 'display_names_as' => 'slug')); ?></div>
 
         <?php
 $defaults = array(

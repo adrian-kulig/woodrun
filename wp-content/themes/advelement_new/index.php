@@ -36,7 +36,8 @@ switch ($cur_lang) {
 $cur_lang = 'pl';
 
 
-if (is_404()): wp_redirect(esc_url(home_url('/'))); endif;
+
+//if (is_404()): wp_redirect(esc_url(home_url('/'))); endif;
 if (isset($_GET['cat']) && $_GET['cat'] == '0,0'): wp_redirect(get_permalink($redir)); endif;
 
 if (is_front_page()):

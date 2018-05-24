@@ -269,7 +269,7 @@ body {
   margin: 0 0 0 -6px;
 }
 #sport h3 {
-  font: 36px/100px 'Myriad Pro';
+  font: 28px/100px 'Myriad Pro';
   color: #fff;
   padding: 0 25px;
   margin: 0 0 10px;
@@ -1903,21 +1903,26 @@ html {
 #konkrus-modal {
   overflow: auto;
 }
-#template-movie-modal {
+#template-movie-modal,
+#template-exercise-modal {
   overflow: auto !important;
 }
-#template-movie-modal .modal-body {
+#template-movie-modal .modal-body,
+#template-exercise-modal .modal-body {
   overflow-y: auto;
   height: 500px;
 }
-#template-movie-modal .modal-header {
+#template-movie-modal .modal-header,
+#template-exercise-modal .modal-header {
   padding: 5px 30px;
 }
-#template-movie-modal .modal-header .close {
+#template-movie-modal .modal-header .close,
+#template-exercise-modal .modal-header .close {
   background: transparent;
   border: 0;
 }
-#template-movie-modal .competition-body .name {
+#template-movie-modal .competition-body .name,
+#template-exercise-modal .competition-body .name {
   color: #000;
   font-size: 18px;
   margin-bottom: 10px;
@@ -1926,7 +1931,10 @@ html {
   width: 100%;
   clear: both;
 }
-#template-movie-modal .competition-body .user-description {
+#template-movie-modal .competition-body .user-description,
+#template-exercise-modal .competition-body .user-description,
+#template-movie-modal .competition-body .description,
+#template-exercise-modal .competition-body .description {
   color: #000;
   text-align: justify;
   font-size: 16px;
@@ -1935,9 +1943,43 @@ html {
   line-height: normal;
   clear: both;
 }
-#template-movie-modal .competition-body iframe {
+#template-movie-modal .competition-body iframe,
+#template-exercise-modal .competition-body iframe {
   height: 440px;
   width: 100%;
+}
+.exercies-password span {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-bottom: 15px;
+}
+.exercies-password #send-pass,
+.exercies-password #exercises-pass {
+  padding: 5px 10px;
+}
+.exercies-password #exercies-message,
+.exercies-password #exercies-message-end-date {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-top: 5px;
+  display: none;
+}
+.exercies-password #exercies-message span,
+.exercies-password #exercies-message-end-date span {
+  color: red;
+  font-weight: 700;
+}
+.exercise-box .box {
+  min-height: 490px;
+}
+.empty-exercises {
+  text-align: center;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
 }
 .page-template-template-competition {
   min-width: auto;

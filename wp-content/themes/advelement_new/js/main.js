@@ -195,6 +195,13 @@
             voucher.duration = $('#voucher_duration').html();
             voucher.link = $('#voucher_link').html();
 
+            var rulesText = '';
+            $('.rules-area .rule_text').each(function () {
+                rulesText += $(this).html();
+                rulesText += '<br><br>';
+            });
+
+
 
             $.ajax({
                 type: "POST",
@@ -203,7 +210,8 @@
                     action: "order_offer",
                     data : userDetails,
                     type: type,
-                    voucher: voucher
+                    voucher: voucher,
+                    rulesText : rulesText,
                 }),
                 beforeSend: function(){
                   $('.ajax-spinner').show();
@@ -293,7 +301,7 @@
         }
 
 
-        $('.movie-box .show-more, .movie-box .poster').click(function (e) {
+        $('.competition-movie-box.movie-box .show-more, .movie-box .poster').click(function (e) {
             e.preventDefault();
 
             var video = $(this).parents('.movie-box').find('video');
@@ -355,10 +363,82 @@
                         }
                     }
                 })
-
-
             }
         }, true );
+
+
+        $('#select-exercises').on('submit',function (e) {
+            e.preventDefault();
+            var pass = $('#select-exercises #exercises-pass').val();
+            var email = $('#select-exercises #exercises-email').val();
+            var post_id = $('#select-exercises #post_id').val();
+            var endDate = $('#select-exercises #end_date').val();
+            var today = new Date().toISOString().slice(0,10);
+
+
+            if(endDate < today){
+                $('#exercies-message-end-date').show();
+                return;
+            }
+
+
+            $.ajax({
+                type: "POST",
+                url: '/wp-admin/admin-ajax.php',
+                data: ({
+                    action: "exercise_login",
+                    pass : pass,
+                    email: email,
+                    post_id : post_id,
+                }),
+                beforeSend: function(){
+                    $('#exercies-message').hide();
+                    $('#exercies-list-item').empty();
+                },
+                success: function (data) {
+                    if (data) {
+                        if (data.data.status == 200) {
+                            $('.exercies-password').hide();
+                            $('#exercies-list-item').html(data.data.html);
+                        }else{
+                            $('#exercies-message').show();
+                            $('#exercies-message-end-date').hide();
+                        }
+                    }
+                }
+            })
+        })
+
+
+
+        $('body').on('click', '.exercise-box .show-more', function() {
+            $.ajax({
+                type: "POST",
+                url: '/wp-admin/admin-ajax.php',
+                data: ({
+                    action: "render_exercise_box",
+                    data : $(this).attr('data-id'),
+                }),
+                beforeSend: function(){
+                    $('#template-exercise-modal .competition-body').html('');
+                },
+                success: function (data) {
+                    if (data) {
+                        if (data.data.status == 200) {
+                            $('#template-exercise-modal .competition-body').html(data.data.html);
+                            $('#template-exercise-modal').show();
+
+                        }else{
+                            alert('Wystąpił błąd. Prosimy spróbować później.')
+                        }
+                    }
+                }
+            })
+        });
+
+        // window.history.pushState('page2', 'Title', '/page2.php');
+
+
 
     })
 

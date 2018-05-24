@@ -42,7 +42,7 @@ $posts = get_posts($args);
                         $description = get_field('krotki_opis', $post);
                         ?>
 
-                        <div class="col-md-4 movie-box">
+                        <div class="col-md-4 movie-box competition-movie-box">
                             <div class="box">
                                 <h5><?php echo $name;?></h5>
                                 <span><?php echo short_text_after_characters($description,150);?></span>

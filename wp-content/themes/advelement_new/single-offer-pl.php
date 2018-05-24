@@ -187,19 +187,18 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-2" type="checkbox" class="checkbox"
                                                                     name="rules-2"></span>
                                 <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę na 1) przetwarzanie danych osobowych w celu: wykorzystania przez Woodrun oraz
-                                    Trenerów W Panelu W do realizacji usług zawartych w Voucherze W lub Pobycie W oraz prezentacji
-                                    danych osobowych Użytkownika na jego profilu w Panelu W  (widocznych jedynie dla Administratora,
-                                    Trenerów W oraz samego Klienta); 2) udostępnianie przez Woodrun wybranych danych Trenerom W i
-                                    innym kontrahentom Administratora w celach opisanych powyżej (związanych z realizacją przez nich
-                                    usług wobec Klientów w szczególności z wykorzystaniem Panelu W); 3) dochodzenie przez Woodrun
-                                    roszczeń z tytułu prowadzonej działalności; 4) prowadzenie przez Woodrun marketingu bezpośredniego
-                                    własnych produktów lub usług administratora danych. 5) i oświadczam o świadomości na temat prawa dostępu
-                                    do podanych swoich danych osobowych i ich poprawiania oraz o dobrowolności podania w/w danych, oraz
-                                    podanie prawnych podstaw przetwarzania danych: niezbędności podania w/w danych z uwagi na umożliwienie
-                                    Woodrun - poprzez wykorzystanie Panelu W – realizacji umowy, zaś w przypadku celów: dochodzenie
-                                    roszczeń i marketing bezpośredni z uwagi na Art.23 pkt.4 Ustawy o ochronie danych
-                                    osobowych z 29 sierpnia 1997 r.', 'woodrun'); ?>
+                                     <?php _e('Wyrażam zgodę na umieszczenie moich danych osobowych w informatycznej bazie danych Jałowcówka Gospodarstwo Rolne,
+                                        Koszarawa 497 (kod pocztowy 34-332 Koszarawa), zwane dalej Woodrun i ich przetwarzanie zgodnie z Ustawą o Ochronie Danych
+                                         Osobowych z dnia 29 sierpnia 1997 r. (Dz. U. Dz.U. 1997 nr 133 poz. 883 z późn. zm.) oraz Rozporządzeniem Parlamentu 
+                                        Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem
+                                        danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO) w celu otrzymywania
+                                         informacji marketingowych (w tym prowadzenia marketingu bezpośredniego własnych usług i produktów), handlowych i 
+                                         informacyjnych dotyczących m.in. oferty Woodrun za pomocą poczty elektronicznej, zgodnie z Ustawą o Świadczeniu Usług Drogą 
+                                         Elektroniczną z dnia 18 lipca 2002 r. (Dz.U. 2002 nr 144 poz. 1204). Dane będą przetwarzane przez okres 15 lat. Jestem świadomy, 
+                                         że mam możliwość dostępu do swoich danych, w celu ich sprostowania i usunięcia oraz żądania ograniczenia ich przetwarzania oraz 
+                                         wycofania udzielonej zgody w każdym momencie, przy czym,  cofnięcie uprzednio wyrażonej zgody nie wpłynie na legalność 
+                                         przetwarzania przed jej wycofaniem, a także wniesienia skargi do organu nadzorczego. Dane nie będą przekazywane 
+                                         do państw trzecich. ', 'woodrun'); ?>
                                     </span>
                             </label>
                         </div>
@@ -209,20 +208,16 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-6" type="checkbox" class="checkbox"
                                                                     name="rules-6"></span>
                                 <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę na to, że korzystanie przeze mnie z Usług świadczonych przez Woodrun odbywać się 
-                                     będzie na wyłączną moją odpowiedzialność , w szczególności dotyczy to uwarunkowań związanych ze stanem 
-                                     mojego zdrowia. W szczególności, przyjmuję do wiadomości, że korzystanie z pakietów Woodrun jest przeznaczone 
-                                     wyłącznie dla osób nie posiadających poniższych chorób i dolegliwości: układu nerwowego (epilepsja, 
-                                     polineuropatie, po przebytych udarach/wylewach, stwardnienie rozsiane, stwardnienie zanikowe boczne), 
-                                     układu hormonalnego (cukrzyca (niezależnie od jej typu), choroba/zespół Cushinga), układu pokarmowego 
-                                     (choroba Leśniowskiego-Crohna, po resekcjach narządów układu pokarmowego), układu kostno-stawowego 
-                                     (urazy stanowiące przeciwwskazanie do podjęcia treningu siłowego, reumatoidalne zapalenie stawów, 
-                                     dna moczanowa, rwa kulszowa), układu sercowo-naczyniowego (tętniaki, wady serca, przebyte zawały serca), 
-                                     układu oddechowego (dławica piersiowa, po przebytej resekcji płuc), układu moczowego (choroby nerek, 
-                                     po przeszczepie nerek). Nie oferujemy także w/w pakietów kobietom w ciąży, karmiącym piersią, osobom 
-                                     odbywającym rehabilitację, osobom zmagającym się z zaburzeniami natury psychicznej, zwłaszcza dającymi 
-                                     objawy somatyczne. Przy zamówieniu pakietu niezbędne jest  potwierdzenie spełnienia tych warunków. 
-                                     Pakiety nie są przez Woodrun oferowane osobom  z nietolerancjami i alergiami pokarmowymi. ', 'woodrun'); ?>
+                                     <?php _e('Wyrażam zgodę, że korzystanie przeze mnie z Usług świadczonych przez Woodrun, odbywać się będzie na moją
+                                      wyłączną odpowiedzialność, w szczególności dotyczy to uwarunkowań związanych ze stanem mojego zdrowia i oświadczam, 
+                                      że nie cierpię na żadną z poniższych chorób i dolegliwości: układu nerwowego (epilepsja, polineuropatie, po przebytych 
+                                      udarach/wylewach, stwardnienie rozsiane, stwardnienie zanikowe boczne), układu hormonalnego (cukrzyca (niezależnie od jej typu), 
+                                      choroba/zespół Cushinga), układu pokarmowego (choroba Leśniowskiego-Crohna, po resekcjach narządów układu pokarmowego), 
+                                      układu kostno-stawowego (urazy stanowiące przeciwwskazanie do podjęcia treningu siłowego, reumatoidalne zapalenie stawów, 
+                                      dna moczanowa, rwa kulszowa), układu sercowo-naczyniowego (tętniaki, wady serca, przebyte zawały serca), układu oddechowego 
+                                      (dławica piersiowa, po przebytej resekcji płuc), układu moczowego (choroby nerek, po przeszczepie nerek), nie odbywam 
+                                      rehabilitacji, nie zmagam się z zaburzeniami natury psychicznej, zwłaszcza dającymi objawy somatyczne. Oświadczam także, 
+                                      że nie jestem w ciąży i nie karmię piersią. ','woodrun'); ?>
                                     </span>
                             </label>
                         </div>
@@ -232,10 +227,10 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-3" type="checkbox" class="checkbox"
                                                                     name="rules-3"></span>
                                 <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę na korzystanie przez Klienta z Usług świadczonych przez Woodrun odbywać
-                                    się będzie na wyłączną odpowiedzialność Klienta, w szczególności dotyczy to uwarunkowań
-                                    związanych ze stanem zdrowia Klienta', 'woodrun'); ?>
-                                    </span>
+                                         <?php _e('Oświadczam, że jestem osobą całkowicie zdrową i nie mam zdiagnozowanych przez 
+                                         lekarza żadnych chorób, które mogłyby wpłynąć na moje zdrowie w trakcie realizacji
+                                          planu żywieniowego wraz z treningiem', 'woodrun'); ?>
+                                        </span>
                             </label>
                         </div>
 
@@ -244,19 +239,13 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-4" type="checkbox" class="checkbox"
                                                                     name="rules-4"></span>
                                 <span class="rule_text">
-                                        <?php _e('Oświadczam, że jestem świadomy/-a, że na mocy Ustawy o prawach konsumenta z 30 maja
-                                    2014 r.: 1) na podstawie Art. 27 w/w ustawy, mam prawo w terminie 14 dni odstąpić
-                                    (postępując szczegółowo w sposób opisany w Art. 30 w/w ustawy) od zawartej umowy bez
-                                    podawania przyczyny i ponoszenia kosztów (z wyjątkiem kosztów określonych w art. 33,
-                                    art. 34 ust.2 i art. 35); 2) zgodnie z Art. 21 pkt. 2 w/w ustawy, rozpoczęcie realizacji
-                                    przez Woodrun realizacji zamówionej przez klienta usługi przed upływem 14-dniowego
-                                    terminu na odstąpienie przez Klienta od umowy jest możliwe tylko w przypadku wyrażenia
-                                    przez Klienta wyraźnego żądania. ; 3)  zgodnie z Art. 35 w/w ustawy, w przypadku odstąpienia
-                                    przez Klienta od umowy po zgłoszeniu żądania opisanego powyżej w pkt. 1.f.ii, Woodrun będzie
-                                    zobowiązana do zwrotu Klientowi jedynie części opłaty – będącej w takiej samej relacji do
-                                    całości poniesionej przez Klienta opłaty jak relacja wartości niewykorzystanej części usługi
-                                    do wartości pełnej usługi.  4) zgodnie z Art. 38 w/w ustawy, w chwili, gdy Woodrun wykona w
-                                    pełni zamówioną przez Klienta usługę, Klient utraci prawo do odstąpienia od umowy.', 'woodrun'); ?>
+                                        <?php _e('Wyrażam zgodę na kontakt ze mna drogą telefoniczną lub mailową ze strony Woodrun, w celu odbycia
+                                         ze mną rozmowy lub korespondencji mailowej i dzięki temu uzyskania informacji (w tym danych dotyczących
+                                          moich celów biegowych i kilometrażu tygodniowego w celu optymalnego dostosowania proponowanego planu 
+                                          treningowego do moich potrzeb i możliwości, co jest elementem profilowania - automatycznego podejmowania 
+                                          decyzji),  pozwalających na przygotowanie i omówienie ze mną proponowanego zindywidualizowanego na moje 
+                                          potrzeby planu treningowego, wraz z informacjami uzupełniającymi dotyczącymi w/w planu i metodyki treningu 
+                                          biegowego przesłanymi w formie poradnikowej. ', 'woodrun'); ?>
                                     </span>
                             </label>
                         </div>
@@ -266,11 +255,16 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-5" type="checkbox" class="checkbox"
                                                                     name="rules-5"></span>
                                 <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę w przypadku zakupu przeze mnie Voucherów W (na pakiety opieki online) na
-                                    rozpoczęcie realizacji przez Woodrun realizacji zamówionej przez klienta usługi przed
-                                    upływem 14-dniowego terminu na odstąpienie przez Klienta od umowy. Zgoda ta jest wymagana
-                                    z uwagi na specyfikę usług Woodrun oraz formy płatności za nie (poprzez vouchery posiadające
-                                    określony okres ważności). Niniejszy punkt nie odnosi się do Pobytów W.', 'woodrun'); ?>
+                                     <?php _e('Oświadczam, że:  1) jestem świadomy, że na podstawie Art. 27 Ustawy o prawach konsumenta z 30 maja 2014 r., 
+                                     mogę w terminie 14 dni odstąpić (postępując szczegółowo w sposób opisany w Art. 30 w/w ustawy) od zawartej umowy bez 
+                                     podawania przyczyny i ponoszenia kosztów (z wyjątkiem kosztów określonych w art. 33, art. 34 ust.2 i art. 35); 2) 
+                                     wyrażam zgodę na rozpoczęcie realizacji przez Woodrun realizacji zamówionej przeze mnie usługi przed upływem 14-dniowego 
+                                     terminu na odstąpienie przeze mnie od umowy; zgoda ta jest wymagana z uwagi na specyfikę usług Woodrun oraz formy płatności 
+                                     za nie (poprzez vouchery posiadające określony okres ważności) oraz że zgodnie z Art. 35 w/w ustawy, w przypadku odstąpienia 
+                                     przeze mnie od umowy Woodrun będzie zobowiązana do zwrotu mi jedynie części opłaty – będącej w takiej samej relacji do 
+                                     całości poniesionej przeze mnie opłaty jak relacja wartości niewykorzystanej części usługi do wartości pełnej usługi; 3) 
+                                     zgodnie z Art. 38 w/w ustawy, w chwili, gdy Woodrun wykona w pełni zamówioną przeze mnie usługę, utracę prawo do 
+                                     odstąpienia od umowy.', 'woodrun'); ?>
                                     </span>
                             </label>
                         </div>

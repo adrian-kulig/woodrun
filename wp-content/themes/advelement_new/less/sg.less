@@ -264,7 +264,7 @@ body {
   margin: 0 0 0 -6px;
 }
 #sport h3 {
-  font: 36px/100px 'Myriad Pro';
+  font: 28px/100px 'Myriad Pro';
   color: #fff;
   padding: 0 25px;
   margin: 0 0 10px;
@@ -1991,7 +1991,7 @@ html{
 #konkrus-modal{
   overflow:auto;
 }
-#template-movie-modal{
+#template-movie-modal, #template-exercise-modal{
     overflow : auto !important;
   .modal-body{
     overflow-y: auto;
@@ -2014,7 +2014,7 @@ html{
       width:100%;
       clear: both;
     }
-    .user-description{
+    .user-description, .description{
       color:#000;
       text-align: justify;
       font-size:16px;
@@ -2028,6 +2028,62 @@ html{
       width:100%;
     }
   }
+}
+
+
+.exercies-password{
+  span{
+    width:100%;
+    float:left;
+    clear: both;
+    margin-bottom:15px;
+  }
+
+  #send-pass , #exercises-pass{
+    padding:5px 10px;
+  }
+  #exercies-message, #exercies-message-end-date{
+    float:left;
+    clear:both;
+    width:100%;
+    margin-top:5px;
+    display:none;
+    span{
+      color:red;
+      font-weight:700;
+    }
+  }
+}
+
+.exercise-box{
+  .box{
+    min-height:490px;
+    //.short-description{
+    //  float:left;
+    //  clear: both;
+    //  width:100%;
+    //  .description-text, .description-name{
+    //    float:left;
+    //    width:100%;
+    //    clear:both;
+    //  }
+    //}
+    //.content-text{
+    //  float:left;
+    //  clear: both;
+    //  width:100%;
+    //  max-height:350px;
+    //}
+  }
+}
+
+.empty-exercises{
+  text-align: center;
+}
+
+.img-responsive{
+  max-width:100%;
+  height:auto;
 }
 
 

@@ -1,15 +1,16 @@
 <?php
-ini_set( 'upload_max_size' , '96M' );
-ini_set( 'post_max_size', '96M');
-ini_set( 'max_execution_time', '500' );
+ini_set('upload_max_size', '96M');
+ini_set('post_max_size', '96M');
+ini_set('max_execution_time', '500');
 
 
 require_once "post-types/logotypes.php";
 require_once "post-types/competition-files.php";
+require_once "post-types/users-account.php";
+require_once "post-types/exercises-repository.php";
 
 
-load_theme_textdomain( 'woodrun', get_template_directory().'/languages' );
-
+load_theme_textdomain('woodrun', get_template_directory() . '/languages');
 
 
 add_action('do_feed_facebook-9lBM3', 'feed_facebook', 10, 1);
@@ -60,9 +61,9 @@ register_sidebar(array(
     'id' => 's',
     'description' => 'Panel do edycji boxów w stopce',
     'before_widget' => '            <div class="footer-entry black-entry">
-                <article>',
+            <article>',
     'after_widget' => '                </article>
-            </div>',
+        </div>',
     'before_title' => '<h2>',
     'after_title' => '</h2>
 ',
@@ -272,7 +273,7 @@ function adv_authors()
 function adv_us($atts, $content = null, $tag = null)
 {
     $return = '
-        <ul id="authors">';
+    <ul id="authors">';
     $authors = adv_authors();
     foreach ($authors as $author) {
         if ($author->ID == 1) {
@@ -337,9 +338,9 @@ add_action('edit_user_profile_update', 'fb_save_custom_user_profile_fields');
 
 function adv_comment($comment, $args, $depth)
 {
-    $GLOBALS['comment'] = $comment;
-    ?>
-    <li>
+$GLOBALS['comment'] = $comment;
+?>
+<li>
     <article id="comment-<?php comment_ID(); ?>" class="comment">
         <header>
             <h3><?php echo get_comment_meta(get_comment_ID(), 'destination', true); ?></h3>
@@ -352,79 +353,79 @@ function adv_comment($comment, $args, $depth)
         </footer>
     </article>
     <?php
-}
+    }
 
-function adv_commentfields($fields)
-{
-    $fields['author'] = '<p><input name="author" type="text" value="Imię i nazwisko" /></p>';
-    $fields['destination'] = '<p><input name="destination" type="text" value="Gdzie byłeś?" /></p>';
+    function adv_commentfields($fields)
+    {
+        $fields['author'] = '<p><input name="author" type="text" value="Imię i nazwisko" /></p>';
+        $fields['destination'] = '<p><input name="destination" type="text" value="Gdzie byłeś?" /></p>';
 
-    return $fields;
-}
+        return $fields;
+    }
 
-function adv_commentfield()
-{
-    ?>
-    <p><input name="destination" type="text" value="Gdzie byłeś?"/></p>
-    <?php
-}
+    function adv_commentfield()
+    {
+        ?>
+        <p><input name="destination" type="text" value="Gdzie byłeś?"/></p>
+        <?php
+    }
 
-add_filter('comment_form_default_fields', 'adv_commentfields');
-add_action('comment_form_logged_in_after', 'adv_commentfield');
-add_action('comment_form_after_fields', 'adv_commentfield');
+    add_filter('comment_form_default_fields', 'adv_commentfields');
+    add_action('comment_form_logged_in_after', 'adv_commentfield');
+    add_action('comment_form_after_fields', 'adv_commentfield');
 
-function save_comment_meta_data($comment_id)
-{
-    $destination = $_POST['destination'];
-    update_comment_meta($comment_id, 'destination', $destination);
-}
+    function save_comment_meta_data($comment_id)
+    {
+        $destination = $_POST['destination'];
+        update_comment_meta($comment_id, 'destination', $destination);
+    }
 
-add_action('comment_post', 'save_comment_meta_data');
+    add_action('comment_post', 'save_comment_meta_data');
 
-function adv_date($u)
-{
-    return str_replace(
-        array('.01.', '.02.', '.03.', '.04.', '.05.', '.06.', '.07.', '.08.', '.09.', '.10.', '.11.', '.12.'),
-        array(
-            ' styczeń ',
-            ' luty ',
-            ' marzec ',
-            ' kwiecień ',
-            ' maj ',
-            ' czerwiec ',
-            ' lipiec ',
-            ' sierpień ',
-            ' wrzesień ',
-            ' październik ',
-            ' listopad ',
-            ' grudzień '
-        ),
-        date('j.m.Y', $u)
-    );
-}
+    function adv_date($u)
+    {
+        return str_replace(
+            array('.01.', '.02.', '.03.', '.04.', '.05.', '.06.', '.07.', '.08.', '.09.', '.10.', '.11.', '.12.'),
+            array(
+                ' styczeń ',
+                ' luty ',
+                ' marzec ',
+                ' kwiecień ',
+                ' maj ',
+                ' czerwiec ',
+                ' lipiec ',
+                ' sierpień ',
+                ' wrzesień ',
+                ' październik ',
+                ' listopad ',
+                ' grudzień '
+            ),
+            date('j.m.Y', $u)
+        );
+    }
 
-function adv_excerptmore($more)
-{
-    return '...';
-}
+    function adv_excerptmore($more)
+    {
+        return '...';
+    }
 
-add_filter('excerpt_more', 'adv_excerptmore');
+    add_filter('excerpt_more', 'adv_excerptmore');
 
-function adv_excerptlength($length)
-{
-    return 25;
-}
+    function adv_excerptlength($length)
+    {
+        return 25;
+    }
 
-add_filter('excerpt_length', 'adv_excerptlength', 999);
+    add_filter('excerpt_length', 'adv_excerptlength', 999);
 
-function adv_home_background()
-{
-    the_post();
-    preg_match_all('#src="([^"]+)"#', get_the_content(), $matches);
-    shuffle($matches[1]);
-    //echo ' style="background-image: url(' . $matches[1][array_rand($matches[1])] . ')"';
-    ?>
-       <ul id="slider-main">
+    function adv_home_background()
+    {
+        the_post();
+        preg_match_all('#src="([^"]+)"#', get_the_content(), $matches);
+        shuffle($matches[1]);
+        //echo ' style="background-image: url(' . $matches[1][array_rand($matches[1])] . ')"';
+        ?>
+        <ul id="slider-main">
             <div class="slider-carousel owl-carousel">
                 <?php
                 foreach ($matches[1] as $match) {
@@ -432,414 +433,417 @@ function adv_home_background()
                 }
                 ?>
             </div>
-       </ul>
+        </ul>
 
-    <?php
+        <?php
 
 //    echo '<ul id="slider">';
 //    foreach ($matches[1] as $match) {
 //        echo '<li style="background-image: url(' . $match . ');"></li>';
 //    }
 //    echo '</ul>';
-}
+    }
 
-function adv_permalink()
-{
-    /**
-     * Filter the display of the permalink for the current post.
-     *
-     * @since 1.5.0
-     *
-     * @param string $permalink The permalink for the current post.
-     */
-    return esc_url(apply_filters('the_permalink', get_permalink()));
-}
-
-function adv_excerpt()
-{
-
-    /**
-     * Filter the displayed post excerpt.
-     *
-     * @since 0.71
-     *
-     * @see get_the_excerpt()
-     *
-     * @param string $post_excerpt The post excerpt.
-     */
-    return apply_filters('the_excerpt', get_the_excerpt());
-}
-
-class Adv_Walker extends Walker_Nav_Menu
-{
-    function start_el(&$output, $item, $depth, $args)
+    function adv_permalink()
     {
-        global $_cat;
+        /**
+         * Filter the display of the permalink for the current post.
+         *
+         * @since 1.5.0
+         *
+         * @param string $permalink The permalink for the current post.
+         */
+        return esc_url(apply_filters('the_permalink', get_permalink()));
+    }
 
-        if (array_search('current-menu-item', $item->classes) ||
-            (isset($_cat) && $_cat->category_parent == 4 && $item->object_id == 2 ||
-                (isset($_cat) && $_cat->category_parent == 113 && $item->object_id == 4645))
-        ) {
-            $current = 'current';
-        } elseif (in_category(11) && $item->title == 'Aktualności') {
-            $current = 'current';
-        } elseif (in_category(66) && $item->title == 'Ekspres narty') {
-            $current = 'current';
-        } elseif (in_category(67) && $item->title == 'Stwórz swoją aktywną przygodę') {
-            $current = 'current';
-        } elseif (in_category(76) && $item->title == 'Adventure dla Ciebie') {
-            $current = 'current';
-        } elseif (is_category(5)) {
-            if (in_category(99) && $item->title == 'Zima') {
+    function adv_excerpt()
+    {
+
+        /**
+         * Filter the displayed post excerpt.
+         *
+         * @since 0.71
+         *
+         * @see get_the_excerpt()
+         *
+         * @param string $post_excerpt The post excerpt.
+         */
+        return apply_filters('the_excerpt', get_the_excerpt());
+    }
+
+    class Adv_Walker extends Walker_Nav_Menu
+    {
+        function start_el(&$output, $item, $depth, $args)
+        {
+            global $_cat;
+
+            if (array_search('current-menu-item', $item->classes) ||
+                (isset($_cat) && $_cat->category_parent == 4 && $item->object_id == 2 ||
+                    (isset($_cat) && $_cat->category_parent == 113 && $item->object_id == 4645))
+            ) {
                 $current = 'current';
-            } elseif (in_category(101) && $item->title == 'Lato') {
+            } elseif (in_category(11) && $item->title == 'Aktualności') {
+                $current = 'current';
+            } elseif (in_category(66) && $item->title == 'Ekspres narty') {
+                $current = 'current';
+            } elseif (in_category(67) && $item->title == 'Stwórz swoją aktywną przygodę') {
+                $current = 'current';
+            } elseif (in_category(76) && $item->title == 'Adventure dla Ciebie') {
+                $current = 'current';
+            } elseif (is_category(5)) {
+                if (in_category(99) && $item->title == 'Zima') {
+                    $current = 'current';
+                } elseif (in_category(101) && $item->title == 'Lato') {
+                    $current = 'current';
+                }
+            } elseif (is_category(101) && $item->title == 'Lato') {
                 $current = 'current';
             }
-        } elseif (is_category(101) && $item->title == 'Lato') {
-            $current = 'current';
+
+            //elseif (!in_category(array(11,66,67,76)) && $item->title == 'Oferty') $current = 'current';
+
+            $output .= '<li class="' . $current . '">';
+            $attributes = '';
+
+            !empty($item->attr_title)
+            and $attributes .= ' title="' . esc_attr($item->attr_title) . '"';
+            !empty($item->target)
+            and $attributes .= ' target="' . esc_attr($item->target) . '"';
+            !empty($item->xfn)
+            and $attributes .= ' rel="' . esc_attr($item->xfn) . '"';
+            !empty($item->url)
+            and $attributes .= ' href="' . esc_attr($item->url) . '"';
+
+            $title = apply_filters('the_title', $item->title, $item->ID);
+
+
+            $item_output = $args->before
+                . "<a$attributes>"
+                . $title
+                . '</a>';
+
+            $output .= apply_filters(
+                'walker_nav_menu_start_el'
+                , $item_output
+                , $item
+                , $depth
+                , $args
+            );
+
+        }
+    }
+
+    function add_my_var($public_query_vars)
+    {
+        $public_query_vars[] = 'oferta';
+        return $public_query_vars;
+    }
+
+    function get_parent_category()
+    {
+        global $wp_query;
+        $category = $wp_query->get_queried_object();
+        if ($category->category_parent) {
+            return $category->category_parent;
+        } else {
+            return $category->cat_ID;
+        }
+    }
+
+    add_filter('query_vars', 'add_my_var');
+
+    add_filter('widget_text', 'do_shortcode');
+    register_nav_menu('nav', 'Navigation');
+    remove_filter('the_content', 'wpautop');
+    add_filter('the_content', 'wpautop', 99);
+    add_filter('the_content', 'shortcode_unautop', 100);
+
+    function get_post_custom_x($id)
+    {
+
+        global $wpdb;
+
+        $querystr = "SELECT wposts.ID, wpostmeta.meta_ID, wpostmeta.meta_key, wpostmeta.meta_value " .
+            "FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta " .
+            "WHERE wposts.ID = wpostmeta.post_id AND wposts.ID = " . $id . " " .
+            "ORDER BY wpostmeta.meta_id ASC";
+
+        $pageposts = $wpdb->get_results($querystr, OBJECT);
+        $return = array();
+
+        foreach ($pageposts AS $key => $val) {
+            $return[$val->meta_key][] = $val->meta_value;
         }
 
-        //elseif (!in_category(array(11,66,67,76)) && $item->title == 'Oferty') $current = 'current';
-
-        $output .= '<li class="' . $current . '">';
-        $attributes = '';
-
-        !empty($item->attr_title)
-        and $attributes .= ' title="' . esc_attr($item->attr_title) . '"';
-        !empty($item->target)
-        and $attributes .= ' target="' . esc_attr($item->target) . '"';
-        !empty($item->xfn)
-        and $attributes .= ' rel="' . esc_attr($item->xfn) . '"';
-        !empty($item->url)
-        and $attributes .= ' href="' . esc_attr($item->url) . '"';
-
-        $title = apply_filters('the_title', $item->title, $item->ID);
-
-
-        $item_output = $args->before
-            . "<a$attributes>"
-            . $title
-            . '</a>';
-
-        $output .= apply_filters(
-            'walker_nav_menu_start_el'
-            , $item_output
-            , $item
-            , $depth
-            , $args
-        );
-
-    }
-}
-
-function add_my_var($public_query_vars)
-{
-    $public_query_vars[] = 'oferta';
-    return $public_query_vars;
-}
-
-function get_parent_category()
-{
-    global $wp_query;
-    $category = $wp_query->get_queried_object();
-    if ($category->category_parent) {
-        return $category->category_parent;
-    } else {
-        return $category->cat_ID;
-    }
-}
-
-add_filter('query_vars', 'add_my_var');
-
-add_filter('widget_text', 'do_shortcode');
-register_nav_menu('nav', 'Navigation');
-remove_filter('the_content', 'wpautop');
-add_filter('the_content', 'wpautop', 99);
-add_filter('the_content', 'shortcode_unautop', 100);
-
-function get_post_custom_x($id)
-{
-
-    global $wpdb;
-
-    $querystr = "SELECT wposts.ID, wpostmeta.meta_ID, wpostmeta.meta_key, wpostmeta.meta_value " .
-        "FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta " .
-        "WHERE wposts.ID = wpostmeta.post_id AND wposts.ID = " . $id . " " .
-        "ORDER BY wpostmeta.meta_id ASC";
-
-    $pageposts = $wpdb->get_results($querystr, OBJECT);
-    $return = array();
-
-    foreach ($pageposts AS $key => $val) {
-        $return[$val->meta_key][] = $val->meta_value;
+        return $return;
     }
 
-    return $return;
-}
+    add_action('init', 'wpdocs_custom_init');
 
-add_action('init', 'wpdocs_custom_init');
-
-/**
- * Add excerpt support to pages
- */
-function wpdocs_custom_init() {
-    add_post_type_support( 'post', 'page-attributes' );
-}
-
-function sortByOrder($a, $b)
-{
-    return $b['sortNumber'] - $a['sortNumber'];
-}
-
-
-add_action('wp_ajax_order_offer', 'order_offer');
-add_action('wp_ajax_nopriv_order_offer', 'order_offer');
-function order_offer(){
-
-    $userData = $_POST['data'];
-    $voucher = $_POST['voucher'];
-    $message = '';
-
-    $postCategories = get_the_category($voucher['post']);
-    $sendMailAnkieta = false;
-
-    foreach ($postCategories as $postCategory){
-        if($postCategory->name == 'Optimum' || $postCategory->name == 'Fit' || $postCategory->name == 'Zdrowie'){
-            $sendMailAnkieta = true;
-        };
+    /**
+     * Add excerpt support to pages
+     */
+    function wpdocs_custom_init()
+    {
+        add_post_type_support('post', 'page-attributes');
     }
 
-    $message .= 'Witamy, <br> Potwierdzamy złożenie przez Ciebie zamówienia w dniu '. current_time('Y-m-d H:i:s').'.<br><br>';
-    $message .= 'Szczegóły zamówienia: <br><br>';
-    $message .= '<b>Dane osoby zamawiającej:</b> <br> <br>';
-    if($userData['company-nip'] && $userData['company-regon']) {
-        $message .= 'Nazwa firmy : ' . $userData['company-name'] . '<br>';
-    }
-    $message .= 'Imię i Nazwisko : ' . $userData['person-name'] . '<br>';
-    $message .= 'Email : ' . $userData['person-email'] . '<br>';
-    $message .= 'Telefon : ' . $userData['person-phone']  . '<br>';
-    $message .= 'Adres : ' . $userData['person-address']  . '<br>';
-    $message .= 'Kod pocztowy : ' . $userData['person-zipcode']  . '<br>';
-    $message .= 'Miejscowość : ' . $userData['person-zipcode-country']  . '<br>';
-    if($userData['company-nip'] && $userData['company-regon']) {
-        $message .= 'NIP : ' . $userData['company-nip'] . '<br>';
-        $message .= 'REGON : ' . $userData['company-regon'] . '<br>';
+    function sortByOrder($a, $b)
+    {
+        return $b['sortNumber'] - $a['sortNumber'];
     }
 
-//    $mayArray = array(
-//        'user_name' =>$userData['person-name'],
-//        'user_email' =>$userData['person-email'],
-//        'user_phone' =>$userData['person-phone'],
-//        'offer_id' => $voucher['post']->ID,
-//        'offer_name' => $voucher['name'],
-//        'offer_price' => $voucher['price'],
-//        'offer_start_date' => date('Y-m-d H:i:s'),
-//        'offer_end_date' => date('Y-m-d H:i:s'),
-//        'user_notes' => 'Czas trwania : ' .$voucher["duration"],
-//    );
+
+    add_action('wp_ajax_order_offer', 'order_offer');
+    add_action('wp_ajax_nopriv_order_offer', 'order_offer');
+    function order_offer()
+    {
+
+        $userData = $_POST['data'];
+        $voucher = $_POST['voucher'];
+        $message = '';
+
+        $postCategories = get_the_category($voucher['post']);
+        $sendMailAnkieta = false;
+
+        foreach ($postCategories as $postCategory) {
+            if ($postCategory->name == 'Optimum' || $postCategory->name == 'Fit' || $postCategory->name == 'Zdrowie') {
+                $sendMailAnkieta = true;
+            };
+        }
+
+        $message .= 'Witamy, <br> Potwierdzamy złożenie przez Ciebie zamówienia w dniu ' . current_time('Y-m-d H:i:s') . '.<br><br>';
+        $message .= 'Szczegóły zamówienia: <br><br>';
+        $message .= '<b>Dane osoby zamawiającej:</b> <br> <br>';
+        if ($userData['company-nip'] && $userData['company-regon']) {
+            $message .= 'Nazwa firmy : ' . $userData['company-name'] . '<br>';
+        }
+        $message .= 'Imię i Nazwisko : ' . $userData['person-name'] . '<br>';
+        $message .= 'Email : ' . $userData['person-email'] . '<br>';
+        $message .= 'Telefon : ' . $userData['person-phone'] . '<br>';
+        $message .= 'Adres : ' . $userData['person-address'] . '<br>';
+        $message .= 'Kod pocztowy : ' . $userData['person-zipcode'] . '<br>';
+        $message .= 'Miejscowość : ' . $userData['person-zipcode-country'] . '<br>';
+        if ($userData['company-nip'] && $userData['company-regon']) {
+            $message .= 'NIP : ' . $userData['company-nip'] . '<br>';
+            $message .= 'REGON : ' . $userData['company-regon'] . '<br>';
+        }
 
 
 //    Nazwa produktu i opis zawartości
-    $message .= '<br><br><b>Nazwa produktu i opis zawartości: </b> ' . $voucher["name"] . '  <br>';
-    $message .= '<b>Cena:</b> ' . $voucher["price"] . '<br>';
-    $message .= '<b>Czas trwania umowy:</b> ' . $voucher["duration"] . '<br><br><br>';
+        $message .= '<br><br><b>Nazwa produktu i opis zawartości: </b> ' . $voucher["name"] . '  <br>';
+        $message .= '<b>Cena:</b> ' . $voucher["price"] . '<br>';
+        $message .= '<b>Czas trwania umowy:</b> ' . $voucher["duration"] . '<br><br><br>';
 
 //    dodatkowe dane (zakwaterowanie,data pobuty etc.)
-    if(isset($userData['offer_term']) && isset($userData['offer_room'])){
-        $message .= '<b> Informacje:</b> <br><br> ';
-        $message .= '<b> Data pobytu: </b>' .$userData['offer_term'] . '<br>';
-        $message .= '<b> Zakwaterowanie: </b>' .$userData['offer_room'] . '<br>';
-        $message .= '<b> Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona inna osoba: </b>' .$userData['offer_accept_other_person'] . '<br>';
-        $message .= '<b> Proszę o przedstawienie mi także oferty dla osoby towarzyszącej z zakresem świadczeń: noclegi i wyżywienie: </b>' .$userData['offer_for_other_person'] . '<br><br><br>';
+        if (isset($userData['offer_term']) && isset($userData['offer_room'])) {
+            $message .= '<b> Informacje:</b> <br><br> ';
+            $message .= '<b> Data pobytu: </b>' . $userData['offer_term'] . '<br>';
+            $message .= '<b> Zakwaterowanie: </b>' . $userData['offer_room'] . '<br>';
+            $message .= '<b> Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona inna osoba: </b>' . $userData['offer_accept_other_person'] . '<br>';
+            $message .= '<b> Proszę o przedstawienie mi także oferty dla osoby towarzyszącej z zakresem świadczeń: noclegi i wyżywienie: </b>' . $userData['offer_for_other_person'] . '<br><br><br>';
+        }
+
+
+        $message .= '<b> Dane do przelewu:</b> <br><br> ';
+
+        $message .= 'Anna Makuch <br>';
+        $message .= 'Koszarawa 497<br>';
+        $message .= '34-332 Koszarawa<br>';
+        $message .= 'numer konta ING: 14 1050 1214 1000 0022 9478 5213<br>';
+        $message .= 'Tytuł płatności: Nazwa produktu, Data, Imię, Nazwisko<br><br><br>';
+
+
+//        TRESCI ZGOD PRZEDSTAWIAMY
+        if($_POST['rulesText']){
+            $message .= $_POST['rulesText'];
+        }
+
+        $message .= '<br><br>Dziękujemy za okazane nam zaufanie.<br><br>';
+
+        $message .= 'W przypadku oferty specjalnej, potwierdzenie i finalna wysokość kwoty do zapłacenia zostanie Ci przesłana przez nas niezwłocznie po uwzględnieniu przez nas tej informacji w generowanym dla Ciebie Potwierdzeniu Zawarcia Umowy, które otrzymasz drogą emailową. Prosimy poczekaj na ten dokument chwilę - tam otrzymasz komplet informacji - i po jego otrzymaniu dokonaj wymaganej płatności.<br><br>';
+
+        $message .= 'Woodrun';
+
+
+        $userEmail = $userData['person-email'];
+        $adminEmail = 'biuro@woodrun.pl';
+
+
+        $subject = 'Potwierdzenie zamówienia';
+        $body = $message;
+        $headers = array('Content-Type: text/html; charset=UTF-8');
+
+        $status = 400;
+        try {
+
+            if (!$userData['offer_term']) {
+                $days = preg_replace('/[^0-9]/', '', $voucher["duration"]);
+                $now = date('Y-m-d');
+                $nextDate = date('Y-m-d', strtotime($now . '+' . $days . ' days'));
+
+                $createOrder = createOrderUser(array(
+                    'user_name' => $userData['person-name'],
+                    'user_email' => $userData['person-email'],
+                    'user_phone' => $userData['person-phone'],
+                    'offer_id' => $voucher['post']->ID,
+                    'offer_name' => $voucher['name'],
+                    'offer_price' => $voucher['price'],
+                    'offer_start_date' => $now,
+                    'offer_end_date' => $nextDate,
+                    'user_notes' => 'Czas trwania : ' . $voucher["duration"],
+                ));
+
+                if (!empty($createOrder)) {
+                    if ($createOrder['status'] == 200) {
+                        $link = get_permalink($createOrder['userid']);
+                        notifyCreatedAccountOrder(array(
+                            'user_email' => $userData['person-email'],
+                            'link' => $link,
+                            'id' => $createOrder['userid']
+                        ));
+                    }
+                }
+            }
+            wp_mail($userEmail, $subject, $body, $headers);
+            wp_mail($adminEmail, $subject, $body, $headers);
+            if ($sendMailAnkieta) {
+                sendMailQuestionnaire($userEmail);
+            }
+            $status = 200;
+        } catch (Exception $e) {
+            $status = $e->getMessage();
+        }
+
+        wp_send_json_success(array('status' => $status));
     }
 
+    add_action('wp_ajax_competition_admin_mail', 'competition_admin_mail');
+    add_action('wp_ajax_nopriv_competition_admin_mail', 'competition_admin_mail');
+    function competition_admin_mail()
+    {
 
-    $message .= '<b> Dane do przelewu:</b> <br><br> ';
+        $postData = $_POST['data'];
+        $message = '';
+        $userEmail = 'kulig.adrian1@gmail.com';
 
-    $message .= 'Anna Makuch <br>';
-    $message .= 'Koszarawa 497<br>';
-    $message .= '34-332 Koszarawa<br>';
-    $message .= 'numer konta ING: 14 1050 1214 1000 0022 9478 5213<br>';
-    $message .= 'Tytuł płatności: Nazwa produktu, Data, Imię, Nazwisko<br><br><br>';
+        $message .= '<b>Dziękujemy za nadesłanie zgłoszenia do konkursu Bieganie - moja pasja - filmy</b> <br>';
 
+        $message .= '<b> Dane osobowe: </b><br>';
 
-    $message .= 'Dziękujemy za okazane nam zaufanie.<br><br>';
+        foreach ($postData as $data) {
+            $name = $data['name'];
+            $value = $data['value'];
+            if ($data['name'] == 'Imie') {
+                $name = 'Imię';
+            }
+            if ($data['name'] == 'Email') {
+                $userEmail = $data['value'];
+            }
+            if ($data['name'] == 'Zgoda-regulamin') {
+                $value = 'Wyrażam zgodę na postanowienia <a target="_blank" href="/wp-content/themes/advelement_new/assets/KonkursWoodrunFILM-Bieganie-moja-pasja.pdf">Regulaminu Konkursu “BIEGANIE - MOJA PASJA - filmy”</a> ';
+            }
+            if ($data['name'] == 'Zgoda-dane') {
+                $value = 'Wyrażam zgodę na przetwarzanie moich danych osobowych i na wykorzystanie przesłanych filmów oraz ich opisów do celów promocyjnych przez Organizatora';
+            }
 
-    $message .= 'W przypadku oferty specjalnej, potwierdzenie i finalna wysokość kwoty do zapłacenia zostanie Ci przesłana przez nas niezwłocznie po uwzględnieniu przez nas tej informacji w generowanym dla Ciebie Potwierdzeniu Zawarcia Umowy, które otrzymasz drogą emailową. Prosimy poczekaj na ten dokument chwilę - tam otrzymasz komplet informacji - i po jego otrzymaniu dokonaj wymaganej płatności.<br><br>';
-
-    $message .= 'Woodrun';
-
-
-    $userEmail = $userData['person-email'];
-    $adminEmail = 'biuro@woodrun.pl';
-
-
-    $subject = 'Potwierdzenie zamówienia';
-    $body = $message;
-    $headers = array('Content-Type: text/html; charset=UTF-8');
-
-
-    $status = 400;
-    try{
-//         createOrderUser(array(
-//            'user_name' =>$userData['person-name'],
-//            'user_email' =>$userData['person-email'],
-//            'user_phone' =>$userData['person-phone'],
-//            'offer_id' => $voucher['post']->ID,
-//            'offer_name' => $voucher['name'],
-//            'offer_price' => $voucher['price'],
-//            'offer_start_date' => date('Y-m-d H:i:s'),
-//            'offer_end_date' => date('Y-m-d H:i:s'),
-//            'user_notes' => 'Czas trwania : ' .$voucher["duration"],
-//        ));
-        wp_mail( $userEmail, $subject, $body, $headers);
-        wp_mail( $adminEmail, $subject, $body, $headers);
-        if($sendMailAnkieta){
-            sendMailQuestionnaire($userEmail);
-        }
-        $status = 200;
-    }catch (Exception $e){
-        $status = $e->getMessage();
-    }
-
-     wp_send_json_success(array('status' => $status));
-}
-
-add_action('wp_ajax_competition_admin_mail', 'competition_admin_mail');
-add_action('wp_ajax_nopriv_competition_admin_mail', 'competition_admin_mail');
-function competition_admin_mail(){
-
-    $postData = $_POST['data'];
-    $message = '';
-    $userEmail = 'kulig.adrian1@gmail.com';
-
-    $message .='<b>Dziękujemy za nadesłanie zgłoszenia do konkursu Bieganie - moja pasja - filmy</b> <br>';
-
-    $message .='<b> Dane osobowe: </b><br>';
-
-    foreach ($postData as $data){
-        $name = $data['name'];
-        $value = $data['value'];
-        if($data['name'] =='Imie'){
-            $name = 'Imię';
-        }
-        if($data['name'] =='Email'){
-            $userEmail = $data['value'];
-        }
-        if($data['name'] == 'Zgoda-regulamin'){
-            $value  = 'Wyrażam zgodę na postanowienia <a target="_blank" href="/wp-content/themes/advelement_new/assets/KonkursWoodrunFILM-Bieganie-moja-pasja.pdf">Regulaminu Konkursu “BIEGANIE - MOJA PASJA - filmy”</a> ';
-        }
-        if($data['name'] == 'Zgoda-dane'){
-            $value = 'Wyrażam zgodę na przetwarzanie moich danych osobowych i na wykorzystanie przesłanych filmów oraz ich opisów do celów promocyjnych przez Organizatora';
+            $message .= $name . ' : ' . $value . '<br>';
         }
 
-        $message .= $name. ' : ' . $value. '<br>';
-    }
+        $message .= '<br><br>Informujemy, że odbiór ewentualnej nagrody będzie możliwy tylko po wcześniejszym polajkowaniu naszej strony na Facebooku <br>';
+        $message .= 'Komisja Konkursowa będzie przy wyborze zwycięzcy brała pod uwagę wyłącznie te filmy, które uzyskają co najmniej 1 polubienie od innych (filmy będę wystawione jako galeria na Fb)<br><br>';
 
-    $message .='<br><br>Informujemy, że odbiór ewentualnej nagrody będzie możliwy tylko po wcześniejszym polajkowaniu naszej strony na Facebooku <br>';
-    $message .='Komisja Konkursowa będzie przy wyborze zwycięzcy brała pod uwagę wyłącznie te filmy, które uzyskają co najmniej 1 polubienie od innych (filmy będę wystawione jako galeria na Fb)<br><br>';
-
-    $message .= '<br><br>Dziękujemy za okazane nam zaufanie.<br><br>';
+        $message .= '<br><br>Dziękujemy za okazane nam zaufanie.<br><br>';
 
 
-    $message .= 'Woodrun';
+        $message .= 'Woodrun';
 
 
-    $adminEmail = 'biuro@woodrun.pl';
+        $adminEmail = 'biuro@woodrun.pl';
 
-    $subject = 'Potwierdzenie zgłoszenia do konkursu';
-    $body = $message;
-    $headers = array('Content-Type: text/html; charset=UTF-8', 'Cc: biuro@woodrun.pl');
+        $subject = 'Potwierdzenie zgłoszenia do konkursu';
+        $body = $message;
+        $headers = array('Content-Type: text/html; charset=UTF-8', 'Cc: biuro@woodrun.pl');
 
-    $status = 400;
-    try{
-        wp_mail( $userEmail, $subject, $body, $headers);
+        $status = 400;
+        try {
+            wp_mail($userEmail, $subject, $body, $headers);
 //        wp_mail( $adminEmail, $subject, $body, $headers);
-        $status = 200;
-    }catch (Exception $e){
-        $status = $e->getMessage();
+            $status = 200;
+        } catch (Exception $e) {
+            $status = $e->getMessage();
+        }
+
+        wp_send_json_success(array('status' => $status));
     }
 
-     wp_send_json_success(array('status' => $status));
-}
+
+    function sendMailQuestionnaire($userEmail)
+    {
+        $message = '';
+        $message .= 'Witamy, <br><br>
+   Poniżej przedstawiamy zasady współpracy z naszym dietetykiem w ramach pakietu Woodrun. <br><br>';
+
+        $message .= '1. W trakcie procesu zamówienia pakietu, udzielona została przez Pana/Panią następująca zgoda: 
+“Oświadczam, że jestem osobą całkowicie zdrową i nie mam zdiagnozowanych przez lekarza żadnych chorób, 
+które mogłyby wpłynąć na moje zdrowie w trakcie realizacji planu żywieniowego wraz z treningiem”. <br>';
+
+        $message .= '2. Warunkiem koniecznym rozpoczęcia współpracy z dietetykiem jest wypełnienie przez 
+Klienta Woodrun ankiety dietetycznej, którą otrzymuje w trakcie procesu zamówienia pakietu. 
+<b>Link do ankiety: </b> ' . get_home_url() . '/#ankieta-dietetyk <br>';
+
+        $message .= '3. Po przesłaniu ankiety, w ciągu 3 dni roboczych dietetyk przygotuję dla Klienta dietę. 
+Uwaga: w przypadku stwierdzenia braku informacji zwrotnej od dietetyka, prosimy o maila na adres 
+biuro@woodrun.pl z informacją, że dieta nie dotarła, niekiedy mail trafia do spamu. <br>';
+
+        $message .= '4. Klient ma prawo do zadania 1 krótkiego maila z dopytaniem dietetyka o ewentualne 
+niejasności, diety są przygotowywane z zachowaniem jak najwyższej staranności, aby informacje były 
+zrozumiałe i jednoznaczne.';
 
 
-function sendMailQuestionnaire($userEmail)
-{
-    $message = '';
-    $message .= 'Witamy, <br><br>
-       Poniżej przedstawiamy zasady współpracy z naszym dietetykiem w ramach pakietu Woodrun. <br><br>';
+        $subject = 'Link do ankiety dietetycznej i zasady współpracy z dietetykiem';
+        $body = $message;
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'BCC: biuro@woodrun.pl',
+        );
 
-    $message .='1. W trakcie procesu zamówienia pakietu, udzielona została przez Pana/Panią następująca zgoda: 
-    “Oświadczam, że jestem osobą całkowicie zdrową i nie mam zdiagnozowanych przez lekarza żadnych chorób, 
-    które mogłyby wpłynąć na moje zdrowie w trakcie realizacji planu żywieniowego wraz z treningiem”. <br>';
+        try {
+            wp_mail($userEmail, $subject, $body, $headers);
+            $status1 = 200;
+        } catch (Exception $e) {
+            $status1 = $e->getMessage();
+        }
 
-    $message .= '2. Warunkiem koniecznym rozpoczęcia współpracy z dietetykiem jest wypełnienie przez 
-    Klienta Woodrun ankiety dietetycznej, którą otrzymuje w trakcie procesu zamówienia pakietu. 
-    <b>Link do ankiety: </b> '.get_home_url().'/#ankieta-dietetyk <br>';
-
-    $message .= '3. Po przesłaniu ankiety, w ciągu 3 dni roboczych dietetyk przygotuję dla Klienta dietę. 
-    Uwaga: w przypadku stwierdzenia braku informacji zwrotnej od dietetyka, prosimy o maila na adres 
-    biuro@woodrun.pl z informacją, że dieta nie dotarła, niekiedy mail trafia do spamu. <br>';
-
-    $message .= '4. Klient ma prawo do zadania 1 krótkiego maila z dopytaniem dietetyka o ewentualne 
-    niejasności, diety są przygotowywane z zachowaniem jak najwyższej staranności, aby informacje były 
-    zrozumiałe i jednoznaczne.';
-
-
-
-    $subject = 'Link do ankiety dietetycznej i zasady współpracy z dietetykiem';
-    $body = $message;
-    $headers = array(
-        'Content-Type: text/html; charset=UTF-8',
-        'BCC: biuro@woodrun.pl',
-    );
-
-    try{
-        wp_mail( $userEmail, $subject, $body, $headers);
-        $status1 = 200;
-    }catch (Exception $e){
-        $status1 = $e->getMessage();
     }
 
-}
 
-
-
-
-// wyświetlanie tekstu do max X znaków
-function short_text_after_word($string, $wordsreturned)
-{
-    $retval = $string;
-    $string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $string);
-    $string = str_replace("\n", " ", $string);
-    $array = explode(" ", $string);
-    if (count($array)<=$wordsreturned)
+    // wyświetlanie tekstu do max X znaków
+    function short_text_after_word($string, $wordsreturned)
     {
         $retval = $string;
+        $string = preg_replace('/(?<=\S,)(?=\S)/', ' ', $string);
+        $string = str_replace("\n", " ", $string);
+        $array = explode(" ", $string);
+        if (count($array) <= $wordsreturned) {
+            $retval = $string;
+        } else {
+            array_splice($array, $wordsreturned);
+            $retval = implode(" ", $array) . " ...";
+        }
+        return $retval;
     }
-    else
+
+    function short_text_after_characters($string, $wordsreturned)
     {
-        array_splice($array, $wordsreturned);
-        $retval = implode(" ", $array)." ...";
+        if (strlen($string) > $wordsreturned) {
+            $string = substr($string, 0, $wordsreturned) . '...';
+        }
+        return $string;
     }
-    return $retval;
-}
-
-function short_text_after_characters($string, $wordsreturned)
-{
-    if (strlen($string) > $wordsreturned) {
-        $string = substr($string, 0, $wordsreturned) . '...';
-    }
-    return $string;
-}
 
 
-
-
-
-//ladowanie filmu konkursowego
-
+    //ladowanie filmu konkursowego
     add_action('wp_ajax_render_competition_movie', 'render_competition_movie');
     add_action('wp_ajax_nopriv_render_competition_movie', 'render_competition_movie');
     function render_competition_movie()
@@ -854,83 +858,242 @@ function short_text_after_characters($string, $wordsreturned)
         $html = '';
         $html .= '
         <div class="user-data">
-            <h3 class="name">'.$name.'</h3>
+            <h3 class="name">' . $name . '</h3>
         </div>
         <div class="user-movie">
-            <iframe src="'.$movie.'" frameborder="0" allowfullscreen></iframe>
+            <iframe src="' . $movie . '" frameborder="0" allowfullscreen></iframe>
         </div>
         <div class="user-description">
-            <span class="description">'.$description.'</span>
+            <span class="description">' . $description . '</span>
         </div>';
 
-
-        wp_send_json_success(array('status'=> 200,'html' => $html));
-
+        wp_send_json_success(array('status' => 200, 'html' => $html));
     }
 
 
+    //ladowanie cwiczen do modala
+    add_action('wp_ajax_render_exercise_box', 'render_exercise_box');
+    add_action('wp_ajax_nopriv_render_exercise_box', 'render_exercise_box');
+    function render_exercise_box()
+    {
+        $exerciseID = $_POST['data'];
+        $exercise = get_post($exerciseID);
 
-//sprawdzanie danych logowania
-function checkLoginData(){
-    $userData = $_POST['userData'];
 
-}
+        $name = get_field('nazwa', $exercise);
+        $description = get_field('opis', $exercise);
+        $type = get_field('typ_pliku', $exercise);
+        $file = null;
 
-function createOrderUser($userData){
-    global $wpdb;
+        $html = '';
 
-    $results = $wpdb->get_results('SELECT * FROM wp_orders WHERE `user_email` = "'.$userData["user_email"].'" ');
+        $html .= '
+    <div class="box">
+    <h3 class="name">' . $name . '</h3>
+    <span class="description">' . $description . '</span>';
 
-    $response = array('status' => 400,'message'=> "Użytkownik już istnieje");
+        switch ($type) {
+            case 'Youtube':
+                $file = get_field('youtube_link', $exercise);
+                $html .= '
+                <div class="responsive--video">
+                    <iframe width="560" height="315" src="' . $file . '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>';
+                break;
+            case 'Film':
+                $file = get_field('filmik_wlasny', $exercise);
+                $html .= '  
+                                <video width="100%" height="auto" controls>
+                                    <source src="' . $file . '" type="video/mp4">
+                                </video>';
+                break;
+            case 'Grafika':
+                $file = get_field('zdjecie_wlasne', $exercise);
+                $html .= '<img class="img-responsive" src="' . $file . '">';
+                break;
+            case 'PDF':
+                $file = get_field('dokument_pdf', $exercise);
+                $html .= '
+                    <div class="responsive--video">
+                        <iframe width="560" height="315" src="'.$file.'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>';
+                break;
+            case 'Dokument':
+                $file = get_field('dokument_wlasny', $exercise);
+                $html .= '
+                    <a href="'.$file.'" download="dokument1">Pobierz plik</a>';
+                break;
+            case 'Link':
+                $file = get_field('link' ,$exercise);
+                $link_text = get_field('link_text' ,$exercise);
+                $html .= '<a href="'.$file.'" target="_blank">'.$link_text.'</a>';
+        }
 
-    if(!$results){
-        $userPassword = randomPassword(8);
-        $userData = array(
-            'user_name' => $userData['user_name'],
-            'user_phone' => $userData['user_phone'],
-            'user_email' => $userData['user_email'],
-            'user_password' => md5($userPassword),
-            'offer_id' => $userData['offer_id'],
-            'offer_name' => $userData['offer_name'],
-            'offer_end_date' => $userData['offer_end_date'],
-            'offer_price' => $userData['offer_price'],
-            'user_notes' => $userData['user_notes'],
-        );
+        $html .= '</div>';
 
-        $createUser = $wpdb->insert('wp_orders', $userData);
-        if ($createUser === false){
-            $response = array('status' => '400');
-        }else{
-            $id = $wpdb->insert_id;
+        wp_send_json_success(array('status' => 200, 'html' => $html));
+    }
+
+
+    //sprawdzanie danych logowania
+    add_action('wp_ajax_exercise_login', 'exercise_login');
+    add_action('wp_ajax_nopriv_exercise_login', 'exercise_login');
+    function exercise_login()
+    {
+        $pass = $_POST['pass'];
+        $email = $_POST['email'];
+        $postID = $_POST['post_id'];
+
+
+        $status = 400;
+        $checkPass = substr(md5($email.$postID), 0, 5);
+        $html ='';
+
+        if ($checkPass == $pass) {
+            $status = 200;
+            $html = '';
+
+            session_start();
+            $_SESSION['user']= $postID;
+
+
+            $exercises = get_field('lista_ćwiczeń',$postID);
+
+            if($exercises){
+                foreach ($exercises as $exercise){
+                    $name = get_field('nazwa', $exercise);
+                    $description = get_field('opis', $exercise);
+                    $type = get_field('typ_pliku', $exercise);
+                    $file = null;
+
+
+                    $html .=
+                        '<div class="col-md-4 movie-box exercise-box">
+                    <div class="box">
+                    <div class="short-description">
+                        <h5 class="description-name">'.$name.'</h5>
+                        <span class="description-text">'.short_text_after_characters($description,150).'</span>
+                    </div>';
+
+                    $html .='<div class="content-text">';
+
+                    switch($type){
+                        case 'Youtube':
+                            $file = get_field('youtube_link', $exercise);
+                            $html .= '
+                                <div class="responsive--video">
+                                    <iframe width="560" height="315" src="' . $file . '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>';
+                            break;
+                        case 'Film':
+                            $file = get_field('filmik_wlasny', $exercise);
+                            $html .= '  
+                                <video width="100%" height="auto" controls>
+                                    <source src="' . $file . '" type="video/mp4">
+                                </video>';
+                            break;
+                        case 'Grafika':
+                            $file = get_field('zdjecie_wlasne', $exercise);
+                            $html .= '<img class="img-responsive" src="' . $file . '">';
+                            break;
+                        case 'PDF':
+                            $file = get_field('dokument_pdf', $exercise);
+                            $html .= '
+                    <div class="responsive--video">
+                        <iframe width="560" height="315" src="'.$file.'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>';
+                            break;
+                        case 'Dokument':
+                            $file = get_field('dokument_wlasny', $exercise);
+                            $html .= '
+                    <a href="'.$file.'" download="dokument1">Pobierz plik</a>';
+                            break;
+                        case 'Link':
+                            $file = get_field('link' ,$exercise);
+                            $link_text = get_field('link_text' ,$exercise);
+                            $html .= '<a href="'.$file.'" target="_blank">'.$link_text.'</a>';
+                    }
+                    $html .='</div>';
+
+                    $html .='<div class="more-info">
+                            <a class="show-more" data-id="'.$exercise->ID.'">Zobacz więcej</a>
+                        </div>
+                    </div>
+                </div>
+                ';
+
+                }
+            }else{
+                $html .= ' <div class="col-md-12 empty-exercises"><h4>W Twojej bibliotece ćwiczeń nie ma żadnych filmów.</h4></div>';
+            }
+        };
+
+        wp_send_json_success(array('status' => $status, 'html' => $html));
+
+
+    }
+
+    function createOrderUser($userData = null)
+    {
+
+        $response = array('status' => 400, 'message' => "Błąd");
+
+        $post_id = wp_insert_post(array(
+            'post_type' => 'users-account',
+            'post_title' => $userData['user_email'],
+            'post_content' => '',
+            'post_status' => 'publish',
+        ));
+
+        if ($post_id) {
+            update_field('field_5adf59e6b3cb7', $userData['user_name'], $post_id);
+            update_field('field_5ae0a38760f14', $userData['user_phone'], $post_id);
+            update_field('field_5adf5a0ab3cb8', $userData['user_email'], $post_id);
+            update_field('field_5adf5a0db3cb9', $userData['offer_name'], $post_id);
+            update_field('field_5adf5a13b3cba', $userData['offer_start_date'], $post_id);
+            update_field('field_5adf5a1bb3cbb', $userData['offer_end_date'], $post_id);
+            update_field('field_5adf5a24b3cbc', $userData['offer_price'], $post_id);
+            update_field('field_5adf5a2bb3cbd', $userData['user_notes'], $post_id);
+
             $response = array(
                 'status' => '200',
-                'userid' => $id
+                'userid' => $post_id
             );
         }
+
+        return $response;
     }
-    return $response;
-}
 
 
+    //Wysłanie maila ifnormujacego o stworzeniu konta
+    function notifyCreatedAccountOrder($userData)
+    {
+        $message = '';
+
+        $message .= '<b>Twoje konto dostępowe do biblioteki materiałów instruktażowych Woodrun zostało założone.</b><br><br>';
+        $message .= '<b> Dane logowania: </b><br>';
+        $message .= '<b> Link: </b> <a href="' . $userData['link'] . '">' . $userData['link'] . '</a> <br>';
+        $message .= '<b> Login: </b> ' . $userData['user_email'] . ' <br>';
+        $message .= '<b> Hasło: </b> ' . substr(md5($userData['user_email'].$userData['id']), 0, 5) . ' <br><br><br>';
+
+        $message .= 'Woodrun';
 
 
+        $subject = 'Dostęp do biblioteki materiałów instruktażowych Woodrun';
+        $body = $message;
+        $headers = array('Content-Type: text/html; charset=UTF-8', 'Cc: biuro@woodrun.pl');
 
-
-
-function randomPassword($length,
-    $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') {
-    $str = '';
-    $max = mb_strlen($keyspace, '8bit') - 1;
-    if ($max < 1) {
-        throw new Exception('$keyspace must be at least two characters long');
+        $status = 400;
+        try {
+            wp_mail($userData['user_email'], $subject, $body, $headers);
+            $status = 200;
+        } catch (Exception $e) {
+            $status = $e->getMessage();
+        }
+        return $status;
     }
-    for ($i = 0; $i < $length; ++$i) {
-        $str .= $keyspace[random_int(0, $max)];
-    }
-    return $str;
-}
 
 
-?>
+    ?>
 
 
