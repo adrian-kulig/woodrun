@@ -19,7 +19,7 @@
 
 // ** Ustawienia MySQL-a - możesz uzyskać je od administratora Twojego serwera ** //
 /** Nazwa bazy danych, której używać ma WordPress */
-define('DB_NAME', 'adventurelement');
+define('DB_NAME', 'woodrun');
 
 /** Nazwa użytkownika bazy danych MySQL */
 define('DB_USER', 'root');

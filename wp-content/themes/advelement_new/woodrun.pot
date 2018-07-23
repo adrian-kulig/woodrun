@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-16 07:28+0000\n"
+"POT-Creation-Date: 2018-02-20 08:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,64 +14,270 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: single-offer-pl.php:56
-msgid "Zobacz następną"
+#: homepage.php:3
+msgid "Trenuj z nami"
 msgstr ""
 
-#: single-offer-pl.php:73 single-trener-pl.php:61
+#: homepage.php:5
+msgid ""
+"Panel Woodrun - załóż konto i wykup pakiet z opieką! Możesz też korzystać z "
+"panelu darmowo jako dzienniczka treningowego."
+msgstr ""
+
+#: homepage.php:12
+msgid "Najnowsza oferta"
+msgstr ""
+
+#: homepage.php:57
+msgid "przejdź do oferty"
+msgstr ""
+
+#: homepage.php:76 trener-pl.php:165
+msgid ""
+"Wypełnij ankietę, abyśmy mogli jak najlepiej dobrać i zaproponować Ci ofertę"
+msgstr ""
+
+#: homepage.php:94
+msgid "Ankieta wstępna dla osób, które wykupiły pakiet z dietetykiem"
+msgstr ""
+
+#: single-trener-pl.php:56
+msgid "Zobacz następny"
+msgstr ""
+
+#: single-trener-pl.php:61 single-offer-pl.php:73
 msgid "Formularz zamówienia"
 msgstr ""
 
-#: single-offer-pl.php:77 single-trener-pl.php:65
+#: single-trener-pl.php:65 single-offer-pl.php:77
 msgid "Osoba prywatna"
 msgstr ""
 
-#: single-offer-pl.php:78 single-trener-pl.php:66
+#: single-trener-pl.php:66 single-offer-pl.php:78
 msgid "Firma"
 msgstr ""
 
+#: single-trener-pl.php:72 single-trener-pl.php:74 single-trener-pl.php:232
 #: single-offer-pl.php:84 single-offer-pl.php:86 single-offer-pl.php:268
-#: single-trener-pl.php:72 single-trener-pl.php:74 single-trener-pl.php:217
 msgid "Nazwa firmy"
 msgstr ""
 
+#: single-trener-pl.php:77 single-trener-pl.php:79 single-trener-pl.php:236
 #: single-offer-pl.php:89 single-offer-pl.php:91 single-offer-pl.php:272
-#: single-trener-pl.php:77 single-trener-pl.php:79 single-trener-pl.php:221
 msgid "Imię i Nazwisko"
 msgstr ""
 
-#: single-offer-pl.php:93 single-offer-pl.php:95 single-trener-pl.php:81
-#: single-trener-pl.php:83
+#: single-trener-pl.php:81 single-trener-pl.php:83 single-offer-pl.php:93
+#: single-offer-pl.php:95
 msgid "Adres E-mail"
 msgstr ""
 
+#: single-trener-pl.php:85 single-trener-pl.php:87 single-trener-pl.php:243
 #: single-offer-pl.php:97 single-offer-pl.php:99 single-offer-pl.php:279
-#: single-trener-pl.php:85 single-trener-pl.php:87 single-trener-pl.php:228
 msgid "Telefon"
 msgstr ""
 
-#: single-offer-pl.php:101 single-offer-pl.php:103 single-trener-pl.php:89
-#: single-trener-pl.php:91
+#: single-trener-pl.php:89 single-trener-pl.php:91 single-offer-pl.php:101
+#: single-offer-pl.php:103
 msgid "Ulica i numer domu"
 msgstr ""
 
-#: single-offer-pl.php:105 single-trener-pl.php:93
+#: single-trener-pl.php:93 single-offer-pl.php:105
 msgid "Kod pocztowy i miejscowość"
 msgstr ""
 
-#: single-offer-pl.php:109 single-offer-pl.php:289 single-trener-pl.php:97
-#: single-trener-pl.php:238
+#: single-trener-pl.php:97 single-trener-pl.php:253 single-offer-pl.php:109
+#: single-offer-pl.php:289
 msgid "Miejscowość"
 msgstr ""
 
+#: single-trener-pl.php:102 single-trener-pl.php:104 single-trener-pl.php:257
 #: single-offer-pl.php:114 single-offer-pl.php:116 single-offer-pl.php:293
-#: single-trener-pl.php:102 single-trener-pl.php:104 single-trener-pl.php:242
 msgid "NIP"
 msgstr ""
 
+#: single-trener-pl.php:106 single-trener-pl.php:108 single-trener-pl.php:260
 #: single-offer-pl.php:118 single-offer-pl.php:120 single-offer-pl.php:296
-#: single-trener-pl.php:106 single-trener-pl.php:108 single-trener-pl.php:245
 msgid "REGON"
+msgstr ""
+
+#: single-trener-pl.php:121 single-offer-pl.php:173
+msgid "Akceptuję"
+msgstr ""
+
+#: single-trener-pl.php:123 single-offer-pl.php:175
+msgid "Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)"
+msgstr ""
+
+#: single-trener-pl.php:124 single-offer-pl.php:176
+msgid "oraz"
+msgstr ""
+
+#: single-trener-pl.php:126 single-offer-pl.php:178
+msgid "regulamin aktualnie obowiązujących promocji Woodrun"
+msgstr ""
+
+#: single-trener-pl.php:137 single-offer-pl.php:189
+msgid ""
+"Wyrażam zgodę na 1) przetwarzanie danych osobowych w celu: wykorzystania "
+"przez Woodrun oraz\n"
+"                                    Trenerów W Panelu W do realizacji usług "
+"zawartych w Voucherze W lub Pobycie W oraz prezentacji\n"
+"                                    danych osobowych Użytkownika na jego "
+"profilu w Panelu W  (widocznych jedynie dla Administratora,\n"
+"                                    Trenerów W oraz samego Klienta); 2) "
+"udostępnianie przez Woodrun wybranych danych Trenerom W i\n"
+"                                    innym kontrahentom Administratora w "
+"celach opisanych powyżej (związanych z realizacją przez nich\n"
+"                                    usług wobec Klientów w szczególności z "
+"wykorzystaniem Panelu W); 3) dochodzenie przez Woodrun\n"
+"                                    roszczeń z tytułu prowadzonej "
+"działalności; 4) prowadzenie przez Woodrun marketingu bezpośredniego\n"
+"                                    własnych produktów lub usług "
+"administratora danych. 5) i oświadczam o świadomości na temat prawa dostępu\n"
+"                                    do podanych swoich danych osobowych i "
+"ich poprawiania oraz o dobrowolności podania w/w danych, oraz\n"
+"                                    podanie prawnych podstaw przetwarzania "
+"danych: niezbędności podania w/w danych z uwagi na umożliwienie\n"
+"                                    Woodrun - poprzez wykorzystanie Panelu W "
+"– realizacji umowy, zaś w przypadku celów: dochodzenie\n"
+"                                    roszczeń i marketing bezpośredni z uwagi "
+"na Art.23 pkt.4 Ustawy o ochronie danych\n"
+"                                    osobowych z 29 sierpnia 1997 r."
+msgstr ""
+
+#: single-trener-pl.php:160 single-offer-pl.php:211
+msgid ""
+"Wyrażam zgodę na korzystanie przez Klienta z Usług świadczonych przez "
+"Woodrun odbywać\n"
+"                                    się będzie na wyłączną odpowiedzialność "
+"Klienta, w szczególności dotyczy to uwarunkowań\n"
+"                                    związanych ze stanem zdrowia Klienta"
+msgstr ""
+
+#: single-trener-pl.php:173
+msgid ""
+"Oświadczam, że jestem osobą całkowicie zdrową i nie mam zdiagnozowanych "
+"przez \n"
+"                                         lekarza żadnych chorób, które "
+"mogłyby wpłynąć na moje zdrowie w trakcie realizacji\n"
+"                                          planu żywieniowego wraz z "
+"treningiem"
+msgstr ""
+
+#: single-trener-pl.php:186 single-offer-pl.php:223
+msgid ""
+"Oświadczam, że jestem świadomy/-a, że na mocy Ustawy o prawach konsumenta z "
+"30 maja\n"
+"                                    2014 r.: 1) na podstawie Art. 27 w/w "
+"ustawy, mam prawo w terminie 14 dni odstąpić\n"
+"                                    (postępując szczegółowo w sposób opisany "
+"w Art. 30 w/w ustawy) od zawartej umowy bez\n"
+"                                    podawania przyczyny i ponoszenia kosztów "
+"(z wyjątkiem kosztów określonych w art. 33,\n"
+"                                    art. 34 ust.2 i art. 35); 2) zgodnie z "
+"Art. 21 pkt. 2 w/w ustawy, rozpoczęcie realizacji\n"
+"                                    przez Woodrun realizacji zamówionej "
+"przez klienta usługi przed upływem 14-dniowego\n"
+"                                    terminu na odstąpienie przez Klienta od "
+"umowy jest możliwe tylko w przypadku wyrażenia\n"
+"                                    przez Klienta wyraźnego żądania. ; 3)  "
+"zgodnie z Art. 35 w/w ustawy, w przypadku odstąpienia\n"
+"                                    przez Klienta od umowy po zgłoszeniu "
+"żądania opisanego powyżej w pkt. 1.f.ii, Woodrun będzie\n"
+"                                    zobowiązana do zwrotu Klientowi jedynie "
+"części opłaty – będącej w takiej samej relacji do\n"
+"                                    całości poniesionej przez Klienta opłaty "
+"jak relacja wartości niewykorzystanej części usługi\n"
+"                                    do wartości pełnej usługi.  4) zgodnie z "
+"Art. 38 w/w ustawy, w chwili, gdy Woodrun wykona w\n"
+"                                    pełni zamówioną przez Klienta usługę, "
+"Klient utraci prawo do odstąpienia od umowy."
+msgstr ""
+
+#: single-trener-pl.php:208 single-offer-pl.php:245
+msgid ""
+"Wyrażam zgodę w przypadku zakupu przeze mnie Voucherów W (na pakiety opieki "
+"online) na\n"
+"                                    rozpoczęcie realizacji przez Woodrun "
+"realizacji zamówionej przez klienta usługi przed\n"
+"                                    upływem 14-dniowego terminu na "
+"odstąpienie przez Klienta od umowy. Zgoda ta jest wymagana\n"
+"                                    z uwagi na specyfikę usług Woodrun oraz "
+"formy płatności za nie (poprzez vouchery posiadające\n"
+"                                    określony okres ważności). Niniejszy "
+"punkt nie odnosi się do Pobytów W."
+msgstr ""
+
+#: single-trener-pl.php:221 single-offer-pl.php:257
+msgid "Zamawiam"
+msgstr ""
+
+#: single-trener-pl.php:226 single-offer-pl.php:262
+msgid "Podsumowanie zamówienia"
+msgstr ""
+
+#: single-trener-pl.php:229 single-offer-pl.php:265
+msgid "Dane"
+msgstr ""
+
+#: single-trener-pl.php:240 single-offer-pl.php:276
+msgid "E-mail"
+msgstr ""
+
+#: single-trener-pl.php:246 single-offer-pl.php:282
+msgid "Adres"
+msgstr ""
+
+#: single-trener-pl.php:249 single-offer-pl.php:285
+msgid "Kod pocztowy"
+msgstr ""
+
+#: single-trener-pl.php:266 single-offer-pl.php:319
+msgid "Voucher "
+msgstr ""
+
+#: single-trener-pl.php:271
+msgid "Cena i termin płatności"
+msgstr ""
+
+#: single-trener-pl.php:275 single-offer-pl.php:345
+msgid "Czas trwania umowy* "
+msgstr ""
+
+#: single-trener-pl.php:277 single-offer-pl.php:347
+msgid ""
+"*Jest to wynikający z umowy czas trwania zobowiązań zarówno\n"
+"                                Woodrun, jak i Klienta."
+msgstr ""
+
+#: single-trener-pl.php:282 single-offer-pl.php:352
+msgid ""
+"Po złożeniu zamówienia otrzymasz na wskazany adres e-mail wiadomość o "
+"kolejnych\n"
+"                                etapach\n"
+"                                realizacji zamówienia. Ponadto będziemy się "
+"kontaktować z Tobą telefonicznie."
+msgstr ""
+
+#: single-trener-pl.php:288 single-offer-pl.php:358
+msgid "Zamawiam z obowiązkiem zapłaty"
+msgstr ""
+
+#: single-trener-pl.php:295 single-offer-pl.php:365
+msgid "Dziękujemy za złożenie zamówienia."
+msgstr ""
+
+#: single-trener-pl.php:298 single-offer-pl.php:368
+msgid "Przepraszamy, coś poszło nie tak."
+msgstr ""
+
+#: single-trener-pl.php:314 single-offer-pl.php:382
+msgid "Powrót do listy ofert"
+msgstr ""
+
+#: single-offer-pl.php:56
+msgid "Zobacz następną"
 msgstr ""
 
 #: single-offer-pl.php:125
@@ -110,132 +316,6 @@ msgid ""
 "wyżywienie, bez zajęć sportowych i bez badania EKG wysiłkowego)"
 msgstr ""
 
-#: single-offer-pl.php:173 single-trener-pl.php:121
-msgid "Akceptuję"
-msgstr ""
-
-#: single-offer-pl.php:175 single-trener-pl.php:123
-msgid "Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)"
-msgstr ""
-
-#: single-offer-pl.php:176 single-trener-pl.php:124
-msgid "oraz"
-msgstr ""
-
-#: single-offer-pl.php:178 single-trener-pl.php:126
-msgid "regulamin aktualnie obowiązujących promocji Woodrun"
-msgstr ""
-
-#: single-offer-pl.php:189 single-trener-pl.php:137
-msgid ""
-"Wyrażam zgodę na 1) przetwarzanie danych osobowych w celu: wykorzystania "
-"przez Woodrun oraz\n"
-"                                    Trenerów W Panelu W do realizacji usług "
-"zawartych w Voucherze W lub Pobycie W oraz prezentacji\n"
-"                                    danych osobowych Użytkownika na jego "
-"profilu w Panelu W  (widocznych jedynie dla Administratora,\n"
-"                                    Trenerów W oraz samego Klienta); 2) "
-"udostępnianie przez Woodrun wybranych danych Trenerom W i\n"
-"                                    innym kontrahentom Administratora w "
-"celach opisanych powyżej (związanych z realizacją przez nich\n"
-"                                    usług wobec Klientów w szczególności z "
-"wykorzystaniem Panelu W); 3) dochodzenie przez Woodrun\n"
-"                                    roszczeń z tytułu prowadzonej "
-"działalności; 4) prowadzenie przez Woodrun marketingu bezpośredniego\n"
-"                                    własnych produktów lub usług "
-"administratora danych. 5) i oświadczam o świadomości na temat prawa dostępu\n"
-"                                    do podanych swoich danych osobowych i "
-"ich poprawiania oraz o dobrowolności podania w/w danych, oraz\n"
-"                                    podanie prawnych podstaw przetwarzania "
-"danych: niezbędności podania w/w danych z uwagi na umożliwienie\n"
-"                                    Woodrun - poprzez wykorzystanie Panelu W "
-"– realizacji umowy, zaś w przypadku celów: dochodzenie\n"
-"                                    roszczeń i marketing bezpośredni z uwagi "
-"na Art.23 pkt.4 Ustawy o ochronie danych\n"
-"                                    osobowych z 29 sierpnia 1997 r."
-msgstr ""
-
-#: single-offer-pl.php:211 single-trener-pl.php:159
-msgid ""
-"Wyrażam zgodę na korzystanie przez Klienta z Usług świadczonych przez "
-"Woodrun odbywać\n"
-"                                    się będzie na wyłączną odpowiedzialność "
-"Klienta, w szczególności dotyczy to uwarunkowań\n"
-"                                    związanych ze stanem zdrowia Klienta"
-msgstr ""
-
-#: single-offer-pl.php:223 single-trener-pl.php:171
-msgid ""
-"Oświadczam, że jestem świadomy/-a, że na mocy Ustawy o prawach konsumenta z "
-"30 maja\n"
-"                                    2014 r.: 1) na podstawie Art. 27 w/w "
-"ustawy, mam prawo w terminie 14 dni odstąpić\n"
-"                                    (postępując szczegółowo w sposób opisany "
-"w Art. 30 w/w ustawy) od zawartej umowy bez\n"
-"                                    podawania przyczyny i ponoszenia kosztów "
-"(z wyjątkiem kosztów określonych w art. 33,\n"
-"                                    art. 34 ust.2 i art. 35); 2) zgodnie z "
-"Art. 21 pkt. 2 w/w ustawy, rozpoczęcie realizacji\n"
-"                                    przez Woodrun realizacji zamówionej "
-"przez klienta usługi przed upływem 14-dniowego\n"
-"                                    terminu na odstąpienie przez Klienta od "
-"umowy jest możliwe tylko w przypadku wyrażenia\n"
-"                                    przez Klienta wyraźnego żądania. ; 3)  "
-"zgodnie z Art. 35 w/w ustawy, w przypadku odstąpienia\n"
-"                                    przez Klienta od umowy po zgłoszeniu "
-"żądania opisanego powyżej w pkt. 1.f.ii, Woodrun będzie\n"
-"                                    zobowiązana do zwrotu Klientowi jedynie "
-"części opłaty – będącej w takiej samej relacji do\n"
-"                                    całości poniesionej przez Klienta opłaty "
-"jak relacja wartości niewykorzystanej części usługi\n"
-"                                    do wartości pełnej usługi.  4) zgodnie z "
-"Art. 38 w/w ustawy, w chwili, gdy Woodrun wykona w\n"
-"                                    pełni zamówioną przez Klienta usługę, "
-"Klient utraci prawo do odstąpienia od umowy."
-msgstr ""
-
-#: single-offer-pl.php:245 single-trener-pl.php:193
-msgid ""
-"Wyrażam zgodę w przypadku zakupu przeze mnie Voucherów W (na pakiety opieki "
-"online) na\n"
-"                                    rozpoczęcie realizacji przez Woodrun "
-"realizacji zamówionej przez klienta usługi przed\n"
-"                                    upływem 14-dniowego terminu na "
-"odstąpienie przez Klienta od umowy. Zgoda ta jest wymagana\n"
-"                                    z uwagi na specyfikę usług Woodrun oraz "
-"formy płatności za nie (poprzez vouchery posiadające\n"
-"                                    określony okres ważności). Niniejszy "
-"punkt nie odnosi się do Pobytów W."
-msgstr ""
-
-#: single-offer-pl.php:257 single-trener-pl.php:206
-msgid "Zamawiam"
-msgstr ""
-
-#: single-offer-pl.php:262 single-trener-pl.php:211
-msgid "Podsumowanie zamówienia"
-msgstr ""
-
-#: single-offer-pl.php:265 single-trener-pl.php:214
-msgid "Dane"
-msgstr ""
-
-#: single-offer-pl.php:276 single-trener-pl.php:225
-msgid "E-mail"
-msgstr ""
-
-#: single-offer-pl.php:282 single-trener-pl.php:231
-msgid "Adres"
-msgstr ""
-
-#: single-offer-pl.php:285 single-trener-pl.php:234
-msgid "Kod pocztowy"
-msgstr ""
-
-#: single-offer-pl.php:319 single-trener-pl.php:251
-msgid "Voucher "
-msgstr ""
-
 #: single-offer-pl.php:325
 msgid "Informacje "
 msgstr ""
@@ -258,83 +338,32 @@ msgstr ""
 msgid "Cena i termin płatności : "
 msgstr ""
 
-#: single-offer-pl.php:345 single-trener-pl.php:260
-msgid "Czas trwania umowy* "
-msgstr ""
-
-#: single-offer-pl.php:347 single-trener-pl.php:262
-msgid ""
-"*Jest to wynikający z umowy czas trwania zobowiązań zarówno\n"
-"                                Woodrun, jak i Klienta."
-msgstr ""
-
-#: single-offer-pl.php:352 single-trener-pl.php:267
-msgid ""
-"Po złożeniu zamówienia otrzymasz na wskazany adres e-mail wiadomość o "
-"kolejnych\n"
-"                                etapach\n"
-"                                realizacji zamówienia. Ponadto będziemy się "
-"kontaktować z Tobą telefonicznie."
-msgstr ""
-
-#: single-offer-pl.php:358 single-trener-pl.php:273
-msgid "Zamawiam z obowiązkiem zapłaty"
-msgstr ""
-
-#: single-offer-pl.php:365 single-trener-pl.php:280
-msgid "Dziękujemy za złożenie zamówienia."
-msgstr ""
-
-#: single-offer-pl.php:368 single-trener-pl.php:283
-msgid "Przepraszamy, coś poszło nie tak."
-msgstr ""
-
 #: single-offer-pl.php:379
-msgctxt "Reserve online"
 msgid "Rezerwuj online"
 msgstr ""
 
-#: single-offer-pl.php:382 single-trener-pl.php:299
-msgid "Powrót do listy ofert"
+#: trener-pl.php:61
+msgid "Kategoria"
 msgstr ""
 
-#: single-trener-pl.php:56
-msgid "Zobacz następny"
+#: trener-pl.php:72
+msgid "Wypełnij ankietę - daj nam znać co Cię interesuje z naszej oferty"
 msgstr ""
 
-#: single-trener-pl.php:256
-msgid "Cena i termin płatności"
-msgstr ""
-
-#: homepage.php:3
-msgid "Trenuj z nami"
-msgstr ""
-
-#: homepage.php:5
-msgid ""
-"Panel Woodrun - załóż konto i wykup pakiet z opieką! Możesz też korzystać z "
-"panelu darmowo jako dzienniczka treningowego."
-msgstr ""
-
-#: homepage.php:12
-msgid "Najnowsza oferta"
-msgstr ""
-
-#: homepage.php:57
-msgid "przejdź do oferty"
-msgstr ""
-
-#: homepage.php:78
-msgid ""
-"Wypełnij ankietę, abyśmy mogli jak najlepiej dobrać i zaproponować Ci ofertę"
-msgstr ""
-
-#: offer-pl.php:59
-msgid "Dyscyplina"
+#: trener-pl.php:89
+msgid "Wszystkie pakiety"
 msgstr ""
 
 #: offer-pl.php:61
+msgid "Dyscyplina"
+msgstr ""
+
+#: offer-pl.php:63
 msgid "Miesiąc"
+msgstr ""
+
+#: offer-pl.php:75
+msgid "Wszystkie oferty"
 msgstr ""
 
 #. Name of the theme

@@ -1,176 +1,168 @@
 <div id="content">
     <div>
         <aside class="sidebar">
-            <?php if(is_page('40-2')): ?>
-                <?php dynamic_sidebar('Oferty 40+'); ?>
-
-            <?php else: ?>
-                <?php dynamic_sidebar('Trener-online'); ?>
-                <?php
-
-                $cur_lang = pll_current_language();
-
-                $cur_category_stringID = '113, -22';
-                $currentOfferCategoryID = 113;
-                $parentCategory = 4645;
-                $stempelClass = 'stempel-pl';
-                $allText = 'Wszystkie';
-                $goToOfferText = 'Przejdź do oferty';
-
-
-
-                if($cur_lang =='en'){
-                    $cur_category_stringID = '181, -22';
-                    $currentOfferCategoryID = 181;
-                    $parentCategory = 5235;
-                    $stempelClass = 'stempel-en';
-                    $allText = 'All deals';
-                    $goToOfferText = 'See more';
-                }
-
-                $args = array(
-                    'numberposts' => -1,
-                    'cat' => $cur_category_stringID,
-                    'orderby' => 'menu_order',
-                    'order' => 'DESC'
-                );
-
-
-                if(is_category()){
-                    $e = explode(',', (isset($_GET['cat']) ? $_GET['cat'] : get_query_var('cat')));
-                    if(count($e) == 1){
-                        $args = array(
-                            'numberposts' => -1,
-                            'cat' => '-22,'. $e[0],
-                            'orderby' => 'menu_order',
-                            'order' => 'DESC'
-                        );
-                    }
-//                        $args = 'cat=-22,' . $e[0];
-                    else {
-                        $args = array( 'category__and' => $e, 'orderby' => 'menu_order',
-                            'order' => 'DESC' );
-                        global $wp_query;
-                        $wp_query->set('cat', $e[1]);
-                    }
-                }
-
-                ?>
-                <form action="/" method="get">
-                    <fieldset>
-                        <label><?php _e('Kategoria', 'woodrun'); ?></label>
-                        <?php wp_dropdown_categories('child_of='.$currentOfferCategoryID.'&hide_empty=0&show_option_all='.$allText.'&selected='.$e[0]); ?>
-<!--                        <label>Miesiąc</label>-->
-<!--                        --><?php //wp_dropdown_categories('child_of=5&hide_empty=0&show_option_all=Wszystkie&selected='.(count($e) == 1 ? $e[0] : $e[1])); ?>
-                        <input type="hidden" id="cat" name="cat" value="" />
-                        <input type="submit" value="" />
-                    </fieldset>
-                </form>
-            <?php endif; ?>
+            <?php dynamic_sidebar('Trener-online'); ?>
         </aside>
+
         <div class="sidebar-ankieta ankieta">
             <h3><?php _e('Wypełnij ankietę - daj nam znać co Cię interesuje z naszej oferty', 'woodrun'); ?></h3>
         </div>
-        <div id="offers">
-            <?php if(is_category(99) || is_category(101)): ?>
-                <div style="width:400px; margin: 0 auto; text-align: center;"><?php
-                    $post = get_post($parentCategory);
-                    $content = $post->post_content;
-                    $name = is_category(101) ? 'Adventure Snow Team' : 'Adventure Bike Team';
-                    $content = preg_replace('/\[advbutton page="'.$name.'"\]/','', $content);
-                    $content = apply_filters('the_content', $content);
-                    $content = str_replace(']]>', ']]&gt;', $content);
-                    echo $content;
-                    ?></div>
-            <?php endif; ?>
-            <?php if(!is_page('40-2')): ?>
-                <nav>
-                    <ul>
-                        <li<?php if(is_page($parentCategory) || is_category(99) || is_category(101)): echo ' class="current-cat"'; endif; ?>><a href="<?php echo get_permalink($parentCategory); ?>" title="Wszystkie oferty"><?php _e('Wszystkie pakiety', 'woodrun'); ?></a></li>
-                        <?php wp_list_categories('child_of='.$currentOfferCategoryID.'&title_li=&hide_empty=0'); ?>
-                    </ul>
-                </nav>
-            <?php endif; ?>
-            <?php
-            $the_query = new WP_Query($args);
-            $result_html = array();
-            while ( $the_query->have_posts() ) {
 
-                $the_query->the_post();
-                $date = false;
-                $sport = false;
 
-                foreach (wp_get_post_categories($post->ID) as $c) {
-                    $cat = get_category($c);
-                    if ($cat->parent == 5) $date = $cat;
-                    if ($cat->parent == $currentOfferCategoryID) $sport = $cat;
+        <?php
+        $cur_lang = pll_current_language();
+        $parentCategoryID = 113;
+        if($cur_lang =='en') {
+            $parentCategoryID = 181;
+        }
+
+        $categories = get_categories(
+            array(
+                'parent' => $parentCategoryID,
+                'hide_empty' => 0,
+                'orderby' => 'menu_order',
+                'order' => 'DESC'
+            )
+        );
+
+        $sortedCategories = array();
+        foreach($categories as $category){
+            $order = get_field('kolejnosc',$category);
+            if(!$order){
+                if(!empty($sortedCategories)){
+                    $order = min(array_keys($sortedCategories)) - 1;
+                }else{
+                    $order = 0 ;
                 }
-
-                $categories = (wp_get_post_categories($post->ID));
-                $cats = array();
-                foreach ($categories as $category){
-                    if(get_category($category)->parent == $currentOfferCategoryID){
-                        $cats[] = get_cat_name($category);
-                    }
-                }
-
-                $meta_date = explode('-', get_post_meta($post->ID, 'Data', true));
-                if(count($meta_date) == 2) {
-                    $meta_date[1] = explode('.', $meta_date[1]);
-                    if(count($meta_date[1]) == 3) $meta_time = mktime(0, 0, 0, $meta_date[1][1], $meta_date[0], $meta_date[1][2]);
-                    else $meta_time = $meta_date;
-                }
-                else $meta_time = $meta_date[0];
-
-                $price = get_post_meta($post->ID, 'Cena', true);
-
-                $nextTerm = get_field('najblizsza_data');
-                $slots = get_field('wolne_miejsca');
-
-
-
-
-                $offer = '<li class="offer-entry black-entry">
-            <a href="' . adv_permalink() . '" title="Przejdź do oferty">
-                <article>
-                    <header>
-                        <h3>' . the_title('', '', false) . ', <br />' . get_post_meta($post->ID, 'Data', true) . '</h3>
-                        <h2>' . implode(", ", $cats). '</h2>
-                    </header>
-                    ' . adv_excerpt() . '
-                    <div class="stempel '.$stempelClass.'">' .$slots. '</div>
-                    <span class="more">'.$goToOfferText.'</span>
-                </article>
-            </a>
-        </li>';
-
-                $result_html[$meta_time.uniqid()] = $offer;
             }
-//            ksort($result_html);
+            $sortedCategories[$order] = $category;
+        }
+        krsort($sortedCategories);
+        $categories = $sortedCategories;
 
-            wp_reset_postdata();
-            ?>
-            <ul>
-                <?= implode('',$result_html) ?>
-            </ul>
+
+        ?>
+        <div id="offers" class="trener-online-content">
+
+            <div class="breadcrumbs"><span></span></div>
+
+            <div id="categories-list" class="step step-0">
+                <h2 class="section-title"><?php _e('Wybierz typ pakietu', 'woodrun'); ?></h2>
+                <input type="button" class="next-step-btn" id="btn-step-0" data-step="step-0" value="<?php _e('Przejdź dalej', 'woodrun'); ?>">
+
+                <div class="categories-content">
+                    <div class="row">
+                        <?php foreach($categories as $category):?>
+                            <?php
+                            $long_desc = get_field('long_description',$category);
+                            ?>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="category-item box">
+                                    <div class="text-content">
+                                        <h2><?php echo $category->name;?></h2>
+                                        <span class="description"><?php echo $category->description;?></span>
+                                        <?php if($long_desc):?>
+                                            <div class="read-more-content-div">
+                                                <span class="read-more-btn"><?php _e('Dowiedz się więcej...', 'woodrun'); ?></span>
+                                                <div class="long-description-text"><?php echo $long_desc;?></div>
+                                            </div>
+                                        <?php endif;?>
+                                        <span class="select-step" data-name="<?php echo $category->name;?>" data-id="<?php echo $category->term_id; ?>"><?php _e('Wybierz', 'woodrun'); ?> </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php endforeach;?>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="categories-list" class="step step-1">
+                <h2 class="section-title"><?php _e('Wybierz kategorię', 'woodrun'); ?></h2>
+                <input type="button" class="prev-step-btn" id="btn-prev-step-0" data-back-to-step="step-0" value="<?php _e('Cofnij', 'woodrun'); ?>">
+                <input type="button" class="next-step-btn" id="btn-step-1" data-step="step-1" value="Przejdź dalej">
+
+                <div class="categories-content"></div>
+            </div>
+
+            <div class="item-type-list step step-2">
+                <input type="button" class="prev-step-btn" id="btn-prev-step-1" data-back-to-step="step-1" value="<?php _e('Cofnij', 'woodrun'); ?>">
+                <input type="button" class="next-step-btn" id="btn-step-2" data-step="step-2" value="<?php _e('Przejdź dalej', 'woodrun'); ?>">
+
+                <div class="types">
+                </div>
+            </div>
+
+            <div class="item-duration-content step step-3">
+                <div class="duration-items">
+                    <input type="button" class="prev-step-btn" id="btn-prev-step-2" data-back-to-step="step-1" value="<?php _e('Cofnij', 'woodrun'); ?>">
+                    <input type="button" class="next-step-btn" id="btn-step-3" data-step="step-2" value="<?php _e('Przejdź dalej', 'woodrun'); ?>">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="text-content">
+                                    <h2><?php _e('30 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="30 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="text-content">
+                                <h2><?php _e('90 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="90 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="text-content">
+                                    <h2><?php _e('180 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="180 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box">
+                                <div class="text-content">
+                                    <h2><?php _e('365 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="365 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
+
+
+
     </div>
 </div>
-<div id="ankieta-modal" class="modal">
 
-    <!-- Modal content -->
+
+<div id="ankieta-modal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
-            <h2><?php _e('Wypełnij ankietę, abyśmy mogli jak najlepiej dobrać i zaproponować Ci ofertę', 'woodrun'); ?></h2>
+            <h2><?php _e('Wypełnij ankietę, abyśmy mogli jak najlepiej dobrać i zaproponować Ci ofertę','woodrun'); ?></h2>
         </div>
-
-
         <div class="modal-body">
             <?= do_shortcode('[contact-form-7 id="4693" title="Ankieta"]'); ?>
         </div>
-
-
     </div>
+</div>
 
+
+<div id="additional-information" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2><?php _e('Dodatkowe informacje', 'woodrun'); ?></h2>
+        </div>
+        <div class="modal-body"></div>
+    </div>
 </div>

@@ -440,6 +440,178 @@
 
 
 
+
+        $('.step').on('click','.box',function () {
+            $('.trener-online-content .box').each(function () {
+                $(this).removeClass('active');
+            });
+            if($(this).hasClass('item-instant-package')){
+                return;
+            }
+            $(this).addClass('active');
+            var $parent = $(this).closest('.step');
+            $parent.find('.next-step-btn').trigger('click');
+        });
+
+    // $('.select-step').click(function () {
+    //     $('.trener-online-content .box').each(function () {
+    //         $(this).removeClass('active');
+    //     });
+    //     $(this).parent().addClass('active');
+    // })
+
+    var trenerCategoryDetails = {};
+    var $parentList = $('.trener-online-content');
+    var $box0 = $('.step-0');
+    var $box1 = $('.step-1');
+    var $box2 = $('.step-2');
+    var $box3 = $('.step-3');
+
+
+    $('.next-step-btn').click(function () {
+        if($(this).attr('data-step') == 'step-0') {
+            var ParentCategoryID = $box0.find('.box.active').find('.select-step').attr('data-id');
+            var ParentCategoryName = $box0.find('.box.active').find('.select-step').attr('data-name');
+            if (ParentCategoryID) {
+                trenerCategoryDetails['parentCatID'] = ParentCategoryID;
+                trenerCategoryDetails['parentCatName'] = ParentCategoryName;
+                $box0.fadeOut(500);
+                $box1.fadeIn(500);
+                $parentList.find('.breadcrumbs').find('span').html('<b>Dziedzina:</b> ' + trenerCategoryDetails['parentCatName']);
+
+                $.ajax({
+                    type: "POST",
+                    url: '/wp-admin/admin-ajax.php',
+                    data: ({
+                        action: "get_sub_categories",
+                        data : trenerCategoryDetails['parentCatID'],
+                    }),
+                    beforeSend: function(){
+                        // $('#template-exercise-modal .competition-body').html('');
+                    },
+                    success: function (data) {
+                        if (data) {
+                            if (data.data.status == 200) {
+                                $box1.find('.categories-content').html(data.data.data);
+                            }else{
+                                alert('Wystąpił błąd. Prosimy spróbować później.')
+                            }
+                        }
+                    }
+                })
+            }
+        }
+        if($(this).attr('data-step') == 'step-1') {
+            var categoryID = $box1.find('.box.active').find('.select-step').attr('data-id');
+            var categoryName = $box1.find('.box.active').find('.select-step').attr('data-name');
+            if (categoryID) {
+                trenerCategoryDetails['catID'] = categoryID;
+                trenerCategoryDetails['catName'] = categoryName;
+                $box1.fadeOut(500);
+                $box2.fadeIn(500);
+                $parentList.find('.breadcrumbs').find('span').html('<b>Dziedzina:</b> ' + trenerCategoryDetails['parentCatName']  + ' -> <b> Kategoria:</b> ' + categoryName);
+
+                $.ajax({
+                    type: "POST",
+                    url: '/wp-admin/admin-ajax.php',
+                    data: ({
+                        action: "get_category_suplements",
+                        data : trenerCategoryDetails,
+                    }),
+                    beforeSend: function(){
+                        // $('#template-exercise-modal .competition-body').html('');
+                    },
+                    success: function (data) {
+                        if (data) {
+                            if (data.data.status == 200) {
+                                $box2.find('.types').html(data.data.data);
+                            }else{
+                                alert('Wystąpił błąd. Prosimy spróbować później.')
+                            }
+                        }
+                    }
+                })
+            }
+        }
+        else if($(this).attr('data-step') == 'step-2'){
+            // var type = $box2.find('.box.active').find('.select-step').attr('data-type');
+            // var typeName = $box2.find('.box.active').find('.select-step').attr('data-name');
+            // if (type) {
+            //     trenerCategoryDetails['type'] = type;
+            //     trenerCategoryDetails['typeName'] = typeName;
+            //     $box2.fadeOut(500);
+            //     $box3.fadeIn(500);
+            //     $parentList.find('.breadcrumbs').find('span').html('<b>Dziedzina:</b> ' + trenerCategoryDetails['parentCatName']  + ' -> <b>Kategoria:</b> ' + trenerCategoryDetails['catName'] + ' ->  <b>Suplement:</b> ' + trenerCategoryDetails['typeName']);
+            // }
+        }
+    })
+
+    $('#btn-prev-step-0').click(function () {
+        $box1.fadeOut(500);
+        $box0.fadeIn(500);
+    })
+
+    $('#btn-prev-step-1').click(function () {
+        $box2.fadeOut(500);
+        $box1.fadeIn(500);
+    })
+
+
+    $('#btn-prev-step-2').click(function () {
+        $box3.fadeOut(500);
+        $box2.fadeIn(500);
+    })
+
+    $('.step').on('click','.day-item, .item-instant-package',function () {
+        var categoryID = $(this).attr('data-id');
+        if(categoryID) {
+            trenerCategoryDetails['catID'] = categoryID;
+        }
+
+        var type = $(this).attr('data-type');
+        var typeName = $(this).attr('data-name');
+        var duration = $(this).attr('data-duration');
+        trenerCategoryDetails['type'] = type;
+        trenerCategoryDetails['typeName'] = typeName;
+        trenerCategoryDetails['duration'] = duration;
+        console.log(trenerCategoryDetails);
+        $.ajax({
+            type: "POST",
+            url: '/wp-admin/admin-ajax.php',
+            data: ({
+                action: "search_post_by_meta",
+                data : trenerCategoryDetails,
+            }),
+            beforeSend: function(){
+                // $('#template-exercise-modal .competition-body').html('');
+            },
+            success: function (data) {
+                if (data) {
+                    if (data.data.status == 200) {
+                        window.location.href = data.data.link;
+                    }else{
+                        alert('Nie znaleziono pakietu.')
+                    }
+                }
+            }
+        })
+    })
+
+
+
+    $('.step').on('click','.box .read-more-btn',function () {
+        var $parent = $(this).parent();
+        $('#additional-information .modal-body').html($parent.find('.long-description-text').html());
+        $('#additional-information').show();
+    })
+
+
+
+
+
+
+
+
     })
 
 })(jQuery);

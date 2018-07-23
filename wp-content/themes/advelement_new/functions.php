@@ -8,7 +8,7 @@ require_once "post-types/logotypes.php";
 require_once "post-types/competition-files.php";
 require_once "post-types/users-account.php";
 require_once "post-types/exercises-repository.php";
-
+require_once "post-types/suplements.php";
 
 load_theme_textdomain('woodrun', get_template_directory() . '/languages');
 
@@ -1094,6 +1094,270 @@ zrozumiałe i jednoznaczne.';
     }
 
 
-    ?>
+
+    add_action('wp_ajax_search_post_by_meta', 'search_post_by_meta');
+    add_action('wp_ajax_nopriv_search_post_by_meta', 'search_post_by_meta');
+    function search_post_by_meta(){
+        global $wpdb;
+        $status = 400;
+        $link = '';
+        $data = $_POST['data'];
+
+        if($data['type'] == 'false'){
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => -1,
+                'cat' => $data['catID'],
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'key' => 'suplementy',
+                        'compare' => '=', // works!
+                        'value' => '' // This is ignored, but is necessary...
+                    ),
+                    array(
+                        'key' => 'voucher_duration',
+                        'compare' => '=', // works!
+                        'value' => $data['duration']
+                    ),
+                )
+            );
+
+            $query = new WP_Query($args);
+            if($query->posts[0]){
+                $link = get_permalink($query->posts[0]->ID);
+                $status = 200;
+                wp_send_json_success(array('status' => $status, 'link' => $link));
+            }
+        }
+
+
+        $sql = "
+        SELECT   wp_posts.* FROM wp_posts  LEFT JOIN wp_term_relationships ON (wp_posts.ID = wp_term_relationships.object_id) 
+        INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id )  INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) 
+        WHERE 1=1  AND ( wp_term_relationships.term_taxonomy_id IN (".$data['catID'].")) 
+        AND ( ( wp_postmeta.meta_key = 'suplementy' AND (wp_postmeta.meta_value) LIKE '%".$data['type']."%' )) 
+        AND ( mt1.meta_key = 'voucher_duration' AND mt1.meta_value = '".$data['duration']."' )
+        AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'future' OR wp_posts.post_status = 'draft' OR wp_posts.post_status = 'pending' OR wp_posts.post_status = 'private') GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC";
+
+        $results = $wpdb->get_results($sql);
+        if(!empty($results)){
+            $link = get_permalink($results[0]->ID);
+            $status = 200;
+        }else{
+            $status = 400;
+        }
+
+        wp_send_json_success(array('status' => $status, 'link' => $link));
+    }
+
+    add_action('wp_ajax_get_category_suplements', 'get_category_suplements');
+    add_action('wp_ajax_nopriv_get_category_suplements', 'get_category_suplements');
+    function get_category_suplements(){
+        $status = 200;
+        $suplementsHTML = '';
+
+        $categoryID = $_POST['data']['catID'];
+        $categoryParentName = $_POST['data']['parentCatName'];
+
+        $cat = get_category($categoryID);
+        $suplements = get_field('suplementy',$cat);
+
+        $moreText = 'Dowiedz się więcej';
+        $selectText = 'Wybierz';
+        $suplementNameField = 'suplement_name';
+        $suplementShortDescField = 'suplement_short_description';
+        $suplementLongDescField = 'suplement_long_description';
+        if(pll_current_language() == 'en'){
+            $selectText = 'Select';
+            $moreText = 'Read more...';
+            $suplementNameField = 'suplement_name_en';
+            $suplementShortDescField = 'suplement_short_description_en';
+            $suplementLongDescField = 'suplement_long_description_en';
+        }
+
+//        DLA KATEGORII BIEGANIE
+        if($categoryParentName == 'Bieganie'){
+            $suplementsHTML .='<div class="row">';
+            $suplementsHTML .= '
+            <div class="col-md-4">
+                <div class="box not-colored">
+                    <div class="text-content">
+                        <h2>Pakiet standard <br>(<span style="font-size:12px;">bez suplementacji</span>)</h2> 
+                        <span></span>
+                        <span></span>
+                        <span class="select-step" data-step="2" data-name="Brak" data-type="false">'.$selectText.'</span> 
+                    </div>
+                </div>
+                <div class="days-container">
+                    <div class="col-md-4 day-item" data-duration="90 dni" data-name="Brak" data-type="false">90 dni</div>
+                    <div class="col-md-4 day-item" data-duration="180 dni" data-name="Brak" data-type="false">180 dni</div>
+                    <div class="col-md-4 day-item" data-duration="365 dni" data-name="Brak" data-type="false">365 dni</div>
+                </div>
+            </div>';
+
+            foreach ($suplements as $suplement){
+                $name = get_field($suplementNameField,$suplement);
+                $short_desc = get_field($suplementShortDescField,$suplement);
+                $logn_desc = get_field($suplementLongDescField,$suplement);
+                $suplementsHTML .= '
+            <div class="col-md-4">
+                <div class="category-item box not-colored">
+                    <div class="text-content">
+                        <h2>'.$name.'</h2> 
+                        <span class="description">'.$short_desc.'</span>
+                        <div class="read-more-content-div">
+                            <span class="read-more-btn">'.$moreText.'</span>
+                            <div class="long-description-text">'.$logn_desc.'</div>
+                        </div>
+                        <span class="select-step" data-step="2" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$selectText.'</span> 
+                    </div>
+                </div>
+                <div class="days-container">
+                    <div class="col-md-4 day-item" data-duration="90 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">90 dni</div>
+                    <div class="col-md-4 day-item" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">180 dni</div>
+                    <div class="col-md-4 day-item" data-duration="365 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">365 dni</div>
+                </div>
+            </div>';
+            }
+        }
+        /*
+         * ROBIMY DLA CAŁEJ PARENT CATEGORY PRZEJSCIE Z DANEJ KATEGORII DO PRODUKTU, bo wszędzie mamy 180 dni
+         */
+        else if($categoryParentName == 'Zdrowie'){
+            $suplementsHTML .='<div class="row">';
+            $suplementsHTML .= '
+            <div class="col-md-4">
+                <div class="box not-colored item-instant-package" data-duration="180 dni" data-name="Brak" data-type="false">
+                    <div class="text-content">
+                        <h2>Pakiet standard <br>(<span style="font-size:12px;">bez suplementacji</span>)</h2> 
+                        <span></span>
+                        <span></span>
+                        <span class="select-step day-item" data-step="2" data-duration="180 dni" data-name="Brak" data-type="false">'.$selectText.'</span> 
+                    </div>
+                </div>
+            </div>';
+
+            foreach ($suplements as $suplement){
+                $name = get_field($suplementNameField,$suplement);
+                $short_desc = get_field($suplementShortDescField,$suplement);
+                $logn_desc = get_field($suplementLongDescField,$suplement);
+                $suplementsHTML .= '
+            <div class="col-md-4">
+                <div class="category-item box item-instant-package not-colored" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">
+                    <div class="text-content">
+                        <h2>'.$name.'</h2> 
+                        <span class="description">'.$short_desc.'</span>
+                        <div class="read-more-content-div">
+                            <span class="read-more-btn">'.$moreText.'</span>
+                            <div class="long-description-text">'.$logn_desc.'</div>
+                        </div>
+                        <span class="select-step" data-step="2" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$selectText.'</span> 
+                    </div>
+                </div>
+            </div>';
+            }
+        }
+
+
+        $suplementsHTML .= "</div>";
+        wp_send_json_success(array('status' => $status, 'data' => $suplementsHTML));
+    }
+
+
+
+//    POBRANIE CHILDÓW KATEGORII
+    add_action('wp_ajax_get_sub_categories', 'get_sub_categories');
+    add_action('wp_ajax_nopriv_get_sub_categories', 'get_sub_categories');
+    function get_sub_categories(){
+        $status = 200;
+        $subCategoriesHtml = '';
+
+        $categoryParentID = $_POST['data'];
+
+        $categories = get_categories(
+            array(
+                'parent' => $categoryParentID,
+                'hide_empty' => 0,
+                'orderby' => 'menu_order',
+                'order' => 'DESC'
+            )
+        );
+
+        $moreText = 'Dowiedz się więcej';
+        if(pll_current_language() == 'en'){
+            $moreText = 'Read more...';
+        }
+
+
+        $sortedCategories = array();
+        foreach($categories as $category){
+            $order = get_field('kolejnosc',$category);
+            if(!$order){
+                if(!empty($sortedCategories)){
+                    $order = min(array_keys($sortedCategories)) - 1;
+                }else{
+                    $order = 0 ;
+                }
+            }
+            $sortedCategories[$order] = $category;
+        }
+
+        krsort($sortedCategories);
+        $categories = $sortedCategories;
+
+        $subCategoriesHtml .='<div class="row">';
+
+        foreach($categories as $category){
+            $longDesc = get_field('long_description',$category);
+
+            if($category->name == 'Start'){
+                $subCategoriesHtml .='
+                <div class="col-md-4">
+                    <div class="category-item box item-instant-package" data-id="'.$category->term_id.'" data-duration="30 dni" data-name="Brak" data-type="false">
+                        <div class="text-content">
+                        <h2>'.$category->name.'</h2>
+                        <span class="description">'.$category->description.'</span>';
+                    if($longDesc){
+                        $subCategoriesHtml .= ' 
+                            <div class="read-more-content-div">
+                                <span class="read-more-btn">'.$moreText.'</span>
+                                <div class="long-description-text">'.$longDesc.'</div>
+                            </div>';
+                    }
+                    $subCategoriesHtml .= '<span class="select-step" data-name="'.$category->name.'" data-id="'.$category->term_id.'">Wybierz </span>
+                        </div>
+                    </div>
+                </div>';
+            }else{
+                $subCategoriesHtml .='
+                <div class="col-md-4">
+                    <div class="category-item box">
+                        <div class="text-content">
+                        <h2>'.$category->name.'</h2>
+                        <span class="description">'.$category->description.'</span>';
+                    if($longDesc){
+                        $subCategoriesHtml .= ' 
+                            <div class="read-more-content-div">
+                                <span class="read-more-btn">'.$moreText.'</span>
+                                <div class="long-description-text">'.$longDesc.'</div>
+                            </div>';
+                    }
+                    $subCategoriesHtml .= '<span class="select-step" data-name="'.$category->name.'" data-id="'.$category->term_id.'">Wybierz </span>
+                        </div>
+                    </div>
+                </div>';
+            }
+
+        }
+
+        $subCategoriesHtml .= "</div>";
+
+
+        wp_send_json_success(array('status' => $status, 'data' => $subCategoriesHtml));
+
+    }
+
+?>
 
 

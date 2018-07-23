@@ -66,31 +66,25 @@ foreach ($months as &$item) {
 $getdata = explode(',', $_GET['cat']);
 
 
-$currentTrenerCategoryID = array(113,231,233,181,243,241);
+$currentTrenerCategoryID = 113;
 $parentTrenerCategory = 4645;
 $trenerOnlineText = 'trener-online';
 
 if($current_language =='en'){
-//    $currentTrenerCategoryID = 181;
+    $currentTrenerCategoryID = 181;
     $parentTrenerCategory = 5235;
     $trenerOnlineText = 'online-coach';
 }
 
-//if(is_category() && get_parent_category() == $currentTrenerCategoryID || in_array(get_the_category()[1]->category_parent,$currentTrenerCategoryID)){
-//    $trener_cats = get_categories(array('hide_empty' => 0, 'child_of' => $currentTrenerCategoryID, 'type' => 'category'));
-//}
 
 
-$tempCategories = get_the_category();
-foreach ($tempCategories as $temp){
-    if(in_array($temp->category_parent, $currentTrenerCategoryID)){
-        $trener_categories = array(true);
-    }
+if(is_category() && get_parent_category() == $currentTrenerCategoryID){
+    $trener_cats = get_categories(array('hide_empty' => 0, 'child_of' => $currentTrenerCategoryID, 'type' => 'category'));
 }
 
-//if(in_array(get_the_category()[0]->category_parent,$currentTrenerCategoryID)){
-//    $trener_categories = array(true);
-//}
+if(get_the_category()[0]->category_parent == $currentTrenerCategoryID || get_the_category()[1]->category_parent == $currentTrenerCategoryID){
+    $trener_categories = get_categories(array('hide_empty' => 0, 'child_of' => $currentTrenerCategoryID, 'type' => 'category'));
+}
 
 
 
@@ -118,7 +112,7 @@ foreach ($tempCategories as $temp){
     <?php get_template_part('single-offer-pl'); ?>
 
 <?php elseif (is_single() && (!empty($trener_categories))): ?>
-    <?php get_template_part('single-trener-pl');  ?>
+    <?php get_template_part('single-trener-pl'); ?>
 
 <?php elseif (is_single()): ?>
     <?php get_template_part('single-article'); /*artykuły są dość podobne, póki co bez podziału na język */ ?>

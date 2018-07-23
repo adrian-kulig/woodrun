@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Adventure Element\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-14 22:05+0000\n"
-"PO-Revision-Date: 2018-02-14 22:12+0000\n"
+"POT-Creation-Date: 2018-04-29 07:08+0000\n"
+"PO-Revision-Date: 2018-04-29 07:38+0000\n"
 "Last-Translator: admin <info@adventureelement.pl>\n"
 "Language-Team: English (UK)\n"
 "Language: en-GB\n"
@@ -13,99 +13,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: single-offer-pl.php:73 single-trener-pl.php:63
+#: homepage.php:3
+msgid "Trenuj z nami"
+msgstr ""
+
+#: homepage.php:5
+msgid ""
+"Panel Woodrun - załóż konto i wykup pakiet z opieką! Możesz też korzystać z "
+"panelu darmowo jako dzienniczka treningowego."
+msgstr ""
+
+#: homepage.php:12
+msgid "Najnowsza oferta"
+msgstr ""
+
+#: homepage.php:57
+msgid "przejdź do oferty"
+msgstr ""
+
+#: homepage.php:76 trener-pl.php:165
+msgid ""
+"Wypełnij ankietę, abyśmy mogli jak najlepiej dobrać i zaproponować Ci ofertę"
+msgstr ""
+"Fill in the questionnaire and let us know which from our offer suits you the "
+"best.\n"
+
+#: homepage.php:94
+msgid "Ankieta wstępna dla osób, które wykupiły pakiet z dietetykiem"
+msgstr ""
+
+#: single-trener-pl.php:56
+msgid "Zobacz następny"
+msgstr "See next"
+
+#: single-trener-pl.php:61 single-offer-pl.php:73
 msgid "Formularz zamówienia"
 msgstr ""
 
-#: single-offer-pl.php:77 single-trener-pl.php:67
+#: single-trener-pl.php:65 single-offer-pl.php:77
 msgid "Osoba prywatna"
 msgstr ""
 
-#: single-offer-pl.php:89 single-offer-pl.php:272 single-trener-pl.php:79
-#: single-trener-pl.php:223
-msgid "Imię i Nazwisko:"
+#: single-trener-pl.php:72 single-trener-pl.php:74 single-trener-pl.php:232
+#: single-offer-pl.php:84 single-offer-pl.php:86 single-offer-pl.php:268
+msgid "Nazwa firmy"
 msgstr ""
 
-#: single-offer-pl.php:93 single-trener-pl.php:83
-msgid "Adres E-mail:"
+#: single-trener-pl.php:77 single-trener-pl.php:79 single-trener-pl.php:236
+#: single-offer-pl.php:89 single-offer-pl.php:91 single-offer-pl.php:272
+msgid "Imię i Nazwisko"
 msgstr ""
 
-#: single-offer-pl.php:97 single-offer-pl.php:279 single-trener-pl.php:87
-#: single-trener-pl.php:230
-msgid "Telefon:"
+#: single-trener-pl.php:81 single-trener-pl.php:83 single-offer-pl.php:93
+#: single-offer-pl.php:95
+msgid "Adres E-mail"
 msgstr ""
 
-#: single-offer-pl.php:101 single-trener-pl.php:91
-msgid "Ulica i numer domu:"
+#: single-trener-pl.php:85 single-trener-pl.php:87 single-trener-pl.php:243
+#: single-offer-pl.php:97 single-offer-pl.php:99 single-offer-pl.php:279
+msgid "Telefon"
 msgstr ""
 
-#: single-offer-pl.php:105 single-trener-pl.php:95
-msgid "Kod pocztowy i miejscowość:"
+#: single-trener-pl.php:89 single-trener-pl.php:91 single-offer-pl.php:101
+#: single-offer-pl.php:103
+msgid "Ulica i numer domu"
 msgstr ""
 
-#: single-offer-pl.php:114 single-offer-pl.php:293 single-trener-pl.php:104
-#: single-trener-pl.php:244
-msgid "NIP:"
+#: single-trener-pl.php:93 single-offer-pl.php:105
+msgid "Kod pocztowy i miejscowość"
 msgstr ""
 
-#: single-offer-pl.php:118 single-offer-pl.php:296 single-trener-pl.php:108
-#: single-trener-pl.php:247
-msgid "REGON:"
+#: single-trener-pl.php:97 single-trener-pl.php:253 single-offer-pl.php:109
+#: single-offer-pl.php:289
+msgid "Miejscowość"
 msgstr ""
 
-#: single-offer-pl.php:125
-msgid "Wybierz termin:"
+#: single-trener-pl.php:102 single-trener-pl.php:104 single-trener-pl.php:257
+#: single-offer-pl.php:114 single-offer-pl.php:116 single-offer-pl.php:293
+msgid "NIP"
 msgstr ""
 
-#: single-offer-pl.php:127
-msgid "-- Wybierz datę --"
+#: single-trener-pl.php:106 single-trener-pl.php:108 single-trener-pl.php:260
+#: single-offer-pl.php:118 single-offer-pl.php:120 single-offer-pl.php:296
+msgid "REGON"
 msgstr ""
 
-#: single-offer-pl.php:136
-msgid "Wybierz zakwaterowanie"
-msgstr ""
-
-#: single-offer-pl.php:138 single-offer-pl.php:149 single-offer-pl.php:157
-msgid "-- Wybierz opcję --"
-msgstr ""
-
-#: single-offer-pl.php:147
-msgid ""
-"Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona "
-"inna osoba"
-msgstr ""
-
-#: single-offer-pl.php:150 single-offer-pl.php:158
-msgid "Tak"
-msgstr ""
-
-#: single-offer-pl.php:151 single-offer-pl.php:159
-msgid "Nie"
-msgstr ""
-
-#: single-offer-pl.php:155
-msgid ""
-"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej (noclegi, "
-"wyżywienie, bez zajęć sportowych i bez badania EKG wysiłkowego)"
-msgstr ""
-
-#: single-offer-pl.php:173 single-trener-pl.php:123
+#: single-trener-pl.php:121 single-offer-pl.php:173
 msgid "Akceptuję"
 msgstr ""
 
-#: single-offer-pl.php:175 single-trener-pl.php:125
+#: single-trener-pl.php:123 single-offer-pl.php:175
 msgid "Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)"
 msgstr ""
 
-#: single-offer-pl.php:176 single-trener-pl.php:126
+#: single-trener-pl.php:124 single-offer-pl.php:176
 msgid "oraz"
 msgstr ""
 
-#: single-offer-pl.php:178 single-trener-pl.php:128
+#: single-trener-pl.php:126 single-offer-pl.php:178
 msgid "regulamin aktualnie obowiązujących promocji Woodrun"
 msgstr ""
 
-#: single-offer-pl.php:189 single-trener-pl.php:139
+#: single-trener-pl.php:137 single-offer-pl.php:189
 msgid ""
 "Wyrażam zgodę na 1) przetwarzanie danych osobowych w celu: wykorzystania "
 "przez Woodrun oraz\n"
@@ -134,7 +143,7 @@ msgid ""
 "                                    osobowych z 29 sierpnia 1997 r."
 msgstr ""
 
-#: single-offer-pl.php:211 single-trener-pl.php:161
+#: single-trener-pl.php:160 single-offer-pl.php:211
 msgid ""
 "Wyrażam zgodę na korzystanie przez Klienta z Usług świadczonych przez "
 "Woodrun odbywać\n"
@@ -143,7 +152,17 @@ msgid ""
 "                                    związanych ze stanem zdrowia Klienta"
 msgstr ""
 
-#: single-offer-pl.php:223 single-trener-pl.php:173
+#: single-trener-pl.php:173
+msgid ""
+"Oświadczam, że jestem osobą całkowicie zdrową i nie mam zdiagnozowanych "
+"przez \n"
+"                                         lekarza żadnych chorób, które "
+"mogłyby wpłynąć na moje zdrowie w trakcie realizacji\n"
+"                                          planu żywieniowego wraz z "
+"treningiem"
+msgstr ""
+
+#: single-trener-pl.php:186 single-offer-pl.php:223
 msgid ""
 "Oświadczam, że jestem świadomy/-a, że na mocy Ustawy o prawach konsumenta z "
 "30 maja\n"
@@ -173,7 +192,7 @@ msgid ""
 "Klient utraci prawo do odstąpienia od umowy."
 msgstr ""
 
-#: single-offer-pl.php:245 single-trener-pl.php:195
+#: single-trener-pl.php:208 single-offer-pl.php:245
 msgid ""
 "Wyrażam zgodę w przypadku zakupu przeze mnie Voucherów W (na pakiety opieki "
 "online) na\n"
@@ -187,77 +206,49 @@ msgid ""
 "punkt nie odnosi się do Pobytów W."
 msgstr ""
 
-#: single-offer-pl.php:257 single-trener-pl.php:208
+#: single-trener-pl.php:221 single-offer-pl.php:257
 msgid "Zamawiam"
 msgstr ""
 
-#: single-offer-pl.php:262 single-trener-pl.php:213
+#: single-trener-pl.php:226 single-offer-pl.php:262
 msgid "Podsumowanie zamówienia"
 msgstr ""
 
-#: single-offer-pl.php:265 single-trener-pl.php:216
-msgid "Dane:"
+#: single-trener-pl.php:229 single-offer-pl.php:265
+msgid "Dane"
 msgstr ""
 
-#: single-offer-pl.php:276 single-trener-pl.php:227
-msgid "E-mail:"
+#: single-trener-pl.php:240 single-offer-pl.php:276
+msgid "E-mail"
 msgstr ""
 
-#: single-offer-pl.php:282 single-trener-pl.php:233
-msgid "Adres:"
+#: single-trener-pl.php:246 single-offer-pl.php:282
+msgid "Adres"
 msgstr ""
 
-#: single-offer-pl.php:285 single-trener-pl.php:236
-msgid "Kod pocztowy:"
+#: single-trener-pl.php:249 single-offer-pl.php:285
+msgid "Kod pocztowy"
 msgstr ""
 
-#: single-offer-pl.php:289 single-trener-pl.php:240
-msgid "Miejscowość:"
+#: single-trener-pl.php:266 single-offer-pl.php:319
+msgid "Voucher "
 msgstr ""
 
-#: single-offer-pl.php:319 single-trener-pl.php:254
-msgid "Voucher :"
+#: single-trener-pl.php:271
+msgid "Cena i termin płatności"
 msgstr ""
 
-#: single-offer-pl.php:325
-msgid "Informacje :"
+#: single-trener-pl.php:275 single-offer-pl.php:345
+msgid "Czas trwania umowy* "
 msgstr ""
 
-#: single-offer-pl.php:326
-msgid "Termin pobytu:"
-msgstr ""
-
-#: single-offer-pl.php:328
-msgid "Zakwaterowanie: "
-msgstr ""
-
-#: single-offer-pl.php:331
-msgid ""
-"Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona "
-"inna osoba:"
-msgstr ""
-
-#: single-offer-pl.php:334
-msgid ""
-"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej z zakresem "
-"świadczeń: noclegi i wyżywienie:"
-msgstr ""
-
-#: single-offer-pl.php:341 single-trener-pl.php:259
-msgid "Cena i termin płatności : "
-msgstr ""
-
-#: single-offer-pl.php:345 single-trener-pl.php:263
-msgid "Czas trwania umowy* :"
-msgstr ""
-
-#: single-offer-pl.php:347 single-trener-pl.php:265
+#: single-trener-pl.php:277 single-offer-pl.php:347
 msgid ""
 "*Jest to wynikający z umowy czas trwania zobowiązań zarówno\n"
 "                                Woodrun, jak i Klienta."
 msgstr ""
 
-#: single-offer-pl.php:352 single-trener-pl.php:270
+#: single-trener-pl.php:282 single-offer-pl.php:352
 msgid ""
 "Po złożeniu zamówienia otrzymasz na wskazany adres e-mail wiadomość o "
 "kolejnych\n"
@@ -266,32 +257,96 @@ msgid ""
 "kontaktować z Tobą telefonicznie."
 msgstr ""
 
-#: single-offer-pl.php:358 single-trener-pl.php:276
+#: single-trener-pl.php:288 single-offer-pl.php:358
 msgid "Zamawiam z obowiązkiem zapłaty"
 msgstr ""
 
-#: single-offer-pl.php:365 single-trener-pl.php:283
+#: single-trener-pl.php:295 single-offer-pl.php:365
 msgid "Dziękujemy za złożenie zamówienia."
 msgstr ""
 
-#: single-offer-pl.php:368 single-trener-pl.php:286
+#: single-trener-pl.php:298 single-offer-pl.php:368
 msgid "Przepraszamy, coś poszło nie tak."
 msgstr ""
 
-#: single-offer-pl.php:380
-msgid "Rezerwuj online"
-msgstr ""
-
-#: single-offer-pl.php:383 single-trener-pl.php:306
+#: single-trener-pl.php:314 single-offer-pl.php:382
 msgid "Powrót do listy ofert"
 msgstr ""
 
-#: offer-pl.php:59
-msgid "Dyscyplina"
-msgstr "Dyscypline"
+#: single-offer-pl.php:56
+msgid "Zobacz następną"
+msgstr "See next"
 
-#: offer-pl.php:61
+#: single-offer-pl.php:125
+msgid "Wybierz termin"
+msgstr ""
+
+#: single-offer-pl.php:127
+msgid "-- Wybierz datę --"
+msgstr ""
+
+#: single-offer-pl.php:136
+msgid "Wybierz zakwaterowanie"
+msgstr ""
+
+#: single-offer-pl.php:138 single-offer-pl.php:149 single-offer-pl.php:157
+msgid "-- Wybierz opcję --"
+msgstr ""
+
+#: single-offer-pl.php:147 single-offer-pl.php:331
+msgid ""
+"Za dodatkową opłatą chcę, aby do mojego zakwaterowania nie była przydzielona "
+"inna osoba"
+msgstr ""
+
+#: single-offer-pl.php:150 single-offer-pl.php:158
+msgid "Tak"
+msgstr ""
+
+#: single-offer-pl.php:151 single-offer-pl.php:159
+msgid "Nie"
+msgstr ""
+
+#: single-offer-pl.php:155
+msgid ""
+"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej (noclegi, "
+"wyżywienie, bez zajęć sportowych i bez badania EKG wysiłkowego)"
+msgstr ""
+
+#: single-offer-pl.php:325
+msgid "Informacje "
+msgstr ""
+
+#: single-offer-pl.php:326
+msgid "Termin pobytu"
+msgstr ""
+
+#: single-offer-pl.php:328
+msgid "Zakwaterowanie"
+msgstr ""
+
+#: single-offer-pl.php:334
+msgid ""
+"Proszę o przedstawienie mi także oferty dla osoby towarzyszącej z zakresem "
+"świadczeń: noclegi i wyżywienie"
+msgstr ""
+
+#: single-offer-pl.php:341
+msgid "Cena i termin płatności : "
+msgstr ""
+
+#: trener-pl.php:72
+msgid "Wypełnij ankietę - daj nam znać co Cię interesuje z naszej oferty"
+msgstr ""
+"Fill in the questionnaire and let us know which from our offer suits you the "
+"best.\n"
+
+#: offer-pl.php:63
 msgid "Miesiąc"
+msgstr ""
+
+#: offer-pl.php:75
+msgid "Wszystkie oferty"
 msgstr ""
 
 #. Name of the theme
@@ -310,11 +365,22 @@ msgstr ""
 msgid "http://www.pawelwolak.info/"
 msgstr ""
 
-#: single-offer-pl.php:78 single-trener-pl.php:68
+#: single-offer-pl.php:379
+msgid "Rezerwuj online"
+msgstr "Book online"
+
+#: single-trener-pl.php:66 single-offer-pl.php:78
 msgid "Firma"
 msgstr "Company"
 
-#: single-offer-pl.php:84 single-offer-pl.php:268 single-trener-pl.php:74
-#: single-trener-pl.php:219
-msgid "Nazwa firmy:"
-msgstr "Company name"
+#: trener-pl.php:61
+msgid "Kategoria"
+msgstr "Category"
+
+#: trener-pl.php:89
+msgid "Wszystkie pakiety"
+msgstr "All deals"
+
+#: offer-pl.php:61
+msgid "Dyscyplina"
+msgstr "Dyscypline"

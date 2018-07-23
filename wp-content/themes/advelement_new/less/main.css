@@ -1984,3 +1984,190 @@ html {
 .page-template-template-competition {
   min-width: auto;
 }
+.send-btn-color {
+  background-color: #007C89 !important;
+  font-size: 16px;
+  float: left !important;
+}
+.page-trener-online #content > div {
+  position: unset;
+}
+.trener-online-content {
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.trener-online-content .section-title {
+  text-align: center;
+  font-size: 22px;
+}
+.trener-online-content .categories-list {
+  text-align: center;
+}
+.trener-online-content .row {
+  clear: both;
+  float: left;
+  width: 100%;
+}
+.trener-online-content .col-md-4 {
+  display: inline-block;
+  width: 33%;
+  margin-top: 20px;
+  float: left;
+}
+.trener-online-content .col-md-4 .box {
+  margin: 0px 5px;
+  min-height: 100px;
+  vertical-align: middle;
+}
+.trener-online-content .box {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  line-height: normal;
+  position: relative;
+}
+.trener-online-content .box .text-content {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.trener-online-content .box h2 {
+  width: 100%;
+  color: #007C89;
+  text-align: center;
+  text-transform: uppercase;
+}
+.trener-online-content .box .description {
+  width: 100%;
+  margin: 10px 0px;
+  text-align: left;
+  display: block;
+}
+.trener-online-content .box .select-step {
+  font-size: 16px;
+  border: 1px solid #fff;
+  padding: 5px 15px;
+  width: 110px;
+  cursor: pointer;
+  margin: 0 auto ;
+  display: none;
+}
+.trener-online-content .box.active:not(.colored) {
+  background-color: #007C89;
+}
+.trener-online-content .box.active:not(.colored) h2 {
+  color: #fff;
+}
+.trener-online-content .box.active:not(.colored) .read-more-content-div .read-more-btn {
+  color: #fff;
+}
+.trener-online-content .box.not-colored {
+  background: #000 !important;
+}
+.trener-online-content .box.not-colored h2 {
+  color: #007C89 !important;
+}
+.trener-online-content .next-step-btn,
+.trener-online-content .prev-step-btn {
+  float: right;
+  padding: 10px 15px;
+  background-color: #007C89;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.trener-online-content .next-step-btn:hover,
+.trener-online-content .prev-step-btn:hover {
+  border: 2px solid #007C89;
+  color: #007C89;
+  background-color: #fff;
+}
+.trener-online-content .prev-step-btn {
+  float: left;
+}
+.trener-online-content .next-step-btn {
+  display: none;
+}
+.trener-online-content .step-1,
+.trener-online-content .step-2,
+.trener-online-content .step-3 {
+  display: none;
+}
+.trener-online-content .breadcrumbs {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.trener-online-content .read-more-content-div {
+  display: none;
+}
+.trener-online-content .read-more-content-div .read-more-btn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #007C89;
+}
+.trener-online-content .read-more-content-div .read-more-btn :hover {
+  text-decoration: underline;
+}
+.trener-online-content .read-more-content-div .long-description-text {
+  display: none;
+}
+.trener-online-content .suplement-price {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.trener-online-content .days-container {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.trener-online-content .days-container .day-item {
+  position: relative;
+  background: #0f7c88;
+  border-radius: 50%;
+  height: 80px;
+  max-width: 80px;
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 18px;
+  text-shadow: 1px 2px 1px #000;
+  padding: 0px;
+  margin: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+.trener-online-content .days-container .day-item:before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 25px;
+  background-color: black;
+  content: " ";
+  text-align: center;
+  z-index: 10;
+  top: -25px;
+}
+.trener-online-content .days-container .day-item:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #0f7c88;
+}
+#additional-information .modal-body {
+  color: #000;
+  line-height: 1.2;
+  font-size: 16px;
+}

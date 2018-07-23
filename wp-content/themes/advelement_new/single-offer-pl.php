@@ -172,10 +172,10 @@ setup_postdata($post);
                                                                     name="rules-1"></span>
                                 <span class="rule_text">
                                          <?php _e('Akceptuję', 'woodrun'); ?> <a
-                                            href="/wp-content/themes/advelement_new/assets/Ogolne_Warunki_Swiadczenia_Uslug_i_Regulamin_E-Shop_Woodrun%2005.02.2018.pdf"
+                                            href="/wp-content/themes/advelement_new/assets/Ogólne_Warunki_Świadczenia_Usług_i_Regulamin_E-Shop_Woodrun_25.05.2018.pdf"
                                             target="_blank" class="doc-btn"> <?php _e('Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)', 'woodrun'); ?><img class="rules-pdf-icon" src="/wp-content/themes/advelement_new/images/pdf-icon.png"> </a>
                                     <?php _e('oraz', 'woodrun'); ?> <a
-                                            href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_05.02.2018.pdf"
+                                            href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Letnia_promocja_Woodrun_25.05.2018.pdf"
                                             target="_blank" class="doc-btn"> <?php _e('regulamin aktualnie obowiązujących promocji Woodrun', 'woodrun'); ?><img class="rules-pdf-icon" src="/wp-content/themes/advelement_new/images/pdf-icon.png"></a>
                                     </span>
                             </label>
@@ -187,7 +187,7 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-2" type="checkbox" class="checkbox"
                                                                     name="rules-2"></span>
                                 <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę na umieszczenie moich danych osobowych w informatycznej bazie danych Jałowcówka Gospodarstwo Rolne,
+                                    <?php _e('Wyrażam zgodę na umieszczenie moich danych osobowych w informatycznej bazie danych Jałowcówka Gospodarstwo Rolne,
                                         Koszarawa 497 (kod pocztowy 34-332 Koszarawa), zwane dalej Woodrun i ich przetwarzanie zgodnie z Ustawą o Ochronie Danych
                                          Osobowych z dnia 29 sierpnia 1997 r. (Dz. U. Dz.U. 1997 nr 133 poz. 883 z późn. zm.) oraz Rozporządzeniem Parlamentu 
                                         Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem
@@ -198,7 +198,10 @@ setup_postdata($post);
                                          że mam możliwość dostępu do swoich danych, w celu ich sprostowania i usunięcia oraz żądania ograniczenia ich przetwarzania oraz 
                                          wycofania udzielonej zgody w każdym momencie, przy czym,  cofnięcie uprzednio wyrażonej zgody nie wpłynie na legalność 
                                          przetwarzania przed jej wycofaniem, a także wniesienia skargi do organu nadzorczego. Dane nie będą przekazywane 
-                                         do państw trzecich. ', 'woodrun'); ?>
+                                         do państw trzecich.  Abu komunikować się z Tobą, Woodrun korzysta z firm świadczących usługi wchodzące w skład oferty Woodrun – 
+                                         specjalizujących si ę w danych dziedzinach oferty Woodrun, firm oferujących hosting, rozsyłanie wiadomości email, sms, lub poprzez 
+                                         inne kanały komunikacji elektronicznej. Aby móc pracować dla Woodrun, firmy te posiadają dostęp do Twoich danych Nie mogą z nich 
+                                         korzystać poza zakresem realizowania usług dla Woodrun. ', 'woodrun'); ?>
                                     </span>
                             </label>
                         </div>
