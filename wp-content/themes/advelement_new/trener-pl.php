@@ -51,7 +51,7 @@
                 <input type="button" class="next-step-btn" id="btn-step-0" data-step="step-0" value="<?php _e('Przejdź dalej', 'woodrun'); ?>">
 
                 <div class="categories-content">
-                    <div class="row">
+                    <div class="row text-center">
                         <?php foreach($categories as $category):?>
                             <?php
                             $long_desc = get_field('long_description',$category);
@@ -100,32 +100,32 @@
                     <input type="button" class="prev-step-btn" id="btn-prev-step-2" data-back-to-step="step-1" value="<?php _e('Cofnij', 'woodrun'); ?>">
                     <input type="button" class="next-step-btn" id="btn-step-3" data-step="step-2" value="<?php _e('Przejdź dalej', 'woodrun'); ?>">
 
-                    <div class="row">
+                    <div class="row text-center">
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="text-content">
-                                    <h2><?php _e('30 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="30 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                    <h2><?php _e('30 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="<?php _e('30 dni', 'woodrun'); ?>"><?php _e('Wybierz', 'woodrun'); ?></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="text-content">
-                                <h2><?php _e('90 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="90 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                <h2><?php _e('90 dni', 'woodrun'); ?></h2> <span class="select-step" data-step="3" data-duration="<?php _e('90 dni', 'woodrun'); ?>"><?php _e('Wybierz', 'woodrun'); ?></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="text-content">
-                                    <h2><?php _e('180 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="180 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                    <h2><?php _e('180 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="<?php _e('180 dni', 'woodrun'); ?>"><?php _e('Wybierz', 'woodrun'); ?></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="box">
                                 <div class="text-content">
-                                    <h2><?php _e('365 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="365 dni"><?php _e('Wybierz', 'woodrun'); ?></span>
+                                    <h2><?php _e('365 dni', 'woodrun'); ?></h2><span class="select-step" data-step="3" data-duration="<?php _e('365 dni', 'woodrun'); ?>"><?php _e('Wybierz', 'woodrun'); ?></span>
                                 </div>
                             </div>
                         </div>

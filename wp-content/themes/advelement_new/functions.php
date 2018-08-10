@@ -1117,7 +1117,7 @@ zrozumiałe i jednoznaczne.';
                     ),
                     array(
                         'key' => 'voucher_duration',
-                        'compare' => '=', // works!
+                        'compare' => 'like', // works!
                         'value' => $data['duration']
                     ),
                 )
@@ -1137,7 +1137,7 @@ zrozumiałe i jednoznaczne.';
         INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id )  INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) 
         WHERE 1=1  AND ( wp_term_relationships.term_taxonomy_id IN (".$data['catID'].")) 
         AND ( ( wp_postmeta.meta_key = 'suplementy' AND (wp_postmeta.meta_value) LIKE '%".$data['type']."%' )) 
-        AND ( mt1.meta_key = 'voucher_duration' AND mt1.meta_value = '".$data['duration']."' )
+        AND ( mt1.meta_key = 'voucher_duration' AND mt1.meta_value LIKE '".$data['duration']."' )
         AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'future' OR wp_posts.post_status = 'draft' OR wp_posts.post_status = 'pending' OR wp_posts.post_status = 'private') GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC";
 
         $results = $wpdb->get_results($sql);
@@ -1168,31 +1168,43 @@ zrozumiałe i jednoznaczne.';
         $suplementNameField = 'suplement_name';
         $suplementShortDescField = 'suplement_short_description';
         $suplementLongDescField = 'suplement_long_description';
+        $days30 = '30 dni';
+        $days90 = '90 dni';
+        $days180 = '180 dni';
+        $days365 = '365 dni';
+        $standardPackageText = 'Pakiet standard';
+        $standardPackageSubText = 'bez suplementacji';
         if(pll_current_language() == 'en'){
             $selectText = 'Select';
             $moreText = 'Read more...';
             $suplementNameField = 'suplement_name_en';
             $suplementShortDescField = 'suplement_short_description_en';
             $suplementLongDescField = 'suplement_long_description_en';
+            $days30 = '30 days';
+            $days90 = '90 days';
+            $days180 = '180 days';
+            $days365 = '365 days';
+            $standardPackageText = 'Standard package';
+            $standardPackageSubText = 'without supplementation';
         }
 
 //        DLA KATEGORII BIEGANIE
-        if($categoryParentName == 'Bieganie'){
-            $suplementsHTML .='<div class="row">';
+        if($categoryParentName == 'Bieganie' || $categoryParentName == 'Running'){
+            $suplementsHTML .='<div class="row text-center">';
             $suplementsHTML .= '
             <div class="col-md-4">
                 <div class="box not-colored">
                     <div class="text-content">
-                        <h2>Pakiet standard <br>(<span style="font-size:12px;">bez suplementacji</span>)</h2> 
+                        <h2>'.$standardPackageText.' <br>(<span style="font-size:12px;">'.$standardPackageSubText.'</span>)</h2> 
                         <span></span>
                         <span></span>
                         <span class="select-step" data-step="2" data-name="Brak" data-type="false">'.$selectText.'</span> 
                     </div>
                 </div>
                 <div class="days-container">
-                    <div class="col-md-4 day-item" data-duration="90 dni" data-name="Brak" data-type="false">90 dni</div>
-                    <div class="col-md-4 day-item" data-duration="180 dni" data-name="Brak" data-type="false">180 dni</div>
-                    <div class="col-md-4 day-item" data-duration="365 dni" data-name="Brak" data-type="false">365 dni</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days90.'" data-name="Brak" data-type="false">'.$days90.'</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days180.'" data-name="Brak" data-type="false">'.$days180.'</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days365.'" data-name="Brak" data-type="false">'.$days365.'</div>
                 </div>
             </div>';
 
@@ -1214,9 +1226,9 @@ zrozumiałe i jednoznaczne.';
                     </div>
                 </div>
                 <div class="days-container">
-                    <div class="col-md-4 day-item" data-duration="90 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">90 dni</div>
-                    <div class="col-md-4 day-item" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">180 dni</div>
-                    <div class="col-md-4 day-item" data-duration="365 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">365 dni</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days90.'" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$days90.'</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days180.'" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$days180.'</div>
+                    <div class="col-md-4 day-item" data-duration="'.$days365.'" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$days365.'</div>
                 </div>
             </div>';
             }
@@ -1224,16 +1236,16 @@ zrozumiałe i jednoznaczne.';
         /*
          * ROBIMY DLA CAŁEJ PARENT CATEGORY PRZEJSCIE Z DANEJ KATEGORII DO PRODUKTU, bo wszędzie mamy 180 dni
          */
-        else if($categoryParentName == 'Zdrowie'){
+        else if($categoryParentName == 'Zdrowie' || $categoryParentName == 'Health'){
             $suplementsHTML .='<div class="row">';
             $suplementsHTML .= '
             <div class="col-md-4">
-                <div class="box not-colored item-instant-package" data-duration="180 dni" data-name="Brak" data-type="false">
+                <div class="box not-colored item-instant-package" data-duration="'.$days180.'" data-name="Brak" data-type="false">
                     <div class="text-content">
-                        <h2>Pakiet standard <br>(<span style="font-size:12px;">bez suplementacji</span>)</h2> 
+                        <h2>'.$standardPackageText.' <br>(<span style="font-size:12px;">'.$standardPackageSubText.'</span>)</h2> 
                         <span></span>
                         <span></span>
-                        <span class="select-step day-item" data-step="2" data-duration="180 dni" data-name="Brak" data-type="false">'.$selectText.'</span> 
+                        <span class="select-step day-item" data-step="2" data-duration="'.$days180.'" data-name="Brak" data-type="false">'.$selectText.'</span> 
                     </div>
                 </div>
             </div>';
@@ -1244,7 +1256,7 @@ zrozumiałe i jednoznaczne.';
                 $logn_desc = get_field($suplementLongDescField,$suplement);
                 $suplementsHTML .= '
             <div class="col-md-4">
-                <div class="category-item box item-instant-package not-colored" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">
+                <div class="category-item box item-instant-package not-colored" data-duration="'.$days180.'" data-name="'.$name.'" data-type="'.$suplement->ID.'">
                     <div class="text-content">
                         <h2>'.$name.'</h2> 
                         <span class="description">'.$short_desc.'</span>
@@ -1252,7 +1264,7 @@ zrozumiałe i jednoznaczne.';
                             <span class="read-more-btn">'.$moreText.'</span>
                             <div class="long-description-text">'.$logn_desc.'</div>
                         </div>
-                        <span class="select-step" data-step="2" data-duration="180 dni" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$selectText.'</span> 
+                        <span class="select-step" data-step="2" data-duration="'.$days180.'" data-name="'.$name.'" data-type="'.$suplement->ID.'">'.$selectText.'</span> 
                     </div>
                 </div>
             </div>';
@@ -1285,8 +1297,10 @@ zrozumiałe i jednoznaczne.';
         );
 
         $moreText = 'Dowiedz się więcej';
+        $days30 = '30 dni';
         if(pll_current_language() == 'en'){
             $moreText = 'Read more...';
+            $days30 = '30 days';
         }
 
 
@@ -1306,7 +1320,7 @@ zrozumiałe i jednoznaczne.';
         krsort($sortedCategories);
         $categories = $sortedCategories;
 
-        $subCategoriesHtml .='<div class="row">';
+        $subCategoriesHtml .='<div class="row text-center">';
 
         foreach($categories as $category){
             $longDesc = get_field('long_description',$category);
@@ -1314,7 +1328,7 @@ zrozumiałe i jednoznaczne.';
             if($category->name == 'Start'){
                 $subCategoriesHtml .='
                 <div class="col-md-4">
-                    <div class="category-item box item-instant-package" data-id="'.$category->term_id.'" data-duration="30 dni" data-name="Brak" data-type="false">
+                    <div class="category-item box item-instant-package" data-id="'.$category->term_id.'" data-duration="'.$days30.'" data-name="Brak" data-type="false">
                         <div class="text-content">
                         <h2>'.$category->name.'</h2>
                         <span class="description">'.$category->description.'</span>';
@@ -1329,9 +1343,14 @@ zrozumiałe i jednoznaczne.';
                         </div>
                     </div>
                 </div>';
-            }else{
+            }
+            else{
+                $class = '';
+                if( ( $category->name == 'Power' && $category->category_parent == 241) || ($category->name == 'Optimum' && $category->category_parent == 241 )){
+                   $class = 'hidden';
+                }
                 $subCategoriesHtml .='
-                <div class="col-md-4">
+                <div class="col-md-4 '.$class.'">
                     <div class="category-item box">
                         <div class="text-content">
                         <h2>'.$category->name.'</h2>
