@@ -1190,12 +1190,17 @@ zrozumiałe i jednoznaczne.';
 
 //        DLA KATEGORII BIEGANIE
         if($categoryParentName == 'Bieganie' || $categoryParentName == 'Running'){
+            $standardPackageText = 'PAKIET BASIC';
+            if(pll_current_language() == 'en'){
+                $standardPackageText = 'PACKAGE BASIC';
+            }
+
             $suplementsHTML .='<div class="row text-center">';
             $suplementsHTML .= '
             <div class="col-md-4">
                 <div class="box not-colored">
                     <div class="text-content">
-                        <h2>'.$standardPackageText.' <br>(<span style="font-size:12px;">'.$standardPackageSubText.'</span>)</h2> 
+                        <h2>'.$standardPackageText.'</h2> 
                         <span></span>
                         <span></span>
                         <span class="select-step" data-step="2" data-name="Brak" data-type="false">'.$selectText.'</span> 
@@ -1210,6 +1215,7 @@ zrozumiałe i jednoznaczne.';
 
             foreach ($suplements as $suplement){
                 $name = get_field($suplementNameField,$suplement);
+                $name = (pll_current_language() == 'en') ? 'PACKAGE PRO' : 'PAKIET PRO';
                 $short_desc = get_field($suplementShortDescField,$suplement);
                 $logn_desc = get_field($suplementLongDescField,$suplement);
                 $suplementsHTML .= '

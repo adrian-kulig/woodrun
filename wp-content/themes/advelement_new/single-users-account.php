@@ -60,6 +60,7 @@ $postID = get_the_ID(get_queried_object());
                         $name = get_field('nazwa', $exercise);
                         $description = get_field('opis', $exercise);
                         $type = get_field('typ_pliku', $exercise);
+                        var_dump($description);
                         $file = null;
 
 
