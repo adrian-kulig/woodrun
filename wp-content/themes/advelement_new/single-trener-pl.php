@@ -124,13 +124,13 @@ setup_postdata($post);
                                                                     name="rules-1"></span>
                                     <span class="rule_text">
                                          <?php _e('Akceptuję', 'woodrun'); ?> <a
-                                                href="/wp-content/themes/advelement_new/assets/Ogólne_Warunki_Świadczenia_Usług_i_Regulamin_E-Shop_Woodrun_25.05.2018.pdf"
+                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_09_11_2018.pdf"
                                                 target="_blank"
                                                 class="doc-btn"> <?php _e('Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)',
                                                 'woodrun'); ?><img class="rules-pdf-icon"
                                                                    src="/wp-content/themes/advelement_new/images/pdf-icon.png"> </a>
                                         <?php _e('oraz', 'woodrun'); ?> <a
-                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Letnia_promocja_Woodrun_25.05.2018.pdf"
+                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_09_11_2018.pdf"
                                                 target="_blank"
                                                 class="doc-btn"> <?php _e('regulamin aktualnie obowiązujących promocji Woodrun',
                                                 'woodrun'); ?><img class="rules-pdf-icon"

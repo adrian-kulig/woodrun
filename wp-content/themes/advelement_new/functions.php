@@ -1103,6 +1103,7 @@ zrozumiałe i jednoznaczne.';
         $link = '';
         $data = $_POST['data'];
 
+
         if($data['type'] == 'false'){
             $args = array(
                 'post_type' => 'post',
@@ -1137,7 +1138,7 @@ zrozumiałe i jednoznaczne.';
         INNER JOIN wp_postmeta ON ( wp_posts.ID = wp_postmeta.post_id )  INNER JOIN wp_postmeta AS mt1 ON ( wp_posts.ID = mt1.post_id ) 
         WHERE 1=1  AND ( wp_term_relationships.term_taxonomy_id IN (".$data['catID'].")) 
         AND ( ( wp_postmeta.meta_key = 'suplementy' AND (wp_postmeta.meta_value) LIKE '%".$data['type']."%' )) 
-        AND ( mt1.meta_key = 'voucher_duration' AND mt1.meta_value LIKE '".$data['duration']."' )
+        AND ( mt1.meta_key = 'voucher_duration' AND mt1.meta_value LIKE '%".$data['duration']."%' )
         AND wp_posts.post_type = 'post' AND (wp_posts.post_status = 'publish' OR wp_posts.post_status = 'future' OR wp_posts.post_status = 'draft' OR wp_posts.post_status = 'pending' OR wp_posts.post_status = 'private') GROUP BY wp_posts.ID ORDER BY wp_posts.post_date DESC";
 
         $results = $wpdb->get_results($sql);
