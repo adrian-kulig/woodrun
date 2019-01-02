@@ -124,13 +124,13 @@ setup_postdata($post);
                                                                     name="rules-1"></span>
                                     <span class="rule_text">
                                          <?php _e('Akceptuję', 'woodrun'); ?> <a
-                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_09_11_2018.pdf"
+                                                href="/wp-content/themes/advelement_new/assets/Ogolne_Warunki_Swiadczenia_Uslug_i_Regulamin_E-Shop_Woodrun_01.01.2019.pdf"
                                                 target="_blank"
                                                 class="doc-btn"> <?php _e('Ogólne Warunki Świadczenia Usług przez Woodrun(OWU)',
                                                 'woodrun'); ?><img class="rules-pdf-icon"
                                                                    src="/wp-content/themes/advelement_new/images/pdf-icon.png"> </a>
                                         <?php _e('oraz', 'woodrun'); ?> <a
-                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_09_11_2018.pdf"
+                                                href="/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_01.01.2019.pdf"
                                                 target="_blank"
                                                 class="doc-btn"> <?php _e('regulamin aktualnie obowiązujących promocji Woodrun',
                                                 'woodrun'); ?><img class="rules-pdf-icon"
@@ -145,7 +145,7 @@ setup_postdata($post);
                                     <span class="rule_title"><input id="rules-2" type="checkbox" class="checkbox"
                                                                     name="rules-2"></span>
                                     <span class="rule_text">
-                                     <?php _e('Wyrażam zgodę na umieszczenie moich danych osobowych w informatycznej bazie danych Jałowcówka Gospodarstwo Rolne,
+                                     <?php _e('Wyrażam zgodę na umieszczenie moich danych osobowych w informatycznej bazie danych Fundacji Woodrun,
                                         Koszarawa 497 (kod pocztowy 34-332 Koszarawa), zwane dalej Woodrun i ich przetwarzanie zgodnie z Ustawą o Ochronie Danych
                                          Osobowych z dnia 29 sierpnia 1997 r. (Dz. U. Dz.U. 1997 nr 133 poz. 883 z późn. zm.) oraz Rozporządzeniem Parlamentu 
                                         Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem

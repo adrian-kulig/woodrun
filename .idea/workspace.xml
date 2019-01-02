@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="598f1e61-3f8d-42cf-8a38-cf275e82f2ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_09_11_2018.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/advelement_new/assets/Ogolne_Warunki_Swiadczenia_Uslug_i_Regulamin_E-Shop_Woodrun_01.01.2019.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/advelement_new/assets/Regulamin_Promocji_Zimowa_promocja_Woodrun_01.01.2019.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php" afterPath="$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php" />
@@ -32,26 +33,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="suplements.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/post-types/suplements.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="exercises-repository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/post-types/exercises-repository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/footer.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,69 +53,69 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="1146" column="26" lean-forward="true" selection-start-line="1146" selection-start-column="26" selection-end-line="1146" selection-end-column="26" />
+            <state relative-caret-position="435">
+              <caret line="682" column="42" lean-forward="false" selection-start-line="682" selection-start-column="42" selection-end-line="682" selection-end-column="42" />
               <folding>
-                <marker date="1541499579350" expanded="true" signature="1735:1757" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="5768:5794" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="7349:7413" ph="SELECT ID, u... ${$wpdb-&gt;users}" />
-                <marker date="1541499579350" expanded="true" signature="7804:8117" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="28721:28784" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="28817:28915" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="28954:29035" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="29658:29756" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="29949:30121" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="30339:30462" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="30844:31020" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="32637:32934" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="32675:32934" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="32727:32934" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="33248:33452" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="33718:33841" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="34319:34495" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="35192:35318" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="39308:39632" ph="SELECT wp_po... wp_posts" />
-                <marker date="1541499579350" expanded="true" signature="39308:39742" ph="SELECT wp_po... wp_posts" />
-                <marker date="1541499579350" expanded="true" signature="39308:39833" ph="SELECT wp_po... wp_posts" />
-                <marker date="1541499579350" expanded="true" signature="39308:39838" ph="SELECT wp_po... wp_posts" />
-                <marker date="1541499579350" expanded="true" signature="39308:40139" ph="SELECT wp_po... wp_posts" />
-                <marker date="1541499579350" expanded="true" signature="42370:43258" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42416:42771" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42463:42748" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42816:42883" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42816:42931" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42816:43015" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42816:43149" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="42816:43239" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="43692:44900" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="43752:44359" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="43799:44336" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="43976:44168" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="44404:44881" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45264:45346" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45264:45878" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45395:45859" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45442:45737" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45442:45836" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="45515:45530" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="46223:47041" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="46386:47022" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="46433:46882" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="46433:46999" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="46610:46802" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="48751:48872" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="48751:49108" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="48920:49108" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="48922:49108" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="48971:49108" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="49258:49461" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="50087:50325" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="50137:50325" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="50188:50325" ph="..." />
-                <marker date="1541499579350" expanded="true" signature="50475:50678" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="1735:1757" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="5768:5794" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="7349:7413" ph="SELECT ID, u... ${$wpdb-&gt;users}" />
+                <marker date="1546341496953" expanded="true" signature="7804:8117" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="28715:28778" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="28811:28909" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="28948:29029" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="29652:29750" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="29943:30115" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="30333:30456" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="30838:31014" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="32631:32928" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="32669:32928" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="32721:32928" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="33242:33446" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="33712:33835" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="34313:34489" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="35186:35312" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="39302:39626" ph="SELECT wp_po... wp_posts" />
+                <marker date="1546341496953" expanded="true" signature="39302:39736" ph="SELECT wp_po... wp_posts" />
+                <marker date="1546341496953" expanded="true" signature="39302:39827" ph="SELECT wp_po... wp_posts" />
+                <marker date="1546341496953" expanded="true" signature="39302:39832" ph="SELECT wp_po... wp_posts" />
+                <marker date="1546341496953" expanded="true" signature="39302:40133" ph="SELECT wp_po... wp_posts" />
+                <marker date="1546341496953" expanded="true" signature="42364:43252" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42410:42765" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42457:42742" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42810:42877" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42810:42925" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42810:43009" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42810:43143" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="42810:43233" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="43686:44894" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="43746:44353" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="43793:44330" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="43970:44162" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="44398:44875" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45258:45340" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45258:45872" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45389:45853" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45436:45731" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45436:45830" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="45509:45524" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="46217:47035" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="46380:47016" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="46427:46876" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="46427:46993" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="46604:46796" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="48745:48866" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="48745:49102" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="48914:49102" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="48916:49102" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="48965:49102" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="49252:49455" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="50081:50319" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="50131:50319" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="50182:50319" ph="..." />
+                <marker date="1546341496953" expanded="true" signature="50469:50672" ph="..." />
               </folding>
             </state>
           </provider>
@@ -143,18 +124,40 @@
       <file leaf-file-name="single-trener-pl.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/single-trener-pl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="129" column="65" lean-forward="false" selection-start-line="129" selection-start-column="65" selection-end-line="129" selection-end-column="65" />
+            <state relative-caret-position="175">
+              <caret line="130" column="101" lean-forward="false" selection-start-line="130" selection-start-column="101" selection-end-line="130" selection-end-column="101" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single-offer-pl.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="base-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/base-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#31#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-offer-pl.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="177" column="148" lean-forward="false" selection-start-line="177" selection-start-column="148" selection-end-line="177" selection-end-column="148" />
+            <state relative-caret-position="118">
+              <caret line="168" column="48" lean-forward="true" selection-start-line="168" selection-start-column="48" selection-end-line="168" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -202,7 +205,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>next-step-btn</find>
       <find>.box</find>
       <find>not-colo</find>
       <find>box.</find>
@@ -232,6 +234,7 @@
       <find>search_post_by_meta</find>
       <find>days</find>
       <find>Ogólne_Warunki_Świadczenia_Usług_i_Regulamin_E-Shop_Woodrun_25.05.2018.pdf</find>
+      <find>Zimowa</find>
     </findStrings>
     <replaceStrings>
       <replace>'Woodrunners - Filmy</replace>
@@ -269,8 +272,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/less/sg.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/single-users-account.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php" />
         <option value="/private/var/folders/2d/3ym6phdx3hb5kr9f2w3dgpgc0000gn/T/fz3temp-2/.htaccess 2" />
+        <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/advelement_new/single-trener-pl.php" />
       </list>
@@ -284,10 +287,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1536" />
-    <option name="y" value="-28" />
-    <option name="width" value="1569" />
-    <option name="height" value="938" />
+    <option name="x" value="1514" />
+    <option name="y" value="87" />
+    <option name="width" value="1682" />
+    <option name="height" value="894" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -410,6 +413,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="ignore_missing_gitignore" value="true" />
+    <property name="js-jscs-package" value="/usr/local/lib/node_modules/jscs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -589,7 +593,15 @@
       <workItem from="1541499543183" duration="734000" />
       <workItem from="1541762877977" duration="247000" />
       <workItem from="1541763166621" duration="371000" />
-      <workItem from="1542626681323" duration="565000" />
+      <workItem from="1542626681323" duration="755000" />
+      <workItem from="1542627546699" duration="19000" />
+      <workItem from="1542627589495" duration="1347000" />
+      <workItem from="1544087900351" duration="23000" />
+      <workItem from="1544685785058" duration="309000" />
+      <workItem from="1546341414157" duration="423000" />
+      <workItem from="1546369931075" duration="396000" />
+      <workItem from="1546410545325" duration="20000" />
+      <workItem from="1546418972686" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="etap konkursu">
       <created>1524167986740</created>
@@ -633,22 +645,29 @@
       <option name="project" value="LOCAL" />
       <updated>1539584022030</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="podmianka regulaminu">
+      <created>1542627264870</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542627264870</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186675000" />
+    <option name="totallyTimeSpent" value="189990000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1536" y="-28" width="1569" height="938" extended-state="0" />
+    <frame x="1514" y="87" width="1682" height="894" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21938442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4280488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18203309" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16583541" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19148937" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -696,7 +715,8 @@
     <MESSAGE value="nowy proces zamowienia pakietu" />
     <MESSAGE value="wdrozenie na produkcje bloczkow do wersji EN" />
     <MESSAGE value="fix dla repozytorium plikow" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix dla repozytorium plikow" />
+    <MESSAGE value="podmianka regulaminu" />
+    <option name="LAST_COMMIT_MESSAGE" value="podmianka regulaminu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,13 +725,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4650">
@@ -940,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -965,7 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -980,7 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,18 +1003,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file:///private/var/folders/2d/3ym6phdx3hb5kr9f2w3dgpgc0000gn/T/fz3temp-2/.htaccess 2" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="8655">
+          <caret line="577" column="16" lean-forward="false" selection-start-line="577" selection-start-column="16" selection-end-line="577" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/less/sg.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34860">
-          <caret line="2324" column="23" lean-forward="false" selection-start-line="2324" selection-start-column="23" selection-end-line="2324" selection-end-column="23" />
+        <state relative-caret-position="435">
+          <caret line="682" column="42" lean-forward="false" selection-start-line="682" selection-start-column="42" selection-end-line="682" selection-end-column="42" />
+          <folding>
+            <marker date="1546341496953" expanded="true" signature="1735:1757" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="5768:5794" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="7349:7413" ph="SELECT ID, u... ${$wpdb-&gt;users}" />
+            <marker date="1546341496953" expanded="true" signature="7804:8117" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="28715:28778" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="28811:28909" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="28948:29029" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="29652:29750" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="29943:30115" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="30333:30456" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="30838:31014" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="32631:32928" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="32669:32928" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="32721:32928" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="33242:33446" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="33712:33835" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="34313:34489" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="35186:35312" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="39302:39626" ph="SELECT wp_po... wp_posts" />
+            <marker date="1546341496953" expanded="true" signature="39302:39736" ph="SELECT wp_po... wp_posts" />
+            <marker date="1546341496953" expanded="true" signature="39302:39827" ph="SELECT wp_po... wp_posts" />
+            <marker date="1546341496953" expanded="true" signature="39302:39832" ph="SELECT wp_po... wp_posts" />
+            <marker date="1546341496953" expanded="true" signature="39302:40133" ph="SELECT wp_po... wp_posts" />
+            <marker date="1546341496953" expanded="true" signature="42364:43252" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42410:42765" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42457:42742" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42810:42877" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42810:42925" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42810:43009" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42810:43143" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="42810:43233" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="43686:44894" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="43746:44353" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="43793:44330" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="43970:44162" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="44398:44875" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45258:45340" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45258:45872" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45389:45853" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45436:45731" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45436:45830" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="45509:45524" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="46217:47035" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="46380:47016" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="46427:46876" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="46427:46993" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="46604:46796" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="48745:48866" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="48745:49102" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="48914:49102" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="48916:49102" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="48965:49102" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="49252:49455" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="50081:50319" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="50131:50319" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="50182:50319" ph="..." />
+            <marker date="1546341496953" expanded="true" signature="50469:50672" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/base-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#31#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1031,94 +1112,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/js/main.js">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8655">
-          <caret line="577" column="16" lean-forward="false" selection-start-line="577" selection-start-column="16" selection-end-line="577" selection-end-column="16" />
+        <state relative-caret-position="105">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/2d/3ym6phdx3hb5kr9f2w3dgpgc0000gn/T/fz3temp-2/.htaccess 2" />
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/less/sg.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="177" column="148" lean-forward="false" selection-start-line="177" selection-start-column="148" selection-end-line="177" selection-end-column="148" />
+        <state relative-caret-position="34860">
+          <caret line="2324" column="23" lean-forward="false" selection-start-line="2324" selection-start-column="23" selection-end-line="2324" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/single-trener-pl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="129" column="65" lean-forward="false" selection-start-line="129" selection-start-column="65" selection-end-line="129" selection-end-column="65" />
+        <state relative-caret-position="175">
+          <caret line="130" column="101" lean-forward="false" selection-start-line="130" selection-start-column="101" selection-end-line="130" selection-end-column="101" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/functions.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/advelement_new/single-offer-pl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="1146" column="26" lean-forward="true" selection-start-line="1146" selection-start-column="26" selection-end-line="1146" selection-end-column="26" />
-          <folding>
-            <marker date="1541499579350" expanded="true" signature="1735:1757" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="5768:5794" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="7349:7413" ph="SELECT ID, u... ${$wpdb-&gt;users}" />
-            <marker date="1541499579350" expanded="true" signature="7804:8117" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="28721:28784" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="28817:28915" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="28954:29035" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="29658:29756" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="29949:30121" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="30339:30462" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="30844:31020" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="32637:32934" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="32675:32934" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="32727:32934" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="33248:33452" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="33718:33841" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="34319:34495" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="35192:35318" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="39308:39632" ph="SELECT wp_po... wp_posts" />
-            <marker date="1541499579350" expanded="true" signature="39308:39742" ph="SELECT wp_po... wp_posts" />
-            <marker date="1541499579350" expanded="true" signature="39308:39833" ph="SELECT wp_po... wp_posts" />
-            <marker date="1541499579350" expanded="true" signature="39308:39838" ph="SELECT wp_po... wp_posts" />
-            <marker date="1541499579350" expanded="true" signature="39308:40139" ph="SELECT wp_po... wp_posts" />
-            <marker date="1541499579350" expanded="true" signature="42370:43258" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42416:42771" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42463:42748" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42816:42883" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42816:42931" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42816:43015" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42816:43149" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="42816:43239" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="43692:44900" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="43752:44359" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="43799:44336" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="43976:44168" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="44404:44881" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45264:45346" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45264:45878" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45395:45859" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45442:45737" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45442:45836" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="45515:45530" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="46223:47041" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="46386:47022" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="46433:46882" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="46433:46999" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="46610:46802" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="48751:48872" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="48751:49108" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="48920:49108" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="48922:49108" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="48971:49108" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="49258:49461" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="50087:50325" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="50137:50325" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="50188:50325" ph="..." />
-            <marker date="1541499579350" expanded="true" signature="50475:50678" ph="..." />
-          </folding>
+        <state relative-caret-position="118">
+          <caret line="168" column="48" lean-forward="true" selection-start-line="168" selection-start-column="48" selection-end-line="168" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -647,10 +647,10 @@ $GLOBALS['comment'] = $comment;
 
         $message .= '<b> Dane do przelewu:</b> <br><br> ';
 
-        $message .= 'Anna Makuch <br>';
+        $message .= 'Fundacja Woodrun<br>';
         $message .= 'Koszarawa 497<br>';
         $message .= '34-332 Koszarawa<br>';
-        $message .= 'numer konta ING: 14 1050 1214 1000 0022 9478 5213<br>';
+        $message .= 'numer konta: 04175000120000000040948678<br>';
         $message .= 'Tytuł płatności: Nazwa produktu, Data, Imię, Nazwisko<br><br><br>';
 
 
