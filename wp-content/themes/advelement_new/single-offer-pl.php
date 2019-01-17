@@ -376,7 +376,7 @@ setup_postdata($post);
                         </div>
 
                         <div class="confirm-button-end">
-                            <button id="confirm-button-end" class="<?php if($post->ID == 5439 || $post->ID == 5466):?>austriacamp<?php endif;?>"> <?php _e('Zamawiam z obowiązkiem zapłaty', 'woodrun'); ?></button>
+                            <button id="confirm-button-end" data-offertype="offer" class="<?php if($post->ID == 5439 || $post->ID == 5466):?>austriacamp<?php endif;?>"> <?php _e('Zamawiam z obowiązkiem zapłaty', 'woodrun'); ?></button>
                         </div>
                     </div>
 

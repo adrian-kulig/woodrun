@@ -201,7 +201,7 @@
                 rulesText += '<br><br>';
             });
 
-
+            var offerType =$(this).attr('data-offertype');
 
             $.ajax({
                 type: "POST",
@@ -210,6 +210,7 @@
                     action: "order_offer",
                     data : userDetails,
                     type: type,
+                    offerType: offerType,
                     voucher: voucher,
                     rulesText : rulesText,
                 }),

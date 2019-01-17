@@ -645,13 +645,23 @@ $GLOBALS['comment'] = $comment;
         }
 
 
-        $message .= '<b> Dane do przelewu:</b> <br><br> ';
 
-        $message .= 'Fundacja Woodrun<br>';
-        $message .= 'Koszarawa 497<br>';
-        $message .= '34-332 Koszarawa<br>';
-        $message .= 'numer konta: 04175000120000000040948678<br>';
-        $message .= 'Tytuł płatności: Nazwa produktu, Data, Imię, Nazwisko<br><br><br>';
+        if($_POST['offerType'] == 'trener'){
+            $message .= '<b> Dane do przelewu:</b> <br><br> ';
+            $message .= 'Fundacja Woodrun<br>';
+            $message .= 'Koszarawa 497<br>';
+            $message .= '34-332 Koszarawa<br>';
+            $message .= 'numer konta: 04175000120000000040948678<br>';
+            $message .= 'Tytuł płatności: Imię Nazwisko, nazwa vouchera, numer raty<br><br><br>';
+        }else{
+            $message .= '<b> Dane do płatności:</b> <br><br> ';
+            $message .= 'Anna Makuch<br>';
+            $message .= 'Koszarawa 497<br>';
+            $message .= '34-332 Koszarawa<br>';
+            $message .= 'numer konta: 14 1050 1214 1000 0022 9478 5213<br>';
+            $message .= 'Tytuł płatności: Zaliczka - opłata za pobyt w dniach '.$userData['offer_term'].', Imię Nazwisko osoby, która przyjedzie<br><br><br>';
+            $message .= 'Kwota zaliczki jest podana na dole szczegółowego opisu danego pobytu na naszej stronie internetowej';
+        }
 
 
 //        TRESCI ZGOD PRZEDSTAWIAMY
@@ -768,7 +778,7 @@ $GLOBALS['comment'] = $comment;
         $status = 400;
         try {
             wp_mail($userEmail, $subject, $body, $headers);
-//        wp_mail( $adminEmail, $subject, $body, $headers);
+            wp_mail( $adminEmail, $subject, $body, $headers);
             $status = 200;
         } catch (Exception $e) {
             $status = $e->getMessage();

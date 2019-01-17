@@ -314,8 +314,7 @@ setup_postdata($post);
                             </div>
 
                             <div class="confirm-button-end">
-                                <button id="confirm-button-end"> <?php _e('Zamawiam z obowiązkiem zapłaty',
-                                        'woodrun'); ?></button>
+                                <button id="confirm-button-end" data-offertype="trener"> <?php _e('Zamawiam z obowiązkiem zapłaty', 'woodrun'); ?></button>
                             </div>
                         </div>
 
